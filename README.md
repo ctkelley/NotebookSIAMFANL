@@ -14,7 +14,13 @@ in Julia, but do expect the reader to be able to understand the codes,
 play with the algorithms, and wreak havoc. To that end I have tuned the 
 codes for readability by a Julia novice who knows some numerical analysis.
 
-## Other Nonlienar Solvers in Julia
+## The solvers
+
+I've put the solvers in SIAMFANLSolvers.jl 
+
+-- Tell them how to get it
+
+## Other Nonlinear Solvers in Julia
 
 We have a very different mission from that of the other nonlinear solver
 packages in Julia. 
