@@ -29,6 +29,10 @@ I've put the solvers in SIAMFANLSolvers.jl
 
 -- Tell them how to get it
 
+## The examples
+
+The codes for every plot and table in the book are in the src directory in this repository. You'll get the change to run them, change them, and make them better as you work through the notebook.
+
 ## Other Nonlinear Solvers in Julia
 
 We have a very different mission from that of the other nonlinear solver
