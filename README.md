@@ -1,4 +1,4 @@
-# Solving Nonlinear Equations with Iterative Methods using Julia
+# Solving Nonlinear Equations with Iterative Methods with Solvers and Examples in Julia
 
 ## C. T. Kelley
 
