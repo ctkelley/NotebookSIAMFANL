@@ -25,7 +25,7 @@ numerical methods (LU, SVD, QR) in Julia.
 
 ## The solvers
 
-I've put the solvers in SIAMFANLSolvers.jl 
+I've put the solvers in SIAMFANLEquations.jl 
 
 -- Tell them how to get it
 
@@ -51,6 +51,6 @@ https://github.com/SciML/Sundials.jl
 
 Sundials is a suite of solvers from Lawrence Livermore National 
 Laboratory that is designed for scalable performance on high-end
-supercomputers. This is a very important project, but not one designed
+supercomputers. This is a well-done (by the very best people) and important project, but not one designed
 for a novice to understand.
 
