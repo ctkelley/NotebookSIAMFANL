@@ -28,7 +28,7 @@ function atan_test()
     if iplot
         figure(1)
         yval = local_hist.history[:, 2]
-        xval = local_hist.history[:, 3]
+        xval = local_hist.solhist
         xtval = -1.2:.01:1.2
         ytval = atan.(xtval)
         ztval = zeros(size(xtval))
