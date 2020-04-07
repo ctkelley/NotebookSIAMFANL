@@ -1,5 +1,4 @@
-# Solving Nonlinear Equations with Iterative Methods:
-#* Solvers and Examples in Julia
+# Solving Nonlinear Equations with Iterative Methods: Solvers and Examples in Julia
 
 ## C. T. Kelley
 
@@ -19,7 +18,7 @@ get to them. Alternatively, you could close the repository for the package and p
 Since this is an education project, I do not expect the reader to be an expert
 in Julia, but do expect the reader to be able to understand the codes, 
 play with the algorithms, and wreak havoc. To that end I have tuned the 
-codes for readability by a Julia novice who knows some numerical analysis.
+codes for readability by a Julia novice who knows some numerical analysis. As part of this I have sacrificed much abstraction, some generality, and a bit of performance.
 
 The reader should know Julia well enough to use the package manager, install packages, use modules, and to do basic tasks in 
 numerical methods (LU, SVD, QR) in Julia.
@@ -32,7 +31,7 @@ I've put the solvers in SIAMFANLEquations.jl
 
 ## The examples
 
-The codes for every plot and table in the book are in the src directory in this repository. You'll get the change to run them, change them, and make them better as you work through the notebook.
+The codes for every plot and table in the book are either in the src directory in this repository or in the notebooks. You'll get the chance to run them, change them, and make them better as you work through the notebook.
 
 ## Other Nonlinear Solvers in Julia
 
