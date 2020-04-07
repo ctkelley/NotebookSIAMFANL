@@ -23,9 +23,9 @@ uunstable=0.0
 # Convergence to two different solutions.
 #
 ptcdata1=sptc(u0,sptest; dt0=1.0, rtol=1.e-12)
-ptcerr=ptcdata1.history[:,3].-ustable
+ptcerr=ptcdata1.solhist.-ustable
 ptcfun=ptcdata1.history[:,2]
-ptcdt=ptcdata1.history[:,4]
+ptcdt=ptcdata1.history[:,3]
 pival=ptcdata1.history[:,1]
 newtdata=snewton(u0,sptest)
 nival=newtdata.history[:,1]
