@@ -11,7 +11,7 @@ the reader to learn about algorithms for nonlinear solvers.
 
 The book will be published in the SIAM Fundamentals of Algorithms (FA) serise. Hence the repositories
 are named SIAMFANLxxx. If you are reading this you have found the notebooks. The optimal way to use this is
-to close this repository and put it in your Julia **LOAD_PATH**. Then install the packages with the solvers using **pkg**.
+to clone this repository and put it in your Julia **LOAD_PATH**. Then install the packages with the solvers using **pkg**.
 If you want to play with the solvers, use the **dev** command within **pkg** to put the codes where it's easy for you to
 get to them. Alternatively, you could close the repository for the package and put that in your Julia **LOAD_PATH**.
 
