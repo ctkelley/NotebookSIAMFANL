@@ -26,7 +26,7 @@ numerical methods (LU, SVD, QR) in Julia.
 
 ## The solvers
 
-I've put the solvers in [SIAMFANLEquations.jl](https://github.com/ctkelley/ScalarEquations.jl) 
+I've put the solvers in [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) 
 
 -- Tell them how to get it
 
