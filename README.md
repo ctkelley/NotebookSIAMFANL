@@ -22,7 +22,7 @@ to clone this repository and put it in your Julia **LOAD_PATH**. Then install th
 
 One way to do that is to type
 
-### impoty Pkg; Pkg.add("https://github.com/ctkelley/SIAMFANLEquations.jl")
+### import Pkg; Pkg.add("https://github.com/ctkelley/SIAMFANLEquations.jl")
 
 in the REPL
 
