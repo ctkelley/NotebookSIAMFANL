@@ -1,5 +1,5 @@
 # Solving Nonlinear Equations with Iterative Methods: 
-##Solvers and Examples in Julia
+## Solvers and Examples in Julia
 
 ## C. T. Kelley
 
