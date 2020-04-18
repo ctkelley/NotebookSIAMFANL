@@ -13,21 +13,39 @@ The book will be published in the SIAM Fundamentals of Algorithms (FA) series.
 
 The provisional title is
 
-### Solving Nonlinear Equations with Iterative Methods: Solvers and Examples in Juia
+**Solving Nonlinear Equations with Iterative Methods: Solvers and Examples in Julia**
 
 Hence the repositories have SIAMFANL in their names.
+
+## Getting started ##
 
 If you are reading this you have found the notebooks. The optimal way to use this is
 to clone this repository and put it in your Julia **LOAD_PATH**. Then install the packages with the solvers using **pkg**.
 
 One way to do that is to type
 
-### import Pkg; Pkg.add("https://github.com/ctkelley/SIAMFANLEquations.jl")
+**import Pkg; Pkg.add("https://github.com/ctkelley/SIAMFANLEquations.jl")**
 
 in the REPL
 
+The next step is to open the notebooks. My way to do this (after installing IJulia) is to type **using IJulia** and  **notebook()** in the REPL. 
+
+To get everything to work, you will need a few packages. LinearAlgebra, SuiteSparse, SparseArrays, AbstractFFTs, FFTW, IJjulia, JLD2, and PyPlot. I put 
+
+using LinearAlgebra
+using SuiteSparse
+using SparseArrays
+using AbstractFFTs
+using FFTW
+using IJulia
+using JLD2
+
+in my startup.jl file and do **using PyPlot** when I need it. PyPlot takes a while to get going.
+
 If you want to play with the solvers, use the **dev** command within **pkg** to put the codes where it's easy for you to
 get to them. Alternatively, you could close the repository for the package and put that in your Julia **LOAD_PATH**.
+
+## How much Julia do you need to know? ##
 
 Since this is an education project, I do not expect the reader to be an expert
 in Julia, but do expect the reader to be able to understand the codes, 
