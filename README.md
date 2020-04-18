@@ -2,12 +2,13 @@
 
 ## C. T. Kelley
 
-## Preface: What is this thing?
+## What is this thing?
 
 This is the notebook that comes with the real book and the solvers. The solver
 package is independent of the books, but you would be well advised to 
 play with the notebook. The purpose of all of these things is to enable
-the reader to learn about algorithms for nonlinear solvers. 
+the reader to learn about algorithms for nonlinear solvers. Please read the preface in 
+the first notebook for a more detailed mission statement.
 
 The book will be published in the SIAM Fundamentals of Algorithms (FA) series.
 
@@ -17,7 +18,7 @@ The provisional title is
 
 Hence the repositories have SIAMFANL in their names.
 
-## Getting started ##
+## Getting started
 
 If you are reading this you have found the notebooks. The optimal way to use this is
 to clone this repository and put it in your Julia **LOAD_PATH**. Then install the packages with the solvers using **pkg**.
@@ -56,6 +57,8 @@ The reader should know Julia well enough to use the package manager, install pac
 numerical methods (LU, SVD, QR) in Julia. You should also know how to use github to clone repositories (like this one) and put them where they need to go.
 
 ## The algorithms.
+
+
 
 ## The solvers.
 I've put the solvers in [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) 
