@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 # Solving Nonlinear Equations with Iterative Methods: <br>
 ##Solvers and Examples in Julia
 =======
 # Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia
->>>>>>> ead0eccfccaad3d3ead4e081681a99d35641382e
+
 
 ## C. T. Kelley
 
