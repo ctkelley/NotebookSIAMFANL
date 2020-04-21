@@ -1,5 +1,4 @@
-# Solving Nonlinear Equations with Iterative Methods: <br>
-##Solvers and Examples in Julia
+# Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia
 =======
 # Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia
 
