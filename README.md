@@ -75,7 +75,11 @@ and
 describe the Newton and Broyden algoirthms. CTK95 has the theory. This project is a sequal to CTK03. CTK03 is Matlab-centric
 and will remain in print.
 
-The references I use for pseudo-transient continuation and Anderson acceleration are
+A recent Acta Numerica paper has everything
+
+(CTK18) C. T. Kelley, ***Numerical Methods for Nonlinear Equations***, Acta Numerica 27 (2018), pp 207--287. https://doi.org/10.1017/S0962492917000113
+
+The references I use for theory of pseudo-transient continuation and Anderson acceleration are
 
 (CTK98) C. T. Kelley and D. E. Keyes, ***Convergence Analysis of Pseudo-Transient Continuation***, SIAM Journal on Numerical Analysis 35 (1998), pp 508-523. https://doi.org/10.1137/S0036142996304796
 
