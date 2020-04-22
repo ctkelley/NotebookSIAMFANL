@@ -5,9 +5,9 @@
 
 ## What is this thing?
 
-This is the notebook that comes with the print book and the solvers. The solver
+These are the notebooks that come with the print book and the solvers. The solver
 package is independent of the books, but you would be well advised to 
-play with the notebook. The purpose of all of these things is to enable
+play with the notebooks. The purpose of all of these things is to enable
 the reader to learn about algorithms for nonlinear solvers. Please read the preface in 
 the first notebook (Part1) for a more detailed mission statement.
 
@@ -32,7 +32,7 @@ One way to do that is to type
 
 The next step is to open the notebooks. My way to do this (after installing IJulia) is to type **using IJulia** and  **notebook()** in the REPL. 
 
-In the first code window in the notebook you will find
+In the first code window in each of the notebooks you will find
 
 **using SIAMFANLEquations**<br>
 **using SIAMFANLEquations.TestProblems**
@@ -50,7 +50,7 @@ using JLD2
 
 in my startup.jl file and do **using PyPlot** when I need it. PyPlot takes a while to get going.
 
-All this is also in the first code window in the notebook.
+All this is also in the first code window in the notebook. If Julia complains about a missing package, it is your job to add it.
 
 If you want to play with the solvers, clone the repository for the package and put that in your Julia **LOAD_PATH**.
 
