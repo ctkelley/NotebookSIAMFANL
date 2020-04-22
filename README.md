@@ -69,8 +69,10 @@ numerical methods (LU, SVD, QR) in Julia. You should also know how to use github
 My two books on nonlinear equations
 
 (CTK95) ***Iterative Methods for Linear and Nonlinear Equations*** , Frontiers in Applied Mathematics 16,  SIAM 1995
+
 and
-(CTK03) ***Solving Nonlinear Equations with Newton's Method*** , Fundamentals of Algorithms 1, SIAM 2003
+
+(CTK03) [***Solving Nonlinear Equations with Newton's Method***](https://my.siam.org/Store/Product/viewproduct/?ProductId=841) , Fundamentals of Algorithms 1, SIAM 2003
 
 describe the Newton and Broyden algoirthms. CTK95 has the theory. This project is a sequal to CTK03. CTK03 is Matlab-centric
 and will remain in print.
