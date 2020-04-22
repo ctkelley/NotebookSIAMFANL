@@ -5,11 +5,11 @@
 
 ## What is this thing?
 
-This is the notebook that comes with the real book and the solvers. The solver
+This is the notebook that comes with the print book and the solvers. The solver
 package is independent of the books, but you would be well advised to 
 play with the notebook. The purpose of all of these things is to enable
 the reader to learn about algorithms for nonlinear solvers. Please read the preface in 
-the first notebook for a more detailed mission statement.
+the first notebook (Part1) for a more detailed mission statement.
 
 The book will be published in the SIAM Fundamentals of Algorithms (FA) series.
 
@@ -44,8 +44,7 @@ using JLD2
 
 in my startup.jl file and do **using PyPlot** when I need it. PyPlot takes a while to get going.
 
-If you want to play with the solvers, use the **dev** command within **pkg** to put the codes where it's easy for you to
-get to them. Alternatively, you could close the repository for the package and put that in your Julia **LOAD_PATH**.
+If you want to play with the solvers, clone the repository for the package and put that in your Julia **LOAD_PATH**.
 
 ## How much Julia do you need to know? ##
 
@@ -59,15 +58,11 @@ numerical methods (LU, SVD, QR) in Julia. You should also know how to use github
 
 ## The algorithms.
 
+My two books on nonlinear equations
 
-
-## The solvers.
-I've put the solvers in [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) 
-This is a Julia package and you need it to run the examples in the notebook.
-
-To install the package
-
--- Tell them how to get it
+(CTK95) ***Iterative Methods for Linear and Nonlinear Equations*** , Frontiers in Applied Mathematics 16,  SIAM 1995
+and
+(CTK03) ***Solving Nonlinear Equations with Newton's Method*** , Fundamentals of Algorithms 1, SIAM 2003.
 
 ## The examples
 
