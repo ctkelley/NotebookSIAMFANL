@@ -1,7 +1,7 @@
 # Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia
 
 
-## C. T. Kelley
+[## C. T. Kelley](https://ctk.math.ncsu.edu)
 
 ## What is this thing?
 
