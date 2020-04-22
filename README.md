@@ -68,7 +68,7 @@ numerical methods (LU, SVD, QR) in Julia. You should also know how to use github
 
 My two books on nonlinear equations
 
-(CTK95) ***Iterative Methods for Linear and Nonlinear Equations*** , Frontiers in Applied Mathematics 16,  SIAM 1995
+(CTK95) [***Iterative Methods for Linear and Nonlinear Equations***](https://my.siam.org/Store/Product/viewproduct/?ProductId=862) , Frontiers in Applied Mathematics 16,  SIAM 1995
 
 and
 
