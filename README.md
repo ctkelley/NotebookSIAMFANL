@@ -28,9 +28,15 @@ One way to do that is to type
 
 **import Pkg; Pkg.add("https://github.com/ctkelley/SIAMFANLEquations.jl")**
 
-in the REPL
+
 
 The next step is to open the notebooks. My way to do this (after installing IJulia) is to type **using IJulia** and  **notebook()** in the REPL. 
+
+In the first code window in the notebook you will find
+
+**using SIAMFANLEquations**
+**using SIAMFANLEquations.TestProblems**
+
 
 To get everything to work, you will need a few packages. LinearAlgebra, SuiteSparse, SparseArrays, AbstractFFTs, FFTW, IJjulia, JLD2, and PyPlot. I put 
 
@@ -43,6 +49,8 @@ using IJulia
 using JLD2
 
 in my startup.jl file and do **using PyPlot** when I need it. PyPlot takes a while to get going.
+
+All this is also in the first code window in the notebook.
 
 If you want to play with the solvers, clone the repository for the package and put that in your Julia **LOAD_PATH**.
 
@@ -62,11 +70,22 @@ My two books on nonlinear equations
 
 (CTK95) ***Iterative Methods for Linear and Nonlinear Equations*** , Frontiers in Applied Mathematics 16,  SIAM 1995
 and
-(CTK03) ***Solving Nonlinear Equations with Newton's Method*** , Fundamentals of Algorithms 1, SIAM 2003.
+(CTK03) ***Solving Nonlinear Equations with Newton's Method*** , Fundamentals of Algorithms 1, SIAM 2003
+
+describe the Newton and Broyden algoirthms. CTK95 has the theory. This project is a sequal to CTK03. CTK03 is Matlab-centric
+and will remain in print.
+
+The references I use for pseudo-transient continuation and Anderson acceleration are
+
+(CTK98) C. T. Kelley and D. E. Keyes, ***Convergence Analysis of Pseudo-Transient Continuati***, SIAM Journal on Numerical Analysis 35 (1998), pp 508-523. 
+
+(CTK15) A. Toth and C. T. Kelley, ***Convergence Analysis for Anderson Acceleration***, SIAM Journal on Numerical Analysis 53, (2015), pp 805-819. doi 10.1137/130919398
+
+These references have extensive bibliographies as does the print book. The notebook has a smaller bibliography because a lengthy list of citations looks ugly in a notebook.
 
 ## The examples
 
-The codes for every plot and table in the book are either in the src directory in this repository or in the notebooks. You'll get the chance to run them, change them, and make them better as you work through the notebook.
+The codes for every plot and table in the book are either in the src directory in this repository or in the notebooks. You'll get the chance to run them, change them, and make them better as you work through the notebook. 
 
 ## Other Nonlinear Solvers in Julia
 
