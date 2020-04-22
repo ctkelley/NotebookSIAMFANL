@@ -77,11 +77,11 @@ and will remain in print.
 
 The references I use for pseudo-transient continuation and Anderson acceleration are
 
-(CTK98) C. T. Kelley and D. E. Keyes, ***Convergence Analysis of Pseudo-Transient Continuation***, SIAM Journal on Numerical Analysis 35 (1998), pp 508-523. 
+(CTK98) C. T. Kelley and D. E. Keyes, ***Convergence Analysis of Pseudo-Transient Continuation***, SIAM Journal on Numerical Analysis 35 (1998), pp 508-523. https://doi.org/10.1137/S0036142996304796
 
-(CTK15) A. Toth and C. T. Kelley, ***Convergence Analysis for Anderson Acceleration***, SIAM Journal on Numerical Analysis 53, (2015), pp 805-819. doi 10.1137/130919398
+(CTK15) A. Toth and C. T. Kelley, ***Convergence Analysis for Anderson Acceleration***, SIAM Journal on Numerical Analysis 53, (2015), pp 805-819. https://doi.org/10.1137/130919398
 
-These references have extensive bibliographies as does the print book. The notebook has a smaller bibliography because a lengthy list of citations looks ugly in a notebook.
+These references have extensive bibliographies as does the print book. The notebook has a smaller bibliography because a lengthy list of citations is hard to parse and looks ugly in a notebook.
 
 ## The examples
 
