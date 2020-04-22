@@ -28,7 +28,7 @@ One way to do that is to type
 
 **import Pkg; Pkg.add("https://github.com/ctkelley/SIAMFANLEquations.jl")**
 
-
+in the REPL.
 
 The next step is to open the notebooks. My way to do this (after installing IJulia) is to type **using IJulia** and  **notebook()** in the REPL. 
 
