@@ -91,7 +91,7 @@ These references have extensive bibliographies as does the print book. The noteb
 
 ## The examples
 
-The codes for every plot and table in the book are either in the src directory in this repository or in the notebooks. You'll get the chance to run them, change them, and make them better as you work through the notebooks. 
+The codes for every plot and table in the book are either in the src directory in this repository or in the notebooks. You'll get the chance to run them, change them, and make them better/worse/shinier as you work through the notebooks. 
 
 ## Other Nonlinear Solvers in Julia
 
