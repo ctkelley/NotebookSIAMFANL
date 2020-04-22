@@ -87,11 +87,11 @@ The references I use for theory of pseudo-transient continuation and Anderson ac
 
 (CTK15) A. Toth and C. T. Kelley, ***Convergence Analysis for Anderson Acceleration***, SIAM Journal on Numerical Analysis 53, (2015), pp 805-819. https://doi.org/10.1137/130919398
 
-These references have extensive bibliographies as does the print book. The notebook has a smaller bibliography because a lengthy list of citations is hard to parse and looks ugly in a notebook.
+These references have extensive bibliographies as does the print book. The notebooks have smaller bibliographies because a lengthy list of citations is hard to parse and looks ugly in a notebook.
 
 ## The examples
 
-The codes for every plot and table in the book are either in the src directory in this repository or in the notebooks. You'll get the chance to run them, change them, and make them better as you work through the notebook. 
+The codes for every plot and table in the book are either in the src directory in this repository or in the notebooks. You'll get the chance to run them, change them, and make them better as you work through the notebooks. 
 
 ## Other Nonlinear Solvers in Julia
 
