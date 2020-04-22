@@ -34,7 +34,7 @@ The next step is to open the notebooks. My way to do this (after installing IJul
 
 In the first code window in the notebook you will find
 
-**using SIAMFANLEquations**
+**using SIAMFANLEquations**<br>
 **using SIAMFANLEquations.TestProblems**
 
 
