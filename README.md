@@ -3,6 +3,13 @@
 
 ## [C. T. Kelley](https://ctk.math.ncsu.edu)
 
+## Contents
+
+- [Mission](#What-is-this-thing): Purpose 
+
+-[Getting Started](#Getting-Started): Things you need to do before anything works.
+
+
 ## What is this thing?
 
 These are the notebooks that come with the print book and the solvers. The solver
@@ -114,3 +121,17 @@ Laboratory that is designed for scalable performance on high-end
 supercomputers. This is a well-done (by the very best people) and important project, but not one designed
 for a novice to understand.
 
+## Support
+
+This project was partially supported by
+1. Army Research Office grant W911NF-16-1-0504 and
+2. National Science Foundation Grants
+   1. OAC-1740309
+   2. DMS-1745654
+   3. DMS-1906446
+   
+Any opinions, findings, and conclusions or
+recommendations expressed in this material are those of the author and
+do not necessarily reflect the views of the National
+Science Foundation
+or the Army Research Office.
