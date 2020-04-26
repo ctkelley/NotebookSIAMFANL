@@ -22,7 +22,7 @@
 ## If you know what to do
 
 - Clone this repository. Put the directory in your Julia load path
-- Fire up an IJulia notebook and open FA.ipynb
+- Fire up an IJulia notebook and open SIAMFANL.ipynb
 - Follow the directions
 
 
