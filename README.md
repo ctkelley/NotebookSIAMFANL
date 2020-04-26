@@ -11,6 +11,8 @@
 
 - [How much Julia do you need to know?](#Julia-Prerequisites): You need to know something about Julia
 
+- [The Algorithms](#The-Algorithms): Pointers to the literature for theory
+
 
 ## What is this thing?
 
