@@ -7,7 +7,9 @@
 
 - [Mission](#What-is-this-thing): Purpose 
 
--[Getting Started](#Getting-Started): Things you need to do before anything works.
+- [Getting Started](#Getting-Started): Things you need to do before anything works.
+
+- [How much Julia do you need to know](How-much-Julia-do-you-need-to-know?)
 
 
 ## What is this thing?
@@ -61,7 +63,7 @@ All this is also in the first code window in the notebook. If Julia complains ab
 
 If you want to play with the solvers, clone the repository for the package and put that in your Julia **LOAD_PATH**.
 
-## How much Julia do you need to know? ##
+## How much Julia do you need to know? 
 
 Since this is an education project, I do not expect the reader to be an expert
 in Julia, but do expect the reader to be able to understand the codes, 
