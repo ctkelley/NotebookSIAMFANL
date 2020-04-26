@@ -7,6 +7,8 @@
 
 - [Mission](#What-is-this-thing): Purpose 
 
+- [Quick start guide](#If-you-know-what-to-do): Fast starting for those who have done this before.
+
 - [Getting Started](#Getting-Started): Things you need to do before anything works.
 
 - [How much Julia do you need to know?](#Julia-Prerequisites): You need to know something about Julia
@@ -16,6 +18,12 @@
 - [Other Nonlinear Solvers in Julia](#Other-Nonlinear-Solvers-in-Julia): Two other packages with very different missions.
 
 - [Support](#Support): Thanks!
+
+## If you know what to do
+
+- Clone this repository. Put the directory in your Julia load path
+- Fire up an IJulia notebook and open FA.ipynb
+- Follow the directions
 
 
 ## What is this thing?
