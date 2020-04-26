@@ -13,7 +13,7 @@
 
 - [The Algorithms](#The-Algorithms): Pointers to the literature for theory
 
-- [Other Nonlinear Solves in Julia](#Other-Nonlinear-Solvers-in-Julia): Two other packages with very different missions.
+- [Other Nonlinear Solvers in Julia](#Other-Nonlinear-Solvers-in-Julia): Two other packages with very different missions.
 
 - [Support](#Support): Thanks!
 
