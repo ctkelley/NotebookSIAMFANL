@@ -64,16 +64,22 @@ In the first code window in each of the notebooks you will find
 To get everything to work, you will need a few packages. LinearAlgebra, SuiteSparse, SparseArrays, AbstractFFTs, FFTW, IJjulia, JLD2, and PyPlot. I put 
 
 using LinearAlgebra
+
 using SuiteSparse
+
 using SparseArrays
+
 using AbstractFFTs
+
 using FFTW
+
 using IJulia
+
 using JLD2
 
 in my startup.jl file and do **using PyPlot** when I need it. PyPlot takes a while to get going.
 
-All this is also in the first code window in the notebook. If Julia complains about a missing package, it is your job to add it.
+All this is also in the first code window in the notebooks. If Julia complains about a missing package, it is your job to add it.
 
 If you want to play with the solvers, clone the repository for the package and put that in your Julia **LOAD_PATH**.
 
