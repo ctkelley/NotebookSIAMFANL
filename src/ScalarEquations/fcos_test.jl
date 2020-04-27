@@ -9,8 +9,8 @@ This is another snewton example.
 
 """
 function fcos_test()
-    nnout=snewton(0.0,fcosx)
-    snout=snewton(0.0,fcosx;solver="secant")
+    nnout=snewton(0.0,fcos)
+    snout=snewton(0.0,fcos;solver="secant")
  semilogy(nnout.history[:,1], abs.(nnout.history[:,2]),"k-",snout.history[:,1],
       abs.(snout.history[:,2]),"k--")
    legend(("Newton","Secant"))
