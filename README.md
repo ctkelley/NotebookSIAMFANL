@@ -65,17 +65,11 @@ To get everything to work, you will need a few packages. LinearAlgebra, SuiteSpa
 
 ```Julia
 using LinearAlgebra
-
 using SuiteSparse
-
 using SparseArrays
-
 using AbstractFFTs
-
 using FFTW
-
 using IJulia
-
 using JLD2
 ```
 
