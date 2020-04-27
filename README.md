@@ -63,6 +63,7 @@ In the first code window in each of the notebooks you will find
 
 To get everything to work, you will need a few packages. LinearAlgebra, SuiteSparse, SparseArrays, AbstractFFTs, FFTW, IJjulia, JLD2, and PyPlot. I put 
 
+```Julia
 using LinearAlgebra
 
 using SuiteSparse
@@ -76,6 +77,7 @@ using FFTW
 using IJulia
 
 using JLD2
+'''
 
 in my startup.jl file and do **using PyPlot** when I need it. PyPlot takes a while to get going.
 
