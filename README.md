@@ -5,9 +5,9 @@
 
 ## Contents
 
-- [Mission](#What-is-this-thing): Purpose 
-
 - [Quick start guide](#If-you-know-what-to-do): Fast starting for those who have done this before.
+
+- [Mission](#What-is-this-thing): Purpose 
 
 - [Getting Started](#Getting-Started): Things you need to do before anything works.
 
