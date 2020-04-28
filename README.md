@@ -21,9 +21,9 @@
 
 ## If you know what to do
 
-- Clone this repository. Put the directory in your Julia load path
-- Fire up an IJulia notebook and open SIAMFANL.ipynb
-- Follow the directions
+- Clone this repository. Put the directory in your Julia load path.
+- Fire up an IJulia notebook and open SIAMFANL.ipynb.
+- Follow the directions in the preface and the "How to get the software" sections.
 
 
 ## What is this thing?
@@ -53,7 +53,7 @@ One way to do that is to type
 
 in the REPL.
 
-The next step is to open the notebooks. My way to do this (after installing IJulia) is to type **using IJulia** and  **notebook()** in the REPL. 
+The next step is to open the notebooks. An efficient way to do this (after installing IJulia) is to type **using IJulia** and  **notebook()** in the REPL. Then navigate to the directory where the notebooks are and click on SIAMFANL.ipynb.
 
 In the first code window in each of the notebooks you will find
 
