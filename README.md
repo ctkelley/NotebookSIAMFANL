@@ -36,7 +36,7 @@ play with the notebooks. The purpose of all of these things is to enable
 the reader to learn about algorithms for nonlinear solvers. Please read the preface in 
 the first notebook (Part1) for a more detailed mission statement.
 
-The book will be published in the SIAM Fundamentals of Algorithms (FA) series.
+The book is a sequal to my 2003 book in SIAM Fundamentals of Algorithms (FA) series.
 
 The provisional title is
 
