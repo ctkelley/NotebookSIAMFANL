@@ -6,6 +6,7 @@ using Printf
 using JLD2
 using LinearAlgebra
 using SIAMFANLEquations
+using SIAMFANLEquations.TestProblems
 
 export atan_test
 export fcos_test
