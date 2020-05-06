@@ -4,13 +4,13 @@ atan_test()
 This is the Julia code for Figures 1.1 and 1.4 of the 
 Green book. 
 
-I documented the solver in snewton.jl. The challenge here
+I documented the solver in nsolsc.jl. The challenge here
 is to get the plots to do what I want. I do not recommend your
 studying this code.
 
 The call to the solver is pretty simple
 
-local_hist = snewton(1.0, atan; fp = fpatan, rtol = 1.e-8, maxit = 20)
+local_hist = nsolsc(1.0, atan; fp = fpatan, rtol = 1.e-8, maxit = 20)
 
 and fp_atan(x) = 1.0/(1.0+x^2)
 
@@ -23,7 +23,7 @@ function atan_test()
     # Figure 1.1 on page 3 of the Green book.
     #
 
-    local_hist = snewton(1.0, atan; fp = fpatan, rtol = 1.e-8, maxit = 20)
+    local_hist = nsolsc(1.0, atan; fp = fpatan, rtol = 1.e-8, maxit = 20)
     iplot = true
     if iplot
         figure(1)
@@ -62,7 +62,7 @@ function atan_test()
         #
         # Now for figure 1.4. 
         #
-        global_hist = snewton(
+        global_hist = nsolsc(
             10.0,
             atan;
             fp = fpatan, rtol = 1.e-8, atol = 1.e-10, maxit = 20
