@@ -17,6 +17,8 @@
 
 - [Other Nonlinear Solvers in Julia](#Other-Nonlinear-Solvers-in-Julia): Two other packages with very different missions.
 
+- [Notebook Problems?](#Notebook-Problems): What? You're having trouble starting the notebook?
+
 - [Support](#Support): Thanks!
 
 ## If you know what to do
@@ -138,6 +140,22 @@ Sundials is a suite of solvers from Lawrence Livermore National
 Laboratory that is designed for scalable performance on high-end
 supercomputers. This is a well-done (by the very best people) and important project, but not one designed
 for a novice to understand.
+
+## Notebook Problems
+ 
+It is very important that PyPlot and IJulia use the same version of conda. If the notebook is complaining about the kernel, that is likely the issue. You have a good chance of fixing this with the __update__ command within pkg. If you did the update when you installed this application and are still having problems. Try typing __update IJulia__ from pkg. If that fails ...
+
+The worst case, which has happened to me more than once, is that you'll have to 
+
+   1. Move .julia/config to a safe place.
+      1. Your startup.jl lives in config. Don't lose it.
+        
+   2. Delete or move .julia
+   
+   3. Run Julia (which will create a new .julia in your home directory)
+      1. Put your config diectory back in there. 
+        
+   4. Reinstall ALL YOUR PACKAGES! That is a real pain, but has never failed to fix the problem for me.
 
 ## Support
 
