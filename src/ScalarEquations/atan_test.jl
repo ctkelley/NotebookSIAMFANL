@@ -58,7 +58,7 @@ function atan_test()
         plot(xval[3], 0, "ko")
         ylabel("atan(x)")
         xlabel("x")
-        title("Figure 1.1 from Green Book")
+#        title("Figure 1.1 from Green Book")
         #
         # Now for figure 1.4. 
         #
@@ -83,7 +83,7 @@ function atan_test()
         xlim(0, 12)
         ylabel("Absolute Nonlinear Residual")
         xlabel("Nonlinear iterations")
-        title("Figure 1.4 from Green Book")
+#        title("Figure 1.4 from Green Book")
 
         return (ithistl = local_hist, ithistg = global_hist)
     end
