@@ -28,10 +28,10 @@ legend(("Newton","Chord","Secant"))
 return nnout
 end
 
-function ftanx(x)
-   return tan(x) - x
-end
+#function ftanx(x)
+#   return tan(x) - x
+#end
 
-function ftanxp(x)
-   return sec(x)^2 - 1
-end
+#function ftanxp(x)
+#   return sec(x)^2 - 1
+#end
