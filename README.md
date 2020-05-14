@@ -17,7 +17,7 @@
 
 - [Other Nonlinear Solvers in Julia](#Other-Nonlinear-Solvers-in-Julia): Two other packages with very different missions.
 
-- [Notebook Problems?](#Notebook-Problems): What? You're having trouble starting the notebook?
+- [Notebook Problems?](#Notebook-Problems) What? You're having trouble starting the notebook?
 
 - [Support](#Support): Thanks!
 
