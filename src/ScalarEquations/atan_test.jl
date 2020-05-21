@@ -29,6 +29,7 @@ function atan_test()
         figure(1)
         yval = local_hist.history[:, 2]
         xval = local_hist.solhist
+        yval=atan.(xval)
         xtval = -1.2:.01:1.2
         ytval = atan.(xtval)
         ztval = zeros(size(xtval))
@@ -58,8 +59,8 @@ function atan_test()
         plot(xval[3], 0, "ko")
         ylabel("atan(x)")
         xlabel("x")
-#        title("Figure 1.1 from Green Book")
-        #
+# title("Figure 1.1 from Green Book")
+#
         # Now for figure 1.4. 
         #
         global_hist = nsolsc(
