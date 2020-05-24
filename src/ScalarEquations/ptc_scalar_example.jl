@@ -22,12 +22,12 @@ uunstable=0.0
 #
 # Convergence to two different solutions.
 #
-ptcdata1=ptcsc(u0,sptest; dt0=1.0, rtol=1.e-12)
+ptcdata1=ptcsc(sptest,u0; dt0=1.0, rtol=1.e-12)
 ptcerr=ptcdata1.solhist.-ustable
 ptcfun=ptcdata1.history[:,2]
 ptcdt=ptcdata1.history[:,3]
 pival=ptcdata1.history[:,1]
-newtdata=snewton(u0,sptest)
+newtdata=nsolsc(sptest,u0)
 nival=newtdata.history[:,1]
 itlim=length(pival)
 newterr=newtdata.history[:,3]
@@ -61,6 +61,6 @@ PyPlot.tight_layout()
 #PyPlot.suptitle(bigtitle)
 
 
-ptcdata2=ptcsc(u0,sptest; dt0=1.e-2,maxit=1000)
+ptcdata2=ptcsc(sptest,u0; dt0=1.e-2,maxit=1000)
 return (ptcdata=ptcdata1, newtdata=newtdata)
 end

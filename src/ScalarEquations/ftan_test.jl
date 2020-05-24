@@ -9,9 +9,9 @@ See the notebook.
 
 """
 function ftan_test()
-    nnout=nsolsc(4.5,ftanx; maxit=14, rtol=1.e-17, atol=1.e-17)
-    chout=nsolsc(4.5,ftanx; maxit=14, rtol=1.e-17, atol=1.e-17, solver="chord")
-    scout=nsolsc(4.5,ftanx; maxit=6, rtol=1.e-17, atol=1.e-17, solver="secant")
+    nnout=nsolsc(ftanx,4.5; maxit=14, rtol=1.e-17, atol=1.e-17)
+    chout=nsolsc(ftanx,4.5; maxit=14, rtol=1.e-17, atol=1.e-17, solver="chord")
+    scout=nsolsc(ftanx,4.5; maxit=6, rtol=1.e-17, atol=1.e-17, solver="secant")
 figure(1)
  semilogy(nnout.history[1:6,1], abs.(nnout.history[1:6,2]),"k-")
 ylabel("Log Absolute Nonlinear Residual")

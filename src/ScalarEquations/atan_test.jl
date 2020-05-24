@@ -23,7 +23,7 @@ function atan_test()
     # Figure 1.1 on page 3 of the Green book.
     #
 
-    local_hist = nsolsc(1.0, atan; fp = fpatan, rtol = 1.e-8, maxit = 20)
+    local_hist = nsolsc(atan,1.0; fp = fpatan, rtol = 1.e-8, maxit = 20)
     iplot = true
     if iplot
         figure(1)
