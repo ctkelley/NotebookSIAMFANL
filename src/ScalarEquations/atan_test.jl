@@ -27,7 +27,7 @@ function atan_test()
     iplot = true
     if iplot
         figure(1)
-        yval = local_hist.history[:, 2]
+#        yval = local_hist.history[:, 2]
         xval = local_hist.solhist
         yval=atan.(xval)
         xtval = -1.2:.01:1.2
@@ -64,12 +64,13 @@ function atan_test()
         # Now for figure 1.4. 
         #
         global_hist = nsolsc(
-            10.0,
-            atan;
+            atan,
+            10.0;
             fp = fpatan, rtol = 1.e-8, atol = 1.e-10, maxit = 20
         )
-        rval = global_hist.history[:, 2]
-        ival = global_hist.history[:, 1]
+        rval = global_hist.history
+        itc=length(rval)
+        ival = 0:itc-1
         figure(2)
         semilogy(ival, abs.(rval), "k-")
         plt.text(ival[2], abs(rval[2] * 5), "3")

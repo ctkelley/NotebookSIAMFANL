@@ -24,13 +24,14 @@ uunstable=0.0
 #
 ptcdata1=ptcsc(sptest,u0; dt0=1.0, rtol=1.e-12)
 ptcerr=ptcdata1.solhist.-ustable
-ptcfun=ptcdata1.history[:,2]
-ptcdt=ptcdata1.history[:,3]
-pival=ptcdata1.history[:,1]
+ptcfun=ptcdata1.history[:,1]
+ptcdt=ptcdata1.history[:,2]
 newtdata=nsolsc(sptest,u0)
-nival=newtdata.history[:,1]
-itlim=length(pival)
-newterr=newtdata.history[:,3]
+nival=length(newtdata.history)
+nival=0:nival-1
+itlim=length(ptcfun)
+pival=0:itlim-1
+newterr=newtdata.history
 #
 # Newton errors vs PTC errors
 #
