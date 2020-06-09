@@ -1,5 +1,5 @@
 """
-fig1.1()
+function fig1.1()
 
 This is the Julia code for Figure 1.1 in the book.
 
@@ -11,9 +11,7 @@ The call to the solver is pretty simple
 
 local_hist = nsolsc(1.0, atan; fp = fpatan, rtol = 1.e-8, maxit = 20)
 
-and fp_atan(x) = 1.0/(1.0+x^2)
-
-is in this .jl file.
+fp_atan(x) = 1.0/(1.0+x^2) comes from SIAMFANLTestProblems
 
 """
 
