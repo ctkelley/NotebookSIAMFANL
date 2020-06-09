@@ -1,8 +1,7 @@
 """
-atan_test()
+fig1.1()
 
-This is the Julia code for Figures 1.1 and 1.4 of the 
-Green book. 
+This is the Julia code for Figure 1.1 in the book.
 
 I documented the solver in nsolsc.jl. The challenge here
 is to get the plots to do what I want. I do not recommend your
@@ -12,15 +11,14 @@ The call to the solver is pretty simple
 
 local_hist = nsolsc(1.0, atan; fp = fpatan, rtol = 1.e-8, maxit = 20)
 
-and fpatan(x) = 1.0/(1.0+x^2)
+and fp_atan(x) = 1.0/(1.0+x^2)
 
-is in this .jl file. 
+is in this .jl file.
 
 """
-function atan_test()
 
     #
-    # Figure 1.1 on page 3 of the Green book.
+    # Figure 1.1 from the print book.
     #
 
     local_hist = nsolsc(atan,1.0; fp = fpatan, rtol = 1.e-8, maxit = 20)
@@ -58,35 +56,6 @@ function atan_test()
         plot(xval[3], 0, "ko")
         ylabel("atan(x)")
         xlabel("x")
-# title("Figure 1.1 from Green Book")
-#
-        # Now for figure 1.4. 
-        #
-        global_hist = nsolsc(
-            atan,
-            10.0;
-            fp = fpatan, rtol = 1.e-8, atol = 1.e-10, maxit = 20
-        )
-        rval = global_hist.history
-        itc=length(rval)
-        ival = 0:itc-1
-        figure(2)
-        semilogy(ival, abs.(rval), "k-")
-        plt.text(ival[2], abs(rval[2] * 5), "3")
-        plot(ival[2], abs(rval[2]), "ko")
-        plt.text(ival[3], abs(rval[3] * 5), "3")
-        plot(ival[3], abs(rval[3]), "ko")
-        plt.text(ival[4], abs(rval[4] * 5), "2")
-        plot(ival[4], abs(rval[4]), "ko")
-        plt.text(ival[5], abs(rval[5] * 5), "2")
-        plot(ival[5], abs(rval[5]), "ko")
-        ylim(1.e-11, 1000)
-        xlim(0, 12)
-        ylabel("Absolute Nonlinear Residual")
-        xlabel("Nonlinear iterations")
-#        title("Figure 1.4 from Green Book")
-
-        return (ithistl = local_hist, ithistg = global_hist)
-    end
-
+        title("Figure 1.1 from print book")
 end
+
