@@ -11,7 +11,7 @@
 
 - [Getting Started](#Getting-Started): Things you need to do before anything works.
 
-- [How much Julia do you need to know?](#Julia-Prerequisites): You need to know something about Julia
+- [How much Julia do you need to know?](#Julia-Prerequisites): You need to know something about Julia. You do not need to be an expert.
 
 - [The Algorithms](#The-Algorithms): Pointers to the literature for theory
 
