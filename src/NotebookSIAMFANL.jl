@@ -13,9 +13,9 @@ export ftan_test
 export ptc_scalar_example
 export fig1dot1
 
-include("ScalarEquations/atan_test.jl")
-include("ScalarEquations/ftan_test.jl")
-include("ScalarEquations/ptc_scalar_example.jl")
-include("ScalarEquations/fig1dot1.jl")
+include("Chapter1/atan_test.jl")
+include("Chapter1/ftan_test.jl")
+include("Chapter1/ptc_scalar_example.jl")
+include("Chapter1/fig1dot1.jl")
 
 end # module
