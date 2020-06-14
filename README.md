@@ -15,7 +15,7 @@
 
 - [The Algorithms](#The-Algorithms): Pointers to the literature for theory
 
-- [Other Nonlinear Solvers in Julia](#Other-Nonlinear-Solvers-in-Julia): Two other packages with very different missions.
+- [Other Nonlinear Solvers in Julia](#Other-Nonlinear-Solvers-in-Julia): Three other packages with very different missions.
 
 - [Notebook Problems?](#Notebook-Problems) What? You're having trouble starting the notebook?
 
