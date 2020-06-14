@@ -7,7 +7,7 @@
 
 - [Quick start guide](#If-you-know-what-to-do): Fast starting for those who have done this before.
 
-- [Mission](#What-is-this-thing): Purpose 
+- [Mission](#What-is-this-thing): What is this thing and why do you care?
 
 - [Getting Started](#Getting-Started): Things you need to do before anything works.
 
