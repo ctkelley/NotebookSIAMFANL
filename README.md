@@ -126,7 +126,7 @@ The codes for every plot and table in the book are either in the src directory i
 ## Other Nonlinear Solvers in Julia
 
 We have a very different mission from that of the other nonlinear solver
-packages in Julia. Two of the most complete packages are NLsolve.jl and Sundials.jl.
+packages in Julia. Three of the most complete packages are NLsolve.jl, Sundials.jl and BifurcationKit.jl.
 
 Solvers like NLsolve.jl
 
@@ -143,6 +143,12 @@ Sundials is a suite of solvers from Lawrence Livermore National
 Laboratory that is designed for scalable performance on high-end
 supercomputers. This is a well-done (by the very best people) and important project, but not one designed
 for a novice to understand.
+
+The pathfollowing and bifurcation analysis package BifurcationKit.jl
+
+https://github.com/rveltz/BifurcationKit.jl
+
+has speical-purpose nonlinear solvers that communicate well wiht continuation algorithms. 
 
 ## Notebook Problems
  
