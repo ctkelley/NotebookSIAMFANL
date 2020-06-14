@@ -38,6 +38,9 @@ the first notebook (Part1) for a more detailed mission statement.
 
 The book is a sequal to my 2003 book in SIAM Fundamentals of Algorithms (FA) series.
 
+(Kel03) [***Solving Nonlinear Equations with Newton's Method***](https://my.siam.org/Store/Product/viewproduct/?ProductId=841) , Fundamentals of Algorithms 1, SIAM 2003
+
+
 The provisional title is
 
 **Solving Nonlinear Equations with Iterative Methods: Solvers and Examples in Julia**
