@@ -43,6 +43,6 @@ figure(3)
         xlim(0, 12)
         ylabel("Absolute Nonlinear Residual")
         xlabel("Nonlinear iterations")
-        title("Figure 1.4 from Green Book")
+        title("Figure 1.4 from print book")
     end
 

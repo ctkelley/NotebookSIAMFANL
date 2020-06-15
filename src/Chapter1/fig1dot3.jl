@@ -25,6 +25,7 @@ sccounter, scout.history,"k-."
 ylabel("Log Absolute Nonlinear Residual")
 xlabel("Nonlinear Iterations")
 legend(("Newton","Chord","Secant"))
+title("Figure 1.3 from print book")
 #return nnout
 end
 

@@ -26,6 +26,7 @@ xlabel("Nonlinear Iterations")
 plt.text(4.1, 2.e-15,"Stagnation")
 ylabel("Log Absolute Nonlinear Residual")
 xlabel("Nonlinear Iterations")
+title("Figure 1.2 from print book")
 #return nnout
 end
 
