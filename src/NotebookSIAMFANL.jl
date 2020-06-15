@@ -3,7 +3,6 @@ module NotebookSIAMFANL
 using PyPlot
 using LaTeXStrings
 using Printf
-using JLD2
 using LinearAlgebra
 using SIAMFANLEquations
 using SIAMFANLEquations.TestProblems
