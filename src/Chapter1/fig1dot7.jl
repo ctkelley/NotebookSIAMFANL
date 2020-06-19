@@ -23,42 +23,24 @@ uunstable=0.0
 #
 # Look at how dt0 changes things.
 #
-ptcdata1=ptcsc(sptest,x0; dt0=1.0, rtol=1.e-12)
-ptcerr=ptcdata1.solhist.-ustable
-ptcfun=ptcdata1.history
-newtdata=nsolsc(sptest,x0)
-nival=length(newtdata.history)
-nival=0:nival-1
-itlim=length(ptcfun)
-pival=0:itlim-1
-newterr=abs.(newtdata.solhist)
-newtresid=newtdata.history
-#
-# Newton errors vs PTC errors
-#
-figure(1)
-semilogy(pival,abs.(ptcerr),"k--",nival,abs.(newterr),"k-")
-PTClabel=L"$\Psi$TC"
-legend((PTClabel,"Newton"))
-xlabel("Iterations",fontsize="12")
-gylabele=L"$|x-x^*|$"
-ylabel(gylabele,fontsize="12")
-axis([0, itlim, 1.e-17, 1.0])
-#
-# Look at how |f| and dt almost mirror each other, as the forumla
-# says they should.
-#
-subplot(1,2,2)
-semilogy(pival,abs.(ptcfun),"k--",nival,newtresid,"k-")
-xlabel("Iterations",fontsize="12")
-gylabelfdt=L"$|f|$"
-ylabel(gylabelfdt,fontsize="12")
-legend((PTClabel,"Newton"))
-axis([0, itlim, 1.e-15, 1.0])
-PyPlot.tight_layout()
-#bigtitle=L"$\Psi TC$ results"
-#PyPlot.suptitle(bigtitle)
+dtlist=[1.0, 1.e-1, 1.e-2, 1.e-3, 1.e-4]
+labels=( 
+L"$dt_0 = 1.0$", 
+L"$dt_0 = 10^{-1}$",
+L"$dt_0 = 10^{-2}$",
+L"$dt_0 = 10^{-3}$",
+L"$dt_0 = 10^{-4}$"
+)
+outdata=[]
+for id=1:2
+   dti=10.0^(1-id)
+   ptcdata1=ptcsc(sptest,x0; dt0=dti, rtol=1.e-12, maxit=1000)
+   push!(outdata,ptcdata1)
+end
+plothist( outdata[1], labels[1], outdata[2], labels[2])
+#plothist( outdata[1], outdata[2], outdata[3], outdata[4], outdata[5],
+#labels[1], labels[2], labels[3], labels[4], labels[5])
 
 #ptcdata2=ptcsc(sptest,x0; dt0=1.e-2,maxit=1000)
-return (ptcdata=ptcdata1, newtdata=newtdata)
+return outdata
 end
