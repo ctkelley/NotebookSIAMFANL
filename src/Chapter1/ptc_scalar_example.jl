@@ -25,13 +25,13 @@ uunstable=0.0
 ptcdata1=ptcsc(sptest,u0; dt0=1.0, rtol=1.e-12)
 ptcerr=ptcdata1.solhist.-ustable
 ptcfun=ptcdata1.history[:,1]
-ptcdt=ptcdata1.history[:,2]
 newtdata=nsolsc(sptest,u0)
 nival=length(newtdata.history)
 nival=0:nival-1
 itlim=length(ptcfun)
 pival=0:itlim-1
-newterr=newtdata.history
+newterr=abs.(newtdata.solhist)
+newtresid=newtdata.history
 #
 # Newton errors vs PTC errors
 #
@@ -49,18 +49,15 @@ axis([0, itlim, 1.e-17, 1.0])
 # says they should.
 #
 subplot(1,2,2)
-semilogy(pival,abs.(ptcfun),"k-",pival,ptcdt,"k--")
+semilogy(pival,abs.(ptcfun),"k--",nival,newtresid,"k-")
 xlabel("Iterations",fontsize="12")
-gylabelfdt=L"$|f|$ and $dt$"
-gylabelf=L"$|f|$"
-gylabeldt=L"$dt$"
+gylabelfdt=L"$|f|$"
 ylabel(gylabelfdt,fontsize="12")
-legend((gylabelf, gylabeldt))
-axis([0, itlim, 1.e-15, 1.e15])
+legend((PTClabel,"Newton"))
+axis([0, itlim, 1.e-15, 1.0])
 PyPlot.tight_layout()
 #bigtitle=L"$\Psi TC$ results"
 #PyPlot.suptitle(bigtitle)
-
 
 ptcdata2=ptcsc(sptest,u0; dt0=1.e-2,maxit=1000)
 return (ptcdata=ptcdata1, newtdata=newtdata)
