@@ -1,7 +1,7 @@
 """
-ptc_scalar_example()
+fig1dot6()
 
-Make the ptc plots for the scalar example.
+Make Figure 1.6 in the print book.
 
 f(x) = x^3 - lambda x = 0 with lambda = 1/2
 
@@ -15,7 +15,7 @@ a big one so that I would not have to spend forever waiting for the
 transients to go away. 
 
 """
-function ptc_scalar_example()
+function fig1dot6()
 x0=.1
 ustable=.5*sqrt(2.0)
 uunstable=0.0
@@ -56,9 +56,7 @@ ylabel(gylabelfdt,fontsize="12")
 legend((PTClabel,"Newton"))
 axis([0, itlim, 1.e-15, 1.0])
 PyPlot.tight_layout()
-#bigtitle=L"$\Psi TC$ results"
-#PyPlot.suptitle(bigtitle)
+title("Figure 1.5 from print book")
 
-#ptcdata2=ptcsc(sptest,x0; dt0=1.e-2,maxit=1000)
 return (ptcdata=ptcdata1, newtdata=newtdata)
 end

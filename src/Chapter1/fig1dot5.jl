@@ -40,6 +40,6 @@ function fig1dot5()
         xlim(0, 12)
         ylabel("Absolute Nonlinear Residual")
         xlabel("Nonlinear iterations")
-#        title("Figure 1.5 from print book")
+        title("Figure 1.5 from print book")
     end
 
