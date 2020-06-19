@@ -24,7 +24,7 @@ uunstable=0.0
 #
 ptcdata1=ptcsc(sptest,u0; dt0=1.0, rtol=1.e-12)
 ptcerr=ptcdata1.solhist.-ustable
-ptcfun=ptcdata1.history[:,1]
+ptcfun=ptcdata1.history
 newtdata=nsolsc(sptest,u0)
 nival=length(newtdata.history)
 nival=0:nival-1
