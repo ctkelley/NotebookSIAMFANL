@@ -3,12 +3,12 @@ ptc_scalar_example()
 
 Make the ptc plots for the scalar example.
 
-f(u) = u^3 - lambda u = 0 with lambda = 1/2
+f(x) = x^3 - lambda x = 0 with lambda = 1/2
 
-The answer(s!!) are u=0, -sqrt(2)/2, and sqrt(2)/2.
+The answer(s!!) are x=0, -sqrt(2)/2, and sqrt(2)/2.
 
-The initial iterate is u0=.1. You'll see Newton converge to the 
-unstable soluution u=0 and ptc do it's job and get u=sqrt(2).
+The initial iterate is x0=.1. You'll see Newton converge to the 
+unstable soluution x=0 and ptc do it's job and get x=sqrt(2).
 
 You might want to experiment with different values of dt0. I picked
 a big one so that I would not have to spend forever waiting for the
@@ -16,16 +16,16 @@ transients to go away.
 
 """
 function ptc_scalar_example()
-u0=.1
+x0=.1
 ustable=.5*sqrt(2.0)
 uunstable=0.0
 #
 # Convergence to two different solutions.
 #
-ptcdata1=ptcsc(sptest,u0; dt0=1.0, rtol=1.e-12)
+ptcdata1=ptcsc(sptest,x0; dt0=1.0, rtol=1.e-12)
 ptcerr=ptcdata1.solhist.-ustable
 ptcfun=ptcdata1.history
-newtdata=nsolsc(sptest,u0)
+newtdata=nsolsc(sptest,x0)
 nival=length(newtdata.history)
 nival=0:nival-1
 itlim=length(ptcfun)
@@ -41,7 +41,7 @@ semilogy(pival,abs.(ptcerr),"k--",nival,abs.(newterr),"k-")
 PTClabel=L"$\Psi$TC"
 legend((PTClabel,"Newton"))
 xlabel("Iterations",fontsize="12")
-gylabele=L"$|u-u^*|$"
+gylabele=L"$|x-x^*|$"
 ylabel(gylabele,fontsize="12")
 axis([0, itlim, 1.e-17, 1.0])
 #
@@ -59,6 +59,6 @@ PyPlot.tight_layout()
 #bigtitle=L"$\Psi TC$ results"
 #PyPlot.suptitle(bigtitle)
 
-ptcdata2=ptcsc(sptest,u0; dt0=1.e-2,maxit=1000)
+#ptcdata2=ptcsc(sptest,x0; dt0=1.e-2,maxit=1000)
 return (ptcdata=ptcdata1, newtdata=newtdata)
 end
