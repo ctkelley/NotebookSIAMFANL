@@ -32,14 +32,14 @@ L"$dt_0 = 10^{-3}$",
 L"$dt_0 = 10^{-4}$"
 )
 outdata=[]
-for id=1:2
+for id=1:5
    dti=10.0^(1-id)
    ptcdata1=ptcsc(sptest,x0; dt0=dti, rtol=1.e-12, maxit=1000)
    push!(outdata,ptcdata1)
 end
-plothist( outdata[1], labels[1], outdata[2], labels[2])
-#plothist( outdata[1], outdata[2], outdata[3], outdata[4], outdata[5],
-#labels[1], labels[2], labels[3], labels[4], labels[5])
+plothist( outdata[1], labels[1], outdata[2], labels[2],
+outdata[3], labels[3], outdata[4], labels[4],
+outdata[5], labels[5]; semilogflag=false)
 
 #ptcdata2=ptcsc(sptest,x0; dt0=1.e-2,maxit=1000)
 return outdata
