@@ -1,4 +1,4 @@
-function plothist(avals,labelarray; semilogflag=true)
+function plothist(avals,labelarray; semilogflag=true, ptitle="")
    fmtplot=["k-","k--","k-.","k-.","k:"]
    nplot=length(labelarray)
 if nplot > 5
@@ -15,6 +15,9 @@ end
    end
 end
 legend(labelarray)
+if ptitle != ""
+   title(ptitle)
+end
 ylabel("Nonlinear Residual Norm")
 xlabel("Nonlinear Iterations")
 end

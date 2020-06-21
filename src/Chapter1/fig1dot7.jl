@@ -37,11 +37,7 @@ for id=1:5
    ptcdata1=ptcsc(sptest,x0; dt0=dti, rtol=1.e-6, maxit=1000000)
    push!(outdata,ptcdata1.history)
 end
-#plothist( outdata[1], labels[1], outdata[2], labels[2],
-#outdata[3], labels[3], outdata[4], labels[4],
-#outdata[5], labels[5]; semilogflag=false)
-plothist(outdata,labels; semilogflag=false)
-
-#ptcdata2=ptcsc(sptest,x0; dt0=1.e-2,maxit=1000)
+#plothist(outdata,labels; semilogflag=false, ptitle="Figure 1.7 in print book")
+plothist(outdata,labels; semilogflag=false, ptitle="")
 return outdata
 end
