@@ -1,21 +1,17 @@
-function plothist(args...; semilogflag=true)
-   fmtplot=("k-","k--","k-.","k-.","k>:")
-   na=length(args)
-if na > 10
+function plothist(avals,labelarray; semilogflag=true)
+   fmtplot=["k-","k--","k-.","k-.","k:"]
+   nplot=length(labelarray)
+if nplot > 5
    error("Too many lines for the graph. Use fewer.")
 end
-   nplot=Int(na/2)
-   labelarray=Array{String,1}(undef,nplot)
    figure(1)
-   for iq=1:nplot
-   ip=2*iq-1
-   labelarray[iq]=args[ip+1]
-   itmax=length(args[ip].history)
+   for ip=1:nplot
+   itmax=length(avals[ip])
    itc=0:itmax-1
    if semilogflag 
-      semilogy(itc,args[ip].history,fmtplot[iq])
+      semilogy(itc,avals[ip],fmtplot[ip])
    else
-      loglog(itc,args[ip].history,fmtplot[iq])
+      loglog(itc,avals[ip],fmtplot[ip])
    end
 end
 legend(labelarray)

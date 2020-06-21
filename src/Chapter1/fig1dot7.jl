@@ -24,24 +24,23 @@ uunstable=0.0
 # Look at how dt0 changes things.
 #
 dtlist=[1.0, 1.e-1, 1.e-2, 1.e-3, 1.e-4]
-labels=( 
+labels=[ 
 L"$dt_0 = 1.0$", 
 L"$dt_0 = 10^{-1}$",
 L"$dt_0 = 10^{-2}$",
 L"$dt_0 = 10^{-3}$",
 L"$dt_0 = 10^{-4}$"
-)
+]
 outdata=[]
 for id=1:5
    dti=10.0^(1-id)
    ptcdata1=ptcsc(sptest,x0; dt0=dti, rtol=1.e-6, maxit=1000000)
    push!(outdata,ptcdata1.history)
 end
-#argtest=[outdata[1], labels[1], outdata[2], labels[2]]
-#plothist(argtest...)
-plothist( outdata[1], labels[1], outdata[2], labels[2],
-outdata[3], labels[3], outdata[4], labels[4],
-outdata[5], labels[5]; semilogflag=false)
+#plothist( outdata[1], labels[1], outdata[2], labels[2],
+#outdata[3], labels[3], outdata[4], labels[4],
+#outdata[5], labels[5]; semilogflag=false)
+plothist(outdata,labels; semilogflag=false)
 
 #ptcdata2=ptcsc(sptest,x0; dt0=1.e-2,maxit=1000)
 return outdata
