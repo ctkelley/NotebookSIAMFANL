@@ -1,7 +1,7 @@
 function plothist(avals,labelarray; semilogflag=true, ptitle="")
-   fmtplot=["k-","k--","k-.","k-.","k:"]
+   fmtplot=["k-","k--","k-.","k:"]
    nplot=length(labelarray)
-if nplot > 5
+if nplot > 4
    error("Too many lines for the graph. Use fewer.")
 end
    figure(1)

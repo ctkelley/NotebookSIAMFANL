@@ -28,11 +28,10 @@ labels=[
 L"$dt_0 = 1.0$", 
 L"$dt_0 = 10^{-1}$",
 L"$dt_0 = 10^{-2}$",
-L"$dt_0 = 10^{-3}$",
-L"$dt_0 = 10^{-4}$"
+L"$dt_0 = 10^{-3}$"
 ]
 outdata=[]
-for id=1:5
+for id=1:4
    dti=10.0^(1-id)
    ptcdata1=ptcsc(sptest,x0; dt0=dti, rtol=1.e-6, maxit=1000000)
    push!(outdata,ptcdata1.history)
