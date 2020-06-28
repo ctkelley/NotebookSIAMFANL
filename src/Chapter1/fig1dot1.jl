@@ -9,7 +9,7 @@ studying this code.
 
 The call to the solver is pretty simple
 
-local_hist = nsolsc(1.0, atan; fp = fpatan, rtol = 1.e-8, maxit = 20)
+local_hist = nsolsc(1.0, atan, fpatan; rtol = 1.e-8, maxit = 20)
 
 fp_atan(x) = 1.0/(1.0+x^2) comes from SIAMFANLTestProblems
 
@@ -20,7 +20,7 @@ function fig1dot1()
     # Figure 1.1 from the print book.
     #
 
-    local_hist = nsolsc(atan,1.0; fp = fpatan, rtol = 1.e-8, maxit = 20)
+    local_hist = nsolsc(atan,1.0,fpatan; rtol = 1.e-8, maxit = 20)
     iplot = true
     if iplot
         figure(1)

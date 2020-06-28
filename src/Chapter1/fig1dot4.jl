@@ -10,7 +10,7 @@ studying this code.
 
 The call to the solver is pretty simple
 
-global_hist = nsolsc(1.0, atan; fp = fpatan, rtol = 1.e-8, maxit = 20)
+global_hist = nsolsc(1.0, atan, fpatan; rtol = 1.e-8, maxit = 20)
 
 and fpatan(x) = 1.0/(1.0+x^2)
 
@@ -23,8 +23,8 @@ function fig1dot4()
 #
         global_hist = nsolsc(
             atan,
-            10.0;
-            fp = fpatan, rtol = 1.e-8, atol = 1.e-10, maxit = 20,
+            10.0,
+            fpatan; rtol = 1.e-8, atol = 1.e-10, maxit = 20,
             armfix=true
         )
 figure(3)
