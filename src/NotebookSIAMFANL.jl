@@ -18,6 +18,7 @@ export fig1dot4
 export fig1dot5
 export fig1dot6
 export fig1dot7
+export MyFunction
 
 export plothist
 
@@ -29,6 +30,7 @@ include("Chapter1/fig1dot5.jl")
 include("Chapter1/fig1dot6.jl")
 include("Chapter1/fig1dot7.jl")
 include("Chapter1/tab1dot1.jl")
+include("Chapter1/MyFunction.jl")
 include("Tools/plothist.jl")
 
 end # module

@@ -22,7 +22,7 @@ uunstable=0.0
 #
 # Convergence to two different solutions.
 #
-ptcdata1=ptcsc(sptest,x0; dt0=1.0, rtol=1.e-12)
+ptcdata1=ptcsolsc(sptest,x0; dt0=1.0, rtol=1.e-12)
 ptcerr=ptcdata1.solhist.-ustable
 ptcfun=ptcdata1.history
 newtdata=nsolsc(sptest,x0)
@@ -37,6 +37,7 @@ newtresid=newtdata.history
 #
 figure(1)
 subplot(1,2,1)
+title("Figure 1.6 from print book")
 semilogy(pival,abs.(ptcerr),"k--",nival,abs.(newterr),"k-")
 PTClabel=L"$\Psi$TC"
 legend((PTClabel,"Newton"))
@@ -56,7 +57,6 @@ ylabel(gylabelfdt,fontsize="12")
 legend((PTClabel,"Newton"))
 axis([0, itlim, 1.e-15, 1.0])
 PyPlot.tight_layout()
-title("Figure 1.5 from print book")
 
 return (ptcdata=ptcdata1, newtdata=newtdata)
 end

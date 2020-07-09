@@ -33,10 +33,10 @@ L"$dt_0 = 10^{-3}$"
 outdata=[]
 for id=1:4
    dti=10.0^(1-id)
-   ptcdata1=ptcsc(sptest,x0; dt0=dti, rtol=1.e-6, maxit=1000000)
+   ptcdata1=ptcsolsc(sptest,x0; dt0=dti, rtol=1.e-6, maxit=1000000)
    push!(outdata,ptcdata1.history)
 end
-#plothist(outdata,labels; semilogflag=false, ptitle="Figure 1.7 in print book")
-plothist(outdata,labels; semilogflag=false, ptitle="")
+plothist(outdata,labels; semilogflag=false, ptitle="Figure 1.7 in print book")
+#plothist(outdata,labels; semilogflag=false, ptitle="")
 return outdata
 end
