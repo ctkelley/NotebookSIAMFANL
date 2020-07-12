@@ -133,7 +133,7 @@ Solvers like NLsolve.jl
 https://github.com/JuliaNLSolvers/NLsolve.jl
 
 are highly abstracted and very general. The Julia ecosystem has many 
-codes like this for all kinds of things. They are very useful but hard to learn from.
+codes like this for all kinds of things. They are very useful but hard to learn from. This seems to be based on Dennis and Schnabel's 1983 book. T
 
 At the high end, KINSOL is part of the Julia port of Sundials
 
@@ -148,7 +148,7 @@ The pathfollowing and bifurcation analysis package BifurcationKit.jl
 
 https://github.com/rveltz/BifurcationKit.jl
 
-has speical-purpose nonlinear solvers that communicate well wiht continuation algorithms. 
+has speical-purpose nonlinear solvers that communicate well with continuation algorithms. 
 
 ## Notebook Problems
  
