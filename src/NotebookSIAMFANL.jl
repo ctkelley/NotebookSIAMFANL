@@ -4,6 +4,8 @@ using PyPlot
 using LaTeXStrings
 using Printf
 using LinearAlgebra
+using SIAMFANLEquations
+using SIAMFANLEquations.TestProblems
 
 export atan_test
 export ftan_test
