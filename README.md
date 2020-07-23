@@ -87,7 +87,7 @@ If you want to play with the solvers, clone the repository for the package and p
 ## Julia Prerequisites
 
 Since this is an education project, I do not expect the reader to be an expert
-in Julia, but do expect the reader to be able to understand the codes, 
+in Julia, but do expect her/him to be able to understand the codes, 
 play with the algorithms, and wreak havoc. To that end I have tuned the 
 codes for readability by a Julia novice who knows some numerical analysis. I made the algorithmic parameters very easy to find. As part of this I have sacrificed a lot of abstraction, some generality, and a bit of performance.
 
