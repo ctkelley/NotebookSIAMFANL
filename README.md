@@ -1,5 +1,7 @@
 # Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia
 
+# Notebook version 0.1.2
+
 
 ## [C. T. Kelley](https://ctk.math.ncsu.edu)
 
