@@ -129,14 +129,9 @@ The codes for every plot and table in the book are either in the src directory i
 ## Other Nonlinear Solvers in Julia
 
 We have a very different mission from that of the other nonlinear solver
-packages in Julia. Three of the most complete packages are NLsolve.jl, Sundials.jl and BifurcationKit.jl.
-
-Solvers like NLsolve.jl
-
-https://github.com/JuliaNLSolvers/NLsolve.jl
-
-are highly abstracted and very general. The Julia ecosystem has many 
-codes like this for all kinds of things. They are very useful but hard to learn from. This seems to be based on Dennis and Schnabel's 1983 book. T
+packages in Julia. Three of the most complete packages are
+Sundials.jl,
+BifurcationKit.jl, and NLsolve.jl.
 
 At the high end, KINSOL is part of the Julia port of Sundials
 
@@ -152,6 +147,13 @@ The pathfollowing and bifurcation analysis package BifurcationKit.jl
 https://github.com/rveltz/BifurcationKit.jl
 
 has speical-purpose nonlinear solvers that communicate well with continuation algorithms. 
+
+Solvers like NLsolve.jl
+
+https://github.com/JuliaNLSolvers/NLsolve.jl
+
+are highly abstracted and very general. The Julia ecosystem has many 
+codes like this for all kinds of things. They are very useful but hard to learn from. This seems to be based on Dennis and Schnabel's 1983 book. 
 
 ## Notebook Problems
  
