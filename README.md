@@ -2,7 +2,7 @@
 
 # Notebook version 0.2.1
 
-# This is the dev branch for v0.2.1. There are breaking changes since 0.1.2. Use v0.2.1 with this version of the notebook.
+# This is the dev branch for v0.2.1. Use v0.2.1 with this version of the notebook.
 
 ## [C. T. Kelley](https://ctk.math.ncsu.edu)
 
