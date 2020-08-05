@@ -3,7 +3,7 @@ fig1dot3()
 
 This is the Julia code for the tan(x) = x example.
 
-This code makes Figure in the print book.
+This code makes Figure 1.3 in the print book.
 
 See the notebook.
 
