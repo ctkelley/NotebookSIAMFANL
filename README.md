@@ -153,7 +153,7 @@ Solvers like NLsolve.jl
 https://github.com/JuliaNLSolvers/NLsolve.jl
 
 are highly abstracted and very general. The Julia ecosystem has many 
-codes like this for all kinds of things. They are very useful but hard to learn from. Th
+codes like this for all kinds of things. They are very useful but hard to learn from. This seems to be based on Dennis and Schnabels 1983 book.
 
 ## Notebook Problems
  
