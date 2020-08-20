@@ -20,6 +20,8 @@ export fig1dot5
 export fig1dot6
 export fig1dot7
 export fig2dot1
+export fig2dot2
+export fig2dot3
 export MyFunction
 export PitchFork1
 
@@ -37,6 +39,8 @@ include("Chapter1/tab1dot1.jl")
 include("Chapter1/MyFunction.jl")
 include("Chapter1/PitchFork1.jl")
 include("Chapter2/fig2dot1.jl")
+include("Chapter2/fig2dot2.jl")
+include("Chapter2/fig2dot3.jl")
 
 include("Tools/plothist.jl")
 
