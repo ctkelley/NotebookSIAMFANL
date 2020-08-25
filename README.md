@@ -172,6 +172,8 @@ The worst case, which has happened to me more than once, is that you'll have to
       1. Put your config diectory back in there. 
         
    4. Reinstall ALL YOUR PACKAGES! That is a real pain, but has never failed to fix the problem for me.
+   
+See the tale of woe at https://discourse.julialang.org/t/ijulia-do-not-run/45409/10 , where this seems to have happened to someone else.   
 
 ## Support
 
