@@ -69,12 +69,13 @@ In the first code window in each of the notebooks you will find
 **using SIAMFANLEquations.TestProblems**
 
 
-To get everything to work, you will need a few packages. LinearAlgebra, SuiteSparse, SparseArrays, AbstractFFTs, FFTW, IJjulia, JLD2, and PyPlot. I put 
+To get everything to work, you will need a few packages. LinearAlgebra, SuiteSparse, SparseArrays, BandedMatrices, AbstractFFTs, FFTW, IJjulia, JLD2, and PyPlot. I put 
 
 ```Julia
 using LinearAlgebra
 using SuiteSparse
 using SparseArrays
+using BandedMatrides
 using AbstractFFTs
 using FFTW
 using IJulia
