@@ -18,28 +18,23 @@ is in this .jl file.
 
 """
 function fig1dot5()
-#
-# Figure 1.5. 
-#
-        global_hist = nsolsc(
-            atan,
-            10.0,
-            fpatan; rtol = 1.e-8, atol = 1.e-10, maxit = 20
-        )
-        rval = global_hist.history
-        itc=length(rval)
-        ival = 0:itc-1
-        semilogy(ival, abs.(rval), "k-")
-        plt.text(ival[2], abs(rval[2] * 5), "2")
-        plot(ival[2], abs(rval[2]), "ko")
-        plt.text(ival[3], abs(rval[3] * 5), "1")
-        plot(ival[3], abs(rval[3]), "ko")
-        plt.text(ival[4], abs(rval[4] * 5), "1")
-        plot(ival[4], abs(rval[4]), "ko")
-        ylim(1.e-16, 1000)
-        xlim(0, 12)
-        ylabel("Absolute Nonlinear Residual")
-        xlabel("Nonlinear iterations")
-        title("Figure 1.5 from print book")
-    end
-
+    #
+    # Figure 1.5. 
+    #
+    global_hist = nsolsc(atan, 10.0, fpatan; rtol = 1.e-8, atol = 1.e-10, maxit = 20)
+    rval = global_hist.history
+    itc = length(rval)
+    ival = 0:itc-1
+    semilogy(ival, abs.(rval), "k-")
+    plt.text(ival[2], abs(rval[2] * 5), "2")
+    plot(ival[2], abs(rval[2]), "ko")
+    plt.text(ival[3], abs(rval[3] * 5), "1")
+    plot(ival[3], abs(rval[3]), "ko")
+    plt.text(ival[4], abs(rval[4] * 5), "1")
+    plot(ival[4], abs(rval[4]), "ko")
+    ylim(1.e-16, 1000)
+    xlim(0, 12)
+    ylabel("Absolute Nonlinear Residual")
+    xlabel("Nonlinear iterations")
+    title("Figure 1.5 from print book")
+end
