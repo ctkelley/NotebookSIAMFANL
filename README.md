@@ -1,5 +1,7 @@
 # Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia
 
+# Warning! Breaking changes coming to nsold.jl within a week. Watch this space....
+
 # Notebook version 0.2.1
 
 # Use v0.2.1 of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook.
