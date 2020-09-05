@@ -55,13 +55,13 @@ Hence the repositories have SIAMFANL in their names.
 ## Getting started
 
 If you are reading this you have found the notebooks. The optimal way to use this is
-to clone this repository and put it in your Julia **LOAD_PATH**. Then install the packages with the solvers using **pkg**.
+to clone this repository and put it in your Julia **LOAD_PATH**. Then install the package with the solvers using **pkg**.
 
 One way to do that is to type
 
 **import Pkg; Pkg.add("https://github.com/ctkelley/SIAMFANLEquations.jl")**
 
-in the REPL.
+in the REPL. I have not registered the package yet. That should happen before Thanksgiving.
 
 The next step is to open the notebooks. An efficient way to do this (after installing IJulia) is to type **using IJulia** and  **notebook()** in the REPL. Then navigate to the directory where the notebooks are and click on SIAMFANL.ipynb.
 
