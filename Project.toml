@@ -1,3 +1,6 @@
+name="NotebookSIAMFANL"
+authors = ["C. T. (Tim) Kelley <tim_kelley@ncsu.edu>"]
+version = "0.2.1"
 [deps]
 BandedMatrices = "aae01518-5342-5314-be14-df237901396f"
 LaTeXStrings = "b964fa9f-0449-5b57-a5c2-d3ea65f4040f"
