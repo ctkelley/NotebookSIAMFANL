@@ -32,6 +32,8 @@ function fig1dot6()
     pival = 0:itlim-1
     newterr = abs.(newtdata.solhist)
     newtresid = newtdata.history
+println(length(pival), " ", length(ptcerr))
+println(length(nival)," ", length(newtresid))
     #
     # Newton errors vs PTC errors
     #

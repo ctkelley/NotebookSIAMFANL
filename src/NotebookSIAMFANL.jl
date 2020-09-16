@@ -41,6 +41,7 @@ include("Chapter1/PitchFork1.jl")
 include("Chapter2/fig2dot1.jl")
 include("Chapter2/fig2dot2.jl")
 include("Chapter2/fig2dot3.jl")
+include("Chapter2/fig2dot4.jl")
 
 include("Tools/plothist.jl")
 
