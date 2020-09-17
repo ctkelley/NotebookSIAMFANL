@@ -67,9 +67,16 @@ The next step is to open the notebooks. An efficient way to do this (after insta
 
 In the first code window in each of the notebooks you will find
 
-**using SIAMFANLEquations**<br>
-**using SIAMFANLEquations.TestProblems**
+```Jula
+using SIAMFANLEquations
+using SIAMFANLEquations.TestProblems
+using LinearAlgebra
+using PyPLot
+push!(LOAD_PATH,"./src")
+using NotebookSIAMFANL
+```
 
+Those last two lines let the notebook find the codes for the examples. You might enjoy poking around in the __/src__ subdirectory.
 
 To get everything to work, you will need a few packages. LinearAlgebra, SuiteSparse, SparseArrays, BandedMatrices, AbstractFFTs, FFTW, IJjulia, JLD2, and PyPlot. I put 
 
