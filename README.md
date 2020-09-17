@@ -28,7 +28,7 @@
 
 ## If you know what to do
 - Install the package with **Pkg.add("https://github.com/ctkelley/SIAMFANLEquations.jl")**
-- Clone this repository. Put the directory in your Julia load path.
+- Clone this repository.
 - Fire up an IJulia notebook and open SIAMFANL.ipynb.
 - Follow the directions in the preface and the "How to get the software" sections.
 
@@ -55,7 +55,7 @@ Hence the repositories have SIAMFANL in their names.
 ## Getting started
 
 If you are reading this you have found the notebooks. The optimal way to use this is
-to clone this repository and put it in your Julia **LOAD_PATH**. Then install the package with the solvers using **pkg**.
+to clone this repository. Then install the package with the solvers using **pkg**.
 
 One way to do that is to type
 
@@ -88,16 +88,16 @@ in my startup.jl file and do **using PyPlot** when I need it. PyPlot takes a whi
 
 All this is also in the first code window in the notebooks. If Julia complains about a missing package, it is your job to add it.
 
-If you want to play with the solvers, clone the repository for the package and put that in your Julia **LOAD_PATH**.
-
+If you want to play with the source code solvers, clone the repository for the package and put that in your Julia **LOAD_PATH** or use __Pkg.dev__. The most operating system independent way to do it is with __Pkd.dev__, but that is also the most challenging for a novice to figure out. 
+ 
 ## Julia Prerequisites
 
 Since this is an education project, I do not expect the reader to be an expert
 in Julia, but do expect her/him to be able to understand the codes, 
-play with the algorithms, and wreak havoc. To that end I have tuned the 
+play with the algorithms, and wreak havoc. To that end I have tuned the user interface for the
 codes for readability by a Julia novice who knows some numerical analysis. I made the algorithmic parameters very easy to find. As part of this I have sacrificed a lot of abstraction, some generality, and a bit of performance.
 
-The reader should know Julia well enough to use the package manager, install packages, use modules, and to do basic tasks in 
+The reader should know (or learn) Julia well enough to use the package manager, install packages, use modules, and to do basic tasks in 
 numerical methods (LU, SVD, QR) in Julia. You should also know how to use github to clone repositories (like this one) and put them where they need to go.
 
 ## The algorithms.
