@@ -1,8 +1,10 @@
 # Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia
 
+# Warning! nsold.jl now wants the Jacobian call to look like J!(FP,FV,x) or J!(FP,FV,x,pdata). FP and FV have swapped places.
+
 # Notebook version 0.2.1
 
-# This is the dev branch for v0.2.1. Use v0.2.1 with this version of the notebook.
+# Use v0.2.1 of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook.
 
 ## [C. T. Kelley](https://ctk.math.ncsu.edu)
 
@@ -53,13 +55,13 @@ Hence the repositories have SIAMFANL in their names.
 ## Getting started
 
 If you are reading this you have found the notebooks. The optimal way to use this is
-to clone this repository and put it in your Julia **LOAD_PATH**. Then install the packages with the solvers using **pkg**.
+to clone this repository and put it in your Julia **LOAD_PATH**. Then install the package with the solvers using **pkg**.
 
 One way to do that is to type
 
 **import Pkg; Pkg.add("https://github.com/ctkelley/SIAMFANLEquations.jl")**
 
-in the REPL.
+in the REPL. I have not registered the package yet. That should happen before Thanksgiving.
 
 The next step is to open the notebooks. An efficient way to do this (after installing IJulia) is to type **using IJulia** and  **notebook()** in the REPL. Then navigate to the directory where the notebooks are and click on SIAMFANL.ipynb.
 
@@ -69,12 +71,13 @@ In the first code window in each of the notebooks you will find
 **using SIAMFANLEquations.TestProblems**
 
 
-To get everything to work, you will need a few packages. LinearAlgebra, SuiteSparse, SparseArrays, AbstractFFTs, FFTW, IJjulia, JLD2, and PyPlot. I put 
+To get everything to work, you will need a few packages. LinearAlgebra, SuiteSparse, SparseArrays, BandedMatrices, AbstractFFTs, FFTW, IJjulia, JLD2, and PyPlot. I put 
 
 ```Julia
 using LinearAlgebra
 using SuiteSparse
 using SparseArrays
+using BandedMatrides
 using AbstractFFTs
 using FFTW
 using IJulia
@@ -172,6 +175,8 @@ The worst case, which has happened to me more than once, is that you'll have to
       1. Put your config diectory back in there. 
         
    4. Reinstall ALL YOUR PACKAGES! That is a real pain, but has never failed to fix the problem for me.
+   
+See the tale of woe at https://discourse.julialang.org/t/ijulia-do-not-run/45409/10 , where this seems to have happened to someone else.   
 
 ## Support
 
