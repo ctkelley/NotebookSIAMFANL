@@ -23,7 +23,13 @@ uunstable=0.0
 # Convergence to two different solutions.
 #
 ptcdata1=ptcsolsc(sptest,x0; dt0=1.0, rtol=1.e-12)
-ptcerr=ptcdata1.solhist.-ustable
+#
+# solhist is a matrix with the solutions in the columns. For
+# scalar equations I need to take the transpose to get the plots the way
+# I want them.
+#
+ptcerr=ptcdata1.solhist'
+ptcerr .-= ustable
 ptcfun=ptcdata1.history
 newtdata=nsolsc(sptest,x0)
 nival=length(newtdata.history)
@@ -38,6 +44,7 @@ newtresid=newtdata.history
 figure(1)
 subplot(1,2,1)
 title("Figure 1.6 from print book")
+println(size(ptcerr)," ",size(pival))
 semilogy(pival,abs.(ptcerr),"k--",nival,abs.(newterr),"k-")
 PTClabel=L"$\Psi$TC"
 legend((PTClabel,"Newton"))

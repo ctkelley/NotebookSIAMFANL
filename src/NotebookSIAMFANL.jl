@@ -27,6 +27,7 @@ export MyFunction
 export PitchFork1
 
 export plothist
+export printhist
 
 include("Chapter1/fig1dot1.jl")
 include("Chapter1/fig1dot2.jl")
@@ -45,5 +46,6 @@ include("Chapter2/fig2dot3.jl")
 include("Chapter2/fig2dot4.jl")
 
 include("Tools/plothist.jl")
+include("Tools/printhist.jl")
 
 end
