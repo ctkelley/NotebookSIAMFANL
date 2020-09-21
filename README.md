@@ -58,8 +58,9 @@ If you are reading this you have found the notebooks. The optimal way to use thi
 to clone this repository. Then install the package with the solvers using **pkg**.
 
 One way to do that is to type
-
-**import Pkg; Pkg.add(url="https://github.com/ctkelley/SIAMFANLEquations.jl")**
+```
+import Pkg; Pkg.add(url="https://github.com/ctkelley/SIAMFANLEquations.jl")
+```
 
 in the REPL. I have not registered the package yet. That should happen before Thanksgiving.
 
@@ -83,7 +84,6 @@ using BandedMatrides
 using AbstractFFTs
 using FFTW
 using IJulia
-using JLD
 ```
 
 in my startup.jl file and do **using PyPlot** when I need it. PyPlot takes a while to get going.
