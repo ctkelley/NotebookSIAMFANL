@@ -59,7 +59,7 @@ to clone this repository. Then install the package with the solvers using **pkg*
 
 One way to do that is to type
 
-**import Pkg; Pkg.add("https://github.com/ctkelley/SIAMFANLEquations.jl")**
+**import Pkg; Pkg.add(url="https://github.com/ctkelley/SIAMFANLEquations.jl")**
 
 in the REPL. I have not registered the package yet. That should happen before Thanksgiving.
 
@@ -68,15 +68,10 @@ The next step is to open the notebooks. An efficient way to do this (after insta
 In the first code window in each of the notebooks you will find
 
 ```Jula
-using SIAMFANLEquations
-using SIAMFANLEquations.TestProblems
-using LinearAlgebra
-using PyPLot
-push!(LOAD_PATH,"./src")
-using NotebookSIAMFANL
+include("fanote_init.jl")
 ```
-
-Those last two lines let the notebook find the codes for the examples. You might enjoy poking around in the __/src__ subdirectory.
+This is a Julia script that tells the notebooks where everything is. In partcular, the script lets the notebook find the examples.
+You might enjoy poking around in the __/src__ subdirectory.
 
 To get everything to work, you will need a few packages. LinearAlgebra, SuiteSparse, SparseArrays, BandedMatrices, AbstractFFTs, FFTW, IJjulia, JLD2, and PyPlot. I put 
 
