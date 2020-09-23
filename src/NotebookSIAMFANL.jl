@@ -6,6 +6,7 @@ using Printf
 using LinearAlgebra
 using SIAMFANLEquations
 using SIAMFANLEquations.TestProblems
+using SIAMFANLEquations.Examples
 
 export atan_test
 export ftan_test

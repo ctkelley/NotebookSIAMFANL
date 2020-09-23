@@ -7,7 +7,7 @@ function fig2dot4()
 n=40
 dt=.01
 stepnum=200
-(t, se, xe, fhist, fhistt) = beamivp(n,dt,stepnum)
+(t, se, xe, fhist, fhistt) = ivpBeam(n,dt,stepnum)
 plothist_beam_ivp(t,xe,se)
 end
 
