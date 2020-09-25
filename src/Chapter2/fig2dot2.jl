@@ -18,11 +18,11 @@ function fig2dot2(inbook = false)
     #
     #   Call the solver twice.
     #
-    nsolout9 = nsold(heqf!, x0, FS, FPS; 
+    nsolout9 = nsol(heqf!, x0, FS, FPS; 
              rtol = 1.e-10, atol = 1.e-10, pdata = hdata)
     #   Change c to .5
     setc!(hdata,.5)
-    nsolout5 = nsold(heqf!, x0, FS, FPS; 
+    nsolout5 = nsol(heqf!, x0, FS, FPS; 
              rtol = 1.e-10, atol = 1.e-10, pdata = hdata)
     #
     # Showtime! Make the plot.

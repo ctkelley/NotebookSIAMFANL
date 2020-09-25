@@ -37,6 +37,5 @@ for id=1:4
    push!(outdata,ptcdata1.history)
 end
 plothist(outdata,labels; semilogflag=false, ptitle="Figure 1.7 in print book")
-#plothist(outdata,labels; semilogflag=false, ptitle="")
 return outdata
 end

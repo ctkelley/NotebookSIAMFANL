@@ -28,15 +28,15 @@ ptcdata1=ptcsolsc(sptest,x0; dt0=1.0, rtol=1.e-12)
 # scalar equations I need to take the transpose to get the plots the way
 # I want them.
 #
-ptcerr=ptcdata1.solhist'
+ptcerr=ptcdata1.solhist'[:,1]
 ptcerr .-= ustable
 ptcfun=ptcdata1.history
 newtdata=nsolsc(sptest,x0)
-nival=length(newtdata.history)
-nival=0:nival-1
+lnival=length(newtdata.history)
+nival=collect(0:lnival-1)
 itlim=length(ptcfun)
-pival=0:itlim-1
-newterr=abs.(newtdata.solhist)
+pival=collect(0:itlim-1)
+newterr=abs.(newtdata.solhist'[:,1])
 newtresid=newtdata.history
 #
 # Newton errors vs PTC errors
@@ -44,7 +44,7 @@ newtresid=newtdata.history
 figure(1)
 subplot(1,2,1)
 title("Figure 1.6 from print book")
-println(size(ptcerr)," ",size(pival))
+println(size(nival), "  ", size(newterr))
 semilogy(pival,abs.(ptcerr),"k--",nival,abs.(newterr),"k-")
 PTClabel=L"$\Psi$TC"
 legend((PTClabel,"Newton"))
