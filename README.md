@@ -1,6 +1,5 @@
 # Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia
-
-# Warning! nsold.jl now wants the Jacobian call to look like J!(FP,FV,x) or J!(FP,FV,x,pdata). FP and FV have swapped places.
+## Under contract with SIAM for publication in 2022
 
 # Notebook version 0.2.1
 
