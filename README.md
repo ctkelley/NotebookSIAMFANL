@@ -173,11 +173,15 @@ The worst case, which has happened to me more than once, is that you'll have to
    2. Delete or move .julia
    
    3. Run Julia (which will create a new .julia in your home directory)
-      1. Put your config diectory back in there. 
+      1. Put your config directory back in there. 
         
    4. Reinstall ALL YOUR PACKAGES! That is a real pain, but has never failed to fix the problem for me.
    
-See the tale of woe at https://discourse.julialang.org/t/ijulia-do-not-run/45409/10 , where this seems to have happened to someone else.   
+See the tales of woe at https://discourse.julialang.org/t/ijulia-do-not-run/45409/10 , 
+https://discourse.julialang.org/t/unable-to-install-ijulia/47160 ,
+https://discourse.julialang.org/t/ijulia-notebook-failed-to-launch-the-ijulia-notebook-in-my-browser/37078 , and
+https://discourse.julialang.org/t/ijulia-do-not-run/45409/4 ,
+where this seems to have happened to other people.   
 
 ## Support
 
