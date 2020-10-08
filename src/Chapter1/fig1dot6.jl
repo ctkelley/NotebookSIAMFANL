@@ -44,7 +44,6 @@ newtresid=newtdata.history
 figure(1)
 subplot(1,2,1)
 title("Figure 1.6 from print book")
-println(size(nival), "  ", size(newterr))
 semilogy(pival,abs.(ptcerr),"k--",nival,abs.(newterr),"k-")
 PTClabel=L"$\Psi$TC"
 legend((PTClabel,"Newton"))
