@@ -12,15 +12,14 @@ function fig1dot3b()
     kwnewt=(maxit=14, rtol=1.e-17, atol=1.e-17, printerr=false)
     kwchord=(maxit=14, rtol=1.e-17, atol=1.e-17, printerr=false,  
             solver="chord")
-    kwsec=(maxit=6, rtol=1.e-17, atol=1.e-17, printerr=false,  
-            solver="secant")
+    kwsec=(maxit=6, rtol=1.e-17, atol=1.e-17, printerr=false)
     nnout=nsolsc(ftanx,4.5; kwnewt...)
     lnn=length(nnout.history)
     nncounter=0:lnn-1
     chout=nsolsc(ftanx,4.5; kwchord...)
     lnc=length(chout.history)
     nccounter=0:lnc-1
-    scout=nsolsc(ftanx,4.5; kwsec...)
+    scout=secant(ftanx,4.5; kwsec...)
     lns=length(scout.history)
     sccounter=0:lns-1
 semilogy(nncounter, nnout.history,"k-",
