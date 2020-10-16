@@ -45,11 +45,20 @@ The book is a sequal to my 2003 book in SIAM Fundamentals of Algorithms (FA) ser
 (Kel03) [***Solving Nonlinear Equations with Newton's Method***](https://my.siam.org/Store/Product/viewproduct/?ProductId=841) , Fundamentals of Algorithms 1, SIAM 2003
 
 
-The provisional title is
+The title is
 
 **Solving Nonlinear Equations with Iterative Methods: Solvers and Examples in Julia**
 
 Hence the repositories have SIAMFANL in their names.
+
+Cite this stuff, at least for now, as
+
+(Kel20d) C. T. Kelley, ***Solving Nonlinear Equations with Iterative Methods: Solvers and
+  Examples in Julia***, book manuscript, 2020. 
+
+(Kel20b) C. T. Kelley, ***NotebookSIAMFANL***, IJulia Notebook, 2020. https://github.com/ctkelley/NotebookSIAMFANL
+
+(Kel20c) C. T. Kelley, ***SIAMFANLEquations.jl***, Julia Package, 2020. https://github.com/ctkelley/SIAMFANLEquations.jl
 
 ## Getting started
 
