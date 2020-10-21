@@ -1,4 +1,11 @@
-function plothist(avals,labelarray; semilogflag=true, ptitle="")
+"""
+plothist(avals,labelarray,vax="residual"; 
+                 semilogflag=true, ptitle="")
+
+makes the plots in the notebook for SIAMFANL
+"""
+function plothist(avals,labelarray,vax="residual"; 
+                 semilogflag=true, ptitle="")
    fmtplot=["k-","k--","k-.","k:"]
    nplot=length(labelarray)
 if nplot > 4
@@ -18,6 +25,10 @@ legend(labelarray)
 if ptitle != ""
    title(ptitle)
 end
+if vax=="residual"
 ylabel("Nonlinear Residual Norm")
+else
+ylabel("x")
+end
 xlabel("Nonlinear Iterations")
 end
