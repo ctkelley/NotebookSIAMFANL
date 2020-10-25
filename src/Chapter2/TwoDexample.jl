@@ -1,8 +1,8 @@
 """
-fig2dot1(inbook=false)
+TwoDexample(printlable=true)
 Draw Fig 2.1 in the print book.
 """
-function fig2dot1(inbook=false)
+function TwoDexample(printlabel=true)
 x0a=[2.0, .5];
 x0b=[3.0, 5.0];
 FS=zeros(2,);
@@ -16,9 +16,7 @@ yb=noutb.solhist[2,:];
 plot(xa,ya,"k-*")
 plot(xb,yb,"k-",xb,yb,"ko")
 contourch2()
-if ~inbook
-title("Fig 2.1 from print book")
-end
+~printlabel || title("Fig 2.1 from print book")
 end
 
 """

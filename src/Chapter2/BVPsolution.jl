@@ -1,4 +1,4 @@
-function fig2dot3(n = 801, T = Float64)
+function BVPsolution(n = 801, T = Float64)
 #
 #   Solve the problem and make the figure. The good stuff is
 #   in bvp_solve

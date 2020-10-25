@@ -1,8 +1,8 @@
 """
-fig2dot2(inbook=false)
+HeqSolutions(inbook=false)
 Draw Fig 2.2 in the print book.
 """
-function fig2dot2(inbook = false)
+function HeqSolutions(printlabel=true)
     n = 100
     c = 0.9
     x0 = ones(n)
@@ -35,7 +35,5 @@ function fig2dot2(inbook = false)
     xlabel(L"\mu")
     ylabel(L"H(\mu)")
     legend(["c=.9", "c=.5"])
-    if ~inbook
-        title("Fig 2.2 from print book")
-    end
+    ~printlabel || title("Fig 2.2 from print book")
 end

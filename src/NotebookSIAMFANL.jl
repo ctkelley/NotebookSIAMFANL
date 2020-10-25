@@ -20,9 +20,9 @@ export atanarmijo
 export atanarmijov2
 export simpleptc
 export ptcvarydt
-export fig2dot1
-export fig2dot2
-export fig2dot3
+export TwoDexample
+export HeqSolutions
+export BVPsolution
 export fig2dot4
 export MyFunction
 export PitchFork1
@@ -41,9 +41,9 @@ include("Chapter1/ptcvarydt.jl")
 include("Chapter1/stagnationtable.jl")
 include("Chapter1/MyFunction.jl")
 include("Chapter1/PitchFork1.jl")
-include("Chapter2/fig2dot1.jl")
-include("Chapter2/fig2dot2.jl")
-include("Chapter2/fig2dot3.jl")
+include("Chapter2/TwoDexample.jl")
+include("Chapter2/HeqSolutions.jl")
+include("Chapter2/BVPsolution.jl")
 include("Chapter2/fig2dot4.jl")
 
 include("Tools/plothist.jl")
