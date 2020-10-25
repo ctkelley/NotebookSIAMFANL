@@ -7,10 +7,10 @@ x0a=[2.0, .5];
 x0b=[3.0, 5.0];
 FS=zeros(2,);
 FPS=zeros(2,2);
-nouta=nsol(simple!, x0a, FS, FPS; keepsolhist=true);
+nouta=nsol(simple!, x0a, FS, FPS; keepsolhist=true, sham=1);
 xa=nouta.solhist[1,:];
 ya=nouta.solhist[2,:];
-noutb=nsol(simple!, x0b, FS, FPS; keepsolhist=true);
+noutb=nsol(simple!, x0b, FS, FPS; keepsolhist=true, sham=1);
 xb=noutb.solhist[1,:];
 yb=noutb.solhist[2,:];
 plot(xa,ya,"k-*")
