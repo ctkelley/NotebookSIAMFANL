@@ -1,5 +1,5 @@
 """
-fig1dot6()
+simpleptc()
 
 Make Figure 1.6 in the print book.
 
@@ -15,7 +15,7 @@ a big one so that I would not have to spend forever waiting for the
 transients to go away. 
 
 """
-function fig1dot6()
+function simpleptc(printlabel=true)
 x0=.1
 ustable=.5*sqrt(2.0)
 uunstable=0.0
@@ -43,7 +43,7 @@ newtresid=newtdata.history
 #
 figure(1)
 subplot(1,2,1)
-title("Figure 1.6 from print book")
+~printlabel || title("Figure 1.6 from print book")
 semilogy(pival,abs.(ptcerr),"k--",nival,abs.(newterr),"k-")
 PTClabel=L"$\Psi$TC"
 legend((PTClabel,"Newton"))

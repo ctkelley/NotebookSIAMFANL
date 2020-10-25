@@ -1,5 +1,5 @@
 """
-fig1dot7()
+ptcvarydt()
 
 Make Figure 1.7 in the print book. Examine how the wrong
 dt0 will cost you.
@@ -16,7 +16,7 @@ a big one so that I would not have to spend forever waiting for the
 transients to go away. 
 
 """
-function fig1dot7()
+function ptcvarydt(printlabel=true)
 x0=.1
 ustable=.5*sqrt(2.0)
 uunstable=0.0
@@ -36,6 +36,10 @@ for id=1:4
    ptcdata1=ptcsolsc(sptest,x0; dt0=dti, rtol=1.e-6, maxit=1000000)
    push!(outdata,ptcdata1.history)
 end
+if printlabel
 plothist(outdata,labels; semilogflag=false, ptitle="Figure 1.7 in print book")
+else
+plothist(outdata,labels; semilogflag=false)
+end
 return outdata
 end

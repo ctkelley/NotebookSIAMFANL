@@ -1,5 +1,5 @@
 """
-function fig1dot1()
+function linearmodel(printlabel=true)
 
 This is the Julia code for Figure 1.1 in the book.
 
@@ -14,7 +14,7 @@ local_hist = nsolsc(1.0, atan, fpatan; rtol = 1.e-8, maxit = 20)
 fp_atan(x) = 1.0/(1.0+x^2) comes from SIAMFANLTestProblems
 
 """
-function fig1dot1()
+function linearmodel(printlabel=true)
 
     #
     # Figure 1.1 from the print book.
@@ -55,7 +55,6 @@ function fig1dot1()
         plot(xval[3], 0, "ko")
         ylabel("atan(x)")
         xlabel("x")
-        title("Figure 1.1 from print book")
+        ~printlabel || title("Figure 1.1 from print book")
      end
 end
-

@@ -1,5 +1,5 @@
 """
-fig1dot3()
+threewaystagnation()
 
 This is the Julia code for the tan(x) = x example.
 
@@ -8,7 +8,7 @@ This code makes Figure 1.3 in the print book.
 See the notebook.
 
 """
-function fig1dot3()
+function threewaystagnation(printlabel=true)
     kwnewt=(maxit=14, rtol=1.e-17, atol=1.e-17, printerr=false,  
             stagnationok=true)
     kwchord=(maxit=14, rtol=1.e-17, atol=1.e-17, printerr=false,  
@@ -31,14 +31,5 @@ sccounter, scout.history,"k-."
 ylabel("Log Absolute Nonlinear Residual")
 xlabel("Nonlinear Iterations")
 legend(("Newton","Chord","Secant"))
-title("Figure 1.3 from print book")
-#return nnout
+~printlabel || title("Figure 1.3 from print book")
 end
-
-#function ftanx(x)
-#   return tan(x) - x
-#end
-
-#function ftanxp(x)
-#   return sec(x)^2 - 1
-#end

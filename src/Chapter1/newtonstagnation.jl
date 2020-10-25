@@ -1,5 +1,5 @@
 """
-fig1dot2()
+newtonstagnation(printlabel=true)
 
 This is the Julia code for the tan(x) = x example.
 
@@ -8,7 +8,7 @@ This code makes Figure 1.2
 See the notebook.
 
 """
-function fig1dot2()
+function newtonstagnation(printlabel=true)
     kwnewt=(maxit=14, rtol=1.e-17, atol=1.e-17, printerr=false,  
             stagnationok=true)
     nnout=nsolsc(ftanx,4.5; kwnewt...)
@@ -20,14 +20,5 @@ xlabel("Nonlinear Iterations")
 plt.text(4.1, 2.e-15,"Stagnation")
 ylabel("Log Absolute Nonlinear Residual")
 xlabel("Nonlinear Iterations")
-title("Figure 1.2 from print book")
-#return nnout
+~printlabel || title("Figure 1.2 from print book")
 end
-
-#function ftanx(x)
-#   return tan(x) - x
-#end
-
-#function ftanxp(x)
-#   return sec(x)^2 - 1
-#end
