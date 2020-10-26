@@ -82,13 +82,14 @@ include("fanote_init.jl")
 This is a Julia script that tells the notebooks where everything is. In partcular, the script lets the notebook find the examples.
 You might enjoy poking around in the __/src__ subdirectory.
 
-To get everything to work, you will need a few packages. LinearAlgebra, SuiteSparse, SparseArrays, BandedMatrices, AbstractFFTs, FFTW, IJjulia, and PyPlot. I put 
+To get everything to work, you will need a few packages. LinearAlgebra, SuiteSparse, SparseArrays, BandedMatrices, BenchmarkTools, AbstractFFTs, FFTW, IJjulia, and PyPlot. I put 
 
 ```Julia
 using LinearAlgebra
 using SuiteSparse
 using SparseArrays
 using BandedMatrides
+using BenchmarkTools
 using AbstractFFTs
 using FFTW
 using IJulia
