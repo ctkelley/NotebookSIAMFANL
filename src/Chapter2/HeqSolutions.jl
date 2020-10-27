@@ -1,5 +1,5 @@
 """
-HeqSolutions(inbook=false)
+HeqSolutions(printlabel=true)
 Draw Fig 2.2 in the print book.
 """
 function HeqSolutions(printlabel=true)

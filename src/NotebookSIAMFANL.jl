@@ -23,7 +23,8 @@ export ptcvarydt
 export TwoDexample
 export HeqSolutions
 export BVPsolution
-export fig2dot4
+export beamtimedep
+export beamptc
 export MyFunction
 export PitchFork1
 
@@ -44,7 +45,8 @@ include("Chapter1/PitchFork1.jl")
 include("Chapter2/TwoDexample.jl")
 include("Chapter2/HeqSolutions.jl")
 include("Chapter2/BVPsolution.jl")
-include("Chapter2/fig2dot4.jl")
+include("Chapter2/beamtimedep.jl")
+include("Chapter2/beamptc.jl")
 
 include("Tools/plothist.jl")
 include("Tools/printhist.jl")

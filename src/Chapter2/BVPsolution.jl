@@ -1,4 +1,4 @@
-function BVPsolution(n = 801, T = Float64)
+function BVPsolution(n = 801, T = Float64, printlabel=true)
 #
 #   Solve the problem and make the figure. The good stuff is
 #   in bvp_solve
@@ -14,5 +14,5 @@ function BVPsolution(n = 801, T = Float64)
     legend((vlabel, vplabel))
     axis([0, 20, -1.5, 2.5])
     xticks(collect(0:2:20))
-    title("Fig 2.3 in print book")
+    ~printlabel || title("Fig 2.3 in print book")
 end
