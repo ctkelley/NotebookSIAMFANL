@@ -15,7 +15,7 @@ export stagnationtable
 export linearmodel
 export newtonstagnation
 export threewaystagnation
-export fig1dot3b
+export threewaystagnationv2
 export atanarmijo 
 export atanarmijov2
 export simpleptc
@@ -35,6 +35,7 @@ include("Chapter1/linearmodel.jl")
 include("Chapter1/newtonstagnation.jl")
 include("Chapter1/threewaystagnation.jl")
 include("Chapter1/fig1dot3b.jl")
+include("threewaystagnationv2.jl")
 include("Chapter1/atanarmijo.jl")
 include("Chapter1/atanarmijov2.jl")
 include("Chapter1/simpleptc.jl")

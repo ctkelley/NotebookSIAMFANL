@@ -1,14 +1,15 @@
 """
-fig1dot3b()
+function threewaystagnationv2()
 
 This is the Julia code for the tan(x) = x example.
 
-This code makes Figure in the print book.
+This code makes the restrained version of Figure 1.3
+in the print book.
 
 See the notebook.
 
 """
-function fig1dot3b()
+function  threewaystagnationv2()
     kwnewt=(maxit=14, rtol=1.e-17, atol=1.e-17, printerr=false)
     kwchord=(maxit=14, rtol=1.e-17, atol=1.e-17, printerr=false,  
             solver="chord")
