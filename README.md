@@ -1,3 +1,6 @@
+[![DOI](https://zenodo.org/badge/253600556.svg)](https://zenodo.org/badge/latestdoi/253600556)
+
+
 # Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia
 ## Under contract with SIAM for publication in 2022
 
