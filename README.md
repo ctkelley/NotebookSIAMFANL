@@ -24,6 +24,8 @@
 
 - [Notebook Problems?](#Notebook-Problems) What? You're having trouble starting the notebook?
 
+- [How to cite this stuff](#Citations)
+
 - [Support](#Support): Thanks!
 
 ## If you know what to do
@@ -193,6 +195,35 @@ https://discourse.julialang.org/t/unable-to-install-ijulia/47160 ,
 https://discourse.julialang.org/t/ijulia-notebook-failed-to-launch-the-ijulia-notebook-in-my-browser/37078 , and
 https://discourse.julialang.org/t/ijulia-do-not-run/45409/4 ,
 where this seems to have happened to other people.   
+
+## Citations 
+Cite the package, print book and notebook like this. 
+```
+@misc{ctk:siamfanl,
+title="{SIAMFANLEquations.jl}",
+author="C. T. Kelley",
+year=2020,
+note="Julia Package",
+url="https://github.com/ctkelley/SIAMFANLEquations.jl"
+}
+
+@misc{ctk:fajulia,
+author="C. T. Kelley",
+title="{Solving Nonlinear Equations with Iterative Methods:
+Solvers and Examples in Julia}",
+year=2020,
+note="Unpublished book ms"
+}
+
+@misc{ctk:notebooknl,
+title="{NotebookSIAMFANL}",
+author="C. T. Kelley",
+year=2020,
+note="IJulia Notebook",
+url="https://github.com/ctkelley/NotebookSIAMFANL",
+doi="10.5281/zenodo.4284687"
+}
+```
 
 ## Support
 
