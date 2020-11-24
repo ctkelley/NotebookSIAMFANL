@@ -102,7 +102,7 @@ in my startup.jl file and do **using PyPlot** when I need it. PyPlot takes a whi
 
 All this is also in the first code window in the notebooks. If Julia complains about a missing package, it is your job to add it.
 
-If you want to play with the source code solvers, clone the repository for the package and put that in your Julia **LOAD_PATH** or use __Pkg.dev__. The most operating system independent way to do it is with __Pkd.dev__, but that is also the most challenging for a novice to figure out. 
+If you want to play with the source code solvers, clone the repository for the package and put that in your Julia **LOAD_PATH** or use __Pkg.develop__. The most operating system independent way to do it is with __Pkg.develop__, but that is also the most challenging for a novice to figure out. 
  
 ## Julia Prerequisites
 
@@ -204,6 +204,7 @@ title="{SIAMFANLEquations.jl}",
 author="C. T. Kelley",
 year=2020,
 note="Julia Package",
+doi="10.5281/zenodo.4284807",
 url="https://github.com/ctkelley/SIAMFANLEquations.jl"
 }
 
