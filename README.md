@@ -1,10 +1,10 @@
 # Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia
 ## Under contract with SIAM for publication in 2022
 
-# Notebook version 0.2.4   [![DOI](https://zenodo.org/badge/253600556.svg)](https://zenodo.org/badge/latestdoi/253600556)
+# Notebook version 0.3.0   [![DOI](https://zenodo.org/badge/253600556.svg)](https://zenodo.org/badge/latestdoi/253600556)
 
 
-# Use v0.2.3 of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
+# Use v0.3.0 of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
 
 ## [C. T. Kelley](https://ctk.math.ncsu.edu)
 
@@ -70,10 +70,16 @@ to clone this repository. Then install the package with the solvers using **pkg*
 
 One way to do that is to type
 ```
-import Pkg; Pkg.add(url="https://github.com/ctkelley/SIAMFANLEquations.jl")
+import Pkg; Pkg.add("SIAMFANLEquations")
 ```
 
-in the REPL. I have not registered the package yet. That should happen before Thanksgiving.
+or
+
+```
+] add SIAMFANLEquations
+```
+
+in the REPL. 
 
 The next step is to open the notebooks. An efficient way to do this (after installing IJulia) is to type **using IJulia** and  **notebook()** in the REPL. Then navigate to the directory where the notebooks are and click on SIAMFANL.ipynb.
 
@@ -235,9 +241,7 @@ This project was partially supported by
    1. OAC-1740309
    2. DMS-1745654
    3. DMS-1906446
+3. Department of Energy grant DE-NA003967
+
+Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author and do not necessarily reflect the views of the National Science Foundation, the Department of Energy, or the Army Research Office.
    
-Any opinions, findings, and conclusions or
-recommendations expressed in this material are those of the author and
-do not necessarily reflect the views of the National
-Science Foundation
-or the Army Research Office.
