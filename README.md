@@ -26,7 +26,7 @@
 
 - [How to cite this stuff](#Citations)
 
-- [Federal Support](#Support): Thanks!
+- [Funding](#Funding): Thanks!
 
 ## If you know what to do
 - Install the package with **Pkg.add("https://github.com/ctkelley/SIAMFANLEquations.jl")**
@@ -233,7 +233,7 @@ doi="10.5281/zenodo.4284687"
 }
 ```
 
-## Support
+## Funding
 
 This project was partially supported by
 1. Army Research Office grant W911NF-16-1-0504 and
