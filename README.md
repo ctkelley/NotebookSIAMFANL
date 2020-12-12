@@ -26,7 +26,7 @@
 
 - [How to cite this stuff](#Citations)
 
-- [Support](#Support): Thanks!
+- [Federal Support](#Support): Thanks!
 
 ## If you know what to do
 - Install the package with **Pkg.add("https://github.com/ctkelley/SIAMFANLEquations.jl")**
