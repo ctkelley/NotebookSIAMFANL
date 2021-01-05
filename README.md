@@ -29,7 +29,7 @@
 - [Funding](#Funding): Thanks!
 
 ## If you know what to do
-- Install the package with **Pkg.add("https://github.com/ctkelley/SIAMFANLEquations.jl")**
+- Install the package with **Pkg.add("SIAMFANLEquations")**
 - Clone this repository.
 - Fire up an IJulia notebook and open SIAMFANL.ipynb.
 - Follow the directions in the preface and the "How to get the software" sections.
