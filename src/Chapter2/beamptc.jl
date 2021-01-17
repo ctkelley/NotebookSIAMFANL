@@ -11,5 +11,5 @@ semilogy(ipit,phist,"k-",init,nhist,"k--")
 legend([L"\Psi TC", "Newton"])
 xlabel("iterations")
 ylabel("relative residual")
-~printlabel || title("Fig 2.6 from print book")
+~printlabel || title("Fig 2.7 from print book")
 end
