@@ -40,5 +40,5 @@ foutls=cumsum(houtls.stats.ifun+houtls.stats.ijac)
 semilogy(foutrs,hisrs,"k-",foutls,hisls,"k--")
 yticks([1.0, 1.e-2, 1.e-4, 1.e-6, 1.e-8])
 xlabel("function evaluations")
-#return (houtrs=houtrs, houtls=houtls)
+return (houtrs=houtrs, houtls=houtls)
 end
