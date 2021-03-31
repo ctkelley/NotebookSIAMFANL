@@ -15,7 +15,7 @@ pdata=pdeinit(n);
 # Storage for the Jacobian-vector products
 JV=zeros(n*n,100);
 # Call the solver
-# fixed etamax=.1
+# EW with etamax=.9
 houtrs=nsoli(pdeF!, u0, FV, JV, Jvec2d; rtol=rtol, atol=atol, Pvec=Pvec2d,
           eta=.9, pdata=pdata, fixedeta=false, maxit=20, pside="right");
 houtls=nsoli(pdeF!, u0, FV, JV, Jvec2d; rtol=rtol, atol=atol, Pvec=Pvec2d,
