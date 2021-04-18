@@ -31,6 +31,8 @@ export pdech2
 export nk_heq_forcing
 export nk_pde_forcing
 export nk_pde_side
+export ptcCompare
+export LptcCompare
 
 export plothist
 export printhist
@@ -55,6 +57,8 @@ include("Chapter2/pdech2.jl")
 include("Chapter3/nk_heq_forcing.jl")
 include("Chapter3/nk_pde_forcing.jl")
 include("Chapter3/nk_pde_side.jl")
+include("Chapter3/ptcCompare.jl")
+include("Chapter3/LptcCompare.jl")
 
 include("Tools/plothist.jl")
 include("Tools/printhist.jl")
