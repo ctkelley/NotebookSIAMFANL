@@ -97,7 +97,7 @@ To get everything to work, you will need a few packages. LinearAlgebra, SuiteSpa
 using LinearAlgebra
 using SuiteSparse
 using SparseArrays
-using BandedMatrides
+using BandedMatrices
 using BenchmarkTools
 using AbstractFFTs
 using FFTW
