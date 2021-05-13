@@ -4,7 +4,7 @@
 # Notebook version 0.3.1  [![DOI](https://zenodo.org/badge/253600556.svg)](https://zenodo.org/badge/latestdoi/253600556)
 
 
-# Use v0.3.0 or higher of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
+# Use v0.3.1 or higher of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
 
 ## [C. T. Kelley](https://ctk.math.ncsu.edu)
 
