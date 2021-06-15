@@ -6,5 +6,4 @@ using BandedMatrices
 using BenchmarkTools
 using PyPlot
 push!(LOAD_PATH,"./src")
-push!(LOAD_PATH,".")
 using NotebookSIAMFANL

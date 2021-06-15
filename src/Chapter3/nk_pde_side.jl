@@ -42,13 +42,13 @@ xlabel("iterations")
 ylabel("relative residual")
 legend(["Right", "Left", "Left-NL"])
 subplot(1,2,2)
-foutrs=cumsum(houtrs.stats.ifun+houtrs.stats.ijac)
-foutls=cumsum(houtls.stats.ifun+houtls.stats.ijac)
-foutlnls=cumsum(houtlnl.stats.ifun+houtlnl.stats.ijac)
+foutrs=cumsum(houtrs.stats.ijac)
+foutls=cumsum(houtls.stats.ijac)
+foutlnls=cumsum(houtlnl.stats.ijac)
 semilogy(foutrs,hisrs,"k-",foutls,hisls,"k--",
           foutlnls,hislnl,"k-.")
 yticks([1.0, 1.e-2, 1.e-4, 1.e-6, 1.e-8])
-xlabel("function evaluations")
+xlabel("Jacobian-vector products")
 return (houtrs=houtrs, houtls=houtls, houtlnl=houtlnl)
 end
 

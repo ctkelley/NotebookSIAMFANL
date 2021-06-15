@@ -22,9 +22,9 @@ ksolfe=koutfe.solution;
 khistoryew=koutew.history./koutew.history[1]
 khistoryew9=koutew9.history./koutew9.history[1]
 khistoryfe=koutfe.history./koutfe.history[1]
-kfevals=koutfe.stats.ifun+ koutfe.stats.ijac
-kfevals2=koutew.stats.ifun+ koutew.stats.ijac
-kfevals3=koutew9.stats.ifun+ koutew9.stats.ijac
+kfevals=koutfe.stats.ijac
+kfevals2=koutew.stats.ijac
+kfevals3=koutew9.stats.ijac
 lk=length(khistoryfe); ik=0:1:lk-1;
 lk2=length(khistoryew); ik2=0:1:lk2-1;
 lk3=length(khistoryew9); ik3=0:1:lk3-1;
@@ -48,6 +48,7 @@ semilogy(ckfev,khistoryfe,"k-",ckfev2, khistoryew,"k-.",
 lmax=max(maximum(ckfev),maximum(ckfev2),maximum(ckfev3))
 axis([0, lmax, 1.e-10, 1.0])
 yticks([1.0, 1.e-2, 1.e-4, 1.e-6, 1.e-8])
-xlabel("function evaluations")
+xticks(0:3:lmax)
+xlabel("Jacobian-vector products")
 #return (koutfe=koutfe, koutew=koutew, koutew9=koutew9)
 end

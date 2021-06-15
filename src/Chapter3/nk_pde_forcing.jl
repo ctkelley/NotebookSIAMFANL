@@ -44,12 +44,12 @@ legend([L"no preconditioning; fixed $\eta = .1$",
 L"Eisenstat-Walker: $\eta_{max}=.5$",
                              L"Fixed $\eta=.1$"])
 subplot(1,2,2)
-foutnp=cumsum(houtnp.stats.ifun+houtnp.stats.ijac)
-foutew=cumsum(houtew.stats.ifun+houtew.stats.ijac)
-foutfe=cumsum(houtfe.stats.ifun+houtfe.stats.ijac)
+foutnp=cumsum(houtnp.stats.ijac)
+foutew=cumsum(houtew.stats.ijac)
+foutfe=cumsum(houtfe.stats.ijac)
 semilogy(foutnp,hisnp,"k-",foutew,hisew,"k--",
          foutfe,hisfe,"k-.")
 yticks([1.0, 1.e-2, 1.e-4, 1.e-6, 1.e-8])
-xlabel("function evaluations")
+xlabel("Jacobian-vector products")
 #return (houtnp=houtnp, houtew=houtew, houtfe=houtfe)
 end
