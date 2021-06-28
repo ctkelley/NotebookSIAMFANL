@@ -38,10 +38,10 @@ end
 legend(["Direct solve","Precond-dt","Precond-no-dt"])
 xlabel("iterations")
 ylabel("relative residual")
+~printlabel || title("Figure 3.4 from the print book")
 subplot(1,2,2)
 semilogy(fcostdt, ithist[:,2], pstr[2],
          fcostnodt, ithist[:,3], pstr[3]) 
 xlabel("Jacobian-vector products")
-~printlabel || title("Figure 3.4 from the print book")
 end
 

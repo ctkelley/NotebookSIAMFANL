@@ -83,6 +83,7 @@ function nk_pde_bicgstab(printlabel = true)
     ylabel("relative residual")
     axis([0.0, 7.0, 1.e-8, 1.0])
     xlabel("iterations")
+    ~printlabel || title("Fig 3.7 from print book")
     subplot(1, 2, 2)
     fvalsg = poutg.stats.ijac
     hplotg = cumsum(fvalsg)

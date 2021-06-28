@@ -34,10 +34,10 @@ for ip=1:2
      semilogy(0:itl[ip]-1, ithist[1:itl[ip],ip], pstr[ip])
 end
 legend(["Precond-dt","Precond-no-dt"])
+~printlabel || title("Figure 3.5 from the print book")
 subplot(1,2,2)
 ylabel("u"); 
 xlabel("x")
 plot(xv, dtout.solution,"k-",xv, nodtout.solution,"k--")
-~printlabel || title("Figure 3.5 from the print book")
 end
 
