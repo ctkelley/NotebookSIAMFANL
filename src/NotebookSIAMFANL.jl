@@ -36,6 +36,8 @@ export nk_pde_bicgstab
 export nk_nopc_pde_bicgstab
 export ptcCompare
 export LptcCompare
+export aa_heq
+export aa_pde
 
 export plothist
 export printhist
@@ -65,6 +67,8 @@ include("Chapter3/nk_nopc_pde_bicgstab.jl")
 include("Chapter3/nk_heq_bicgstab.jl")
 include("Chapter3/ptcCompare.jl")
 include("Chapter3/LptcCompare.jl")
+include("Chapter4/aa_heq.jl")
+include("Chapter4/aa_pde.jl")
 
 include("Tools/plothist.jl")
 include("Tools/printhist.jl")
