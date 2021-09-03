@@ -31,6 +31,7 @@ export pdech2
 export nk_heq_forcing
 export nk_pde_forcing
 export nk_pde_side
+export hardleft!
 export nk_heq_bicgstab
 export nk_pde_bicgstab
 export nk_nopc_pde_bicgstab
