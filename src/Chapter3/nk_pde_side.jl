@@ -51,10 +51,3 @@ yticks([1.0, 1.e-2, 1.e-4, 1.e-6, 1.e-8])
 xlabel("Jacobian-vector products")
 return (houtrs=houtrs, houtls=houtls, houtlnl=houtlnl)
 end
-
-function hardleft!(FV, u, pdata)
-fdata=pdata.fdata
-FV = pdeF!(FV,u,pdata)
-FV .= Pfish2d(FV,fdata) 
-return FV
-end
