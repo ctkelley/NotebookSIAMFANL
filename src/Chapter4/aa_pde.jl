@@ -15,7 +15,7 @@ u0=zeros(n*n);
 FV=copy(u0);
 JV=zeros(n*n,10);
 mmax=10
-Vstore=zeros(n*n,2(mmax+1));
+Vstore=zeros(n*n,3*mmax+3);
 #
 rtol = 1.e-8;
 atol = 1.e-8;
