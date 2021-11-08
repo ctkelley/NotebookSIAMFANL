@@ -19,7 +19,7 @@ koutfe=nsoli(heqf!, u0, FS, FPS; pdata=hdata, eta=.1, fixedeta=true,
                rtol=rtol, atol=atol);
 iln=length(koutfe.history);
 relresn=koutfe.history./koutfe.history[1]
-println(koutfe.stats.ifun+koutfe.stats.ijac)
+#println(koutfe.stats.ifun+koutfe.stats.ijac)
 tfun=cumsum(koutfe.stats.ifun+koutfe.stats.ijac)
 ithist[1:iln,5]=relresn;
 lhist[5]=iln;
