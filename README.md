@@ -1,10 +1,10 @@
 # Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia
 ## Under contract with SIAM for publication in 2022
 
-# Notebook version 0.4.2
-## Printbook --> Notebook map for Chapter 4 is complete
+# Notebook version 0.4.3
+## Chapter 4 done
 
-# Use v0.4.2 or higher of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
+# Use v0.4.3 or higher of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
 
 ## [C. T. Kelley](https://ctk.math.ncsu.edu)
 
