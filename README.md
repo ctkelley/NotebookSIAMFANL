@@ -2,6 +2,7 @@
 ## Under contract with SIAM for publication in 2022
 
 # Notebook version 0.4.2
+## Printbook --> Notebook map for Chapter 4 is complete
 
 # Use v0.4.2 or higher of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
 
@@ -146,7 +147,28 @@ These references have extensive bibliographies as does the print book. The noteb
 
 ## The examples
 
-The codes for every plot and table in the book are either in the src directory in this repository or in the notebooks. You'll get the chance to run them, change them, and make them better/worse/shinier as you work through the notebooks. 
+The codes for every plot and table in the book are either in the src directory in this repository or in the src directory in __SIAMFANL.jl__. You'll get the chance to run them, change them, and make them better/worse/shinier as you work through the notebooks. The organization is
+
+- src/ChapterX in the notebook repo has the examples for the print-->notebook map
+
+- src/TestProblems in the repo for __SIAMFANL.jl__ has the test problems for the book. You do ```using SIAMFANL.TestProblems``` to get to them.
+
+- src/Examples in the repo for __SIAMFANL.jl__ has many examples that I use in the and for CI. You do ```using SIAMFANL.Examples``` to get to them.
+
+I include the __fanote_init.jl__ script in every notebook to make sure that things are where they are supposed to be. The source for __fanote_init.jl__ is
+
+```
+using SIAMFANLEquations
+using SIAMFANLEquations.TestProblems
+using SIAMFANLEquations.Examples
+using LinearAlgebra
+using BandedMatrices
+using BenchmarkTools
+using PyPlot
+push!(LOAD_PATH,"./src")
+using NotebookSIAMFANL
+```
+Do not mess with it.
 
 ## Other Nonlinear Solvers in Julia
 
