@@ -1,6 +1,10 @@
 # Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia
 ## Under contract with SIAM for publication in 2022
 
+```diff
+- # Warning: Julia 1.6.4 breaks the high-dimensional H-equation examples. 1.6.3 works fine.
+```
+
 # Notebook version 0.4.3
 ## Chapter 4 done
 
