@@ -2,8 +2,18 @@
 ## Under contract with SIAM for publication in 2022
 
 ```diff
-- # Warning: Julia 1.6.4 breaks the high-dimensional H-equation examples. 1.6.3 works fine.
+- # Warning: Julia 1.6.4 breaks the high-dimensional H-equation examples. 1.6.3 is ok.
 ```
+
+See the story at 
+
+https://discourse.julialang.org/t/problems-in-1-6-4-with-ijulia-downgrade-to-1-6-3/72129/12
+
+and
+
+https://github.com/JuliaLang/julia/issues/43242
+
+If you try to start the notebooks with 1.6.4 I will throw an error. 1.6.3 and all previous versions >= 1.5 work fine.
 
 # Notebook version 0.4.3
 ## Chapter 4 done
