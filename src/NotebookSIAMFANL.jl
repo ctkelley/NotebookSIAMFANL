@@ -38,6 +38,7 @@ export ptcCompare
 export LptcCompare
 export aa_heq
 export aa_pde
+export mixing_pde
 
 export plothist
 export printhist
@@ -69,6 +70,7 @@ include("Chapter3/ptcCompare.jl")
 include("Chapter3/LptcCompare.jl")
 include("Chapter4/aa_heq.jl")
 include("Chapter4/aa_pde.jl")
+include("Chapter4/mixing_pde.jl")
 
 include("Tools/plothist.jl")
 include("Tools/printhist.jl")

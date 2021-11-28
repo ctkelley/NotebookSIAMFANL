@@ -10,7 +10,6 @@ function aa_pde(n=31; printlabel=true)
 pdata=pdeinit(n);
 fdata=pdata.fdata;
 fone=ones(n*n);
-u0p=Pfish2d(fone,fdata);
 u0=zeros(n*n);
 FV=copy(u0);
 JV=zeros(n*n,10);
