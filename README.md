@@ -232,8 +232,11 @@ The worst case, which has happened to me more than once, is that you'll have to
    4. Reinstall ALL YOUR PACKAGES! That is a real pain, but has never failed to fix the problem for me.
    
 See the tales of woe at https://discourse.julialang.org/t/ijulia-do-not-run/45409/10 , 
+
 https://discourse.julialang.org/t/unable-to-install-ijulia/47160 ,
-https://discourse.julialang.org/t/ijulia-notebook-failed-to-launch-the-ijulia-notebook-in-my-browser/37078 , and
+
+https://discourse.julialang.org/t/ijulia-notebook-failed-to-launch-the-ijulia-notebook-in-my-browser/37078 , 
+and
 https://discourse.julialang.org/t/ijulia-do-not-run/45409/4 ,
 where this seems to have happened to other people.   
 
