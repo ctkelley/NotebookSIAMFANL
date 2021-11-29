@@ -1,6 +1,6 @@
 """
 mixing_pde(n=31; printlabel=true)
-Solve the left preconditioned convection-diffusion problem with
+So6lve the left preconditioned convection-diffusion problem with
 a mixing parameter beta=.2
 """
 function mixing_pde(n=31; printlabel=true)

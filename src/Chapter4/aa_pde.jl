@@ -12,7 +12,7 @@ fdata=pdata.fdata;
 fone=ones(n*n);
 u0=zeros(n*n);
 FV=copy(u0);
-JV=zeros(n*n,10);
+JV=zeros(n*n,20);
 mmax=10
 Vstore=zeros(n*n,3*mmax+3);
 #
