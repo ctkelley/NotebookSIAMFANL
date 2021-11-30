@@ -1,5 +1,5 @@
 """
-mixing_pde(n=31; printlabel=true)
+mixing_pde(n=31; printlabel=false)
 So6lve the left preconditioned convection-diffusion problem with
 a mixing parameter beta=.2
 """
