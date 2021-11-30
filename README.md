@@ -15,8 +15,8 @@ https://github.com/JuliaLang/julia/issues/43242
 
 If you try to start the notebooks with 1.6.4 I will throw an error. 1.6.3 and all previous versions >= 1.5 work fine.
 
-# Notebook version 0.4.3
-## Chapter 4 done
+# Notebook version 0.5.0
+## First case study
 
 # Use v0.4.3 or higher of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
 
