@@ -3,7 +3,7 @@ mixing_pde(n=31; printlabel=false)
 So6lve the left preconditioned convection-diffusion problem with
 a mixing parameter beta=.2
 """
-function mixing_pde(n=31; printlabel=true)
+function mixing_pde(n=31; printlabel=false)
 pdata=pdeinit(n);
 fdata=pdata.fdata;
 fone=ones(n*n);
