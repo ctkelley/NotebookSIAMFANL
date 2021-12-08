@@ -2,7 +2,11 @@
 ## Under contract with SIAM for publication in 2022
 
 ```diff
-- # Warning: Julia 1.6.4 breaks the high-dimensional H-equation examples. 1.6.3 is ok.
+- # Warning: Julia 1.6.4 and 1.7.0 break the high-dimensional H-equation examples thanks to an OPENBLAS problem.
+```
+
+```diff
+- #1.6.3 is ok. 1.7.0 with MKL blas is ok.
 ```
 
 See the story at 
@@ -13,7 +17,7 @@ and
 
 https://github.com/JuliaLang/julia/issues/43242
 
-If you try to start the notebooks with 1.6.4 I will throw an error. 1.6.3 and all previous versions >= 1.5 work fine.
+If you try to start the notebooks with 1.6.4 or 1.7.0 with OPENBLAS I will throw an error. 1.6.3 and all previous versions >= 1.5 work fine.
 
 # Notebook version 0.5.0
 ## First case study
