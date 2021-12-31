@@ -11,7 +11,7 @@ See the notebook.
 function newtonstagnation(printlabel=true)
     kwnewt=(maxit=14, rtol=1.e-17, atol=1.e-17, printerr=false,  
             stagnationok=true)
-    nnout=nsolsc(ftanx,4.5; kwnewt...)
+    nnout=nsolsc(x -> tan(x) - x, 4.5; kwnewt...)
     lnn=length(nnout.history)
     nncounter=0:lnn-1
 semilogy(0:5, nnout.history[1:6],"k-")

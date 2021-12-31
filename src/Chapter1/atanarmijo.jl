@@ -8,11 +8,11 @@ I documented the solver in nsolsc.jl. The challenge here
 is to get the plots to do what I want. I do not recommend your
 studying this code.
 
-The call to the solver is pretty simple
+The call to the solver is pretty simple. I'm using an anonymous
+function for the derivative in this example.
 
-global_hist = nsolsc(1.0, atan, fpatan; rtol = 1.e-8, maxit = 20)
+global_hist = nsolsc(1.0, atan, x -> 1.0/(1.0+x^2); rtol = 1.e-8, maxit = 20)
 
-and fpatan(x) = 1.0/(1.0+x^2)
 
 is in this .jl file. 
 
@@ -24,7 +24,7 @@ function atanarmijo(printlabel=true)
         global_hist = nsolsc(
             atan,
             10.0,
-            fpatan; rtol = 1.e-8, atol = 1.e-10, maxit = 20,
+            x -> 1.0/(1.0+x^2); rtol = 1.e-8, atol = 1.e-10, maxit = 20,
             armfix=true
         )
         rval = global_hist.history

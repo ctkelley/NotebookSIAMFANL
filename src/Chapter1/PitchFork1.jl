@@ -1,3 +1,7 @@
+"""
+PitchFork1()
+Makes the bifurcation diagram for the Notebook
+"""
 function PitchFork1()
 lambdam=collect(-1:.01:0)
 lambdap=-lambdam

@@ -9,7 +9,7 @@ See the notebook.
 
 """
 function stagnationtable()
-    ftout=nsolsc(ftanx,4.5; maxit=14, rtol=1.e-17, atol=1.e-17, 
+    ftout=nsolsc(x -> tan(x) - x, 4.5; maxit=14, rtol=1.e-17, atol=1.e-17, 
           printerr=false);
     printhist(ftout.history[1:6],["|f(x)|"])
 end

@@ -15,13 +15,13 @@ function threewaystagnation(printlabel=true)
             stagnationok=true,solver="chord")
     kwsec=(maxit=6, rtol=1.e-17, atol=1.e-17, printerr=false,  
             stagnationok=true)
-    nnout=nsolsc(ftanx,4.5; kwnewt...)
+    nnout=nsolsc(x -> tan(x) - x, 4.5; kwnewt...)
     lnn=length(nnout.history)
     nncounter=0:lnn-1
-    chout=nsolsc(ftanx,4.5; kwchord...)
+    chout=nsolsc(x -> tan(x) - x, 4.5; kwchord...)
     lnc=length(chout.history)
     nccounter=0:lnc-1
-    scout=secant(ftanx,4.5; kwsec...)
+    scout=secant(x -> tan(x) - x, 4.5; kwsec...)
     lns=length(scout.history)
     sccounter=0:lns-1
 semilogy(nncounter, nnout.history,"k-",

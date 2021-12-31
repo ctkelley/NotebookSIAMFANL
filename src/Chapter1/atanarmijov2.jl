@@ -10,11 +10,10 @@ studying this code.
 
 The call to the solver is pretty simple
 
-global_hist = nsolsc(1.0, atan, fpatan; rtol = 1.e-8, maxit = 20)
+global_hist = nsolsc(1.0, atan, x -> 1.0/(1.0+x^2); rtol = 1.e-8, maxit = 20)
 
-and fpatan(x) = 1.0/(1.0+x^2)
+using an anonymous function for the derivative.
 
-is in this .jl file. 
 
 """
 function atanarmijov2(printlabel=true)
@@ -24,7 +23,7 @@ function atanarmijov2(printlabel=true)
         global_hist = nsolsc(
             atan,
             10.0,
-            fpatan; rtol = 1.e-8, atol = 1.e-10, maxit = 20
+            x -> 1.0/(1.0 + x^2); rtol = 1.e-8, atol = 1.e-10, maxit = 20
         )
         rval = global_hist.history
         itc=length(rval)
