@@ -6,7 +6,7 @@ bookkeeping.
 
 Inputs:
 tablein: columns of equal length with the data
-         Pad the short ones with NaNs. My codes which all this
+         Pad the short ones with NaNs. My codes which use this
          do that. The formatting turns the NaNs into spaces of
          the correct length.
 headers: the titles for the columns
