@@ -16,32 +16,19 @@ Vstore=zeros(n*n,3*mmax+3);
 rtol = 1.e-8;
 atol = 1.e-8;
 mvec=[0, 2, 4, 10]
-pstr=["k--.","k-.","k-","k--","k-o"]
-lhist=zeros(Int64,5);
-ithist=zeros(101,5);
-fhist=zeros(Int64,101,2);
 #
-for ip=1:4
-m=mvec[ip]
+# Set up the data for the plots. Look at NotebookSIAMFANL.jl for the
+# definition of the Data_4_Plots structure.
+#
+plot_hist = Vector{Data_4_Plots}()
+#
+# AA for a few depths with a little mixing
+#
+for m in mvec
 aout = aasol(hardleftFix!, u0, m, Vstore; pdata=pdata, maxit=100, rtol=rtol,
              atol=atol,beta=.2)
-ila=length(aout.history)
-lhist[ip]=ila;
-ithist[1:ila,ip]=aout.history./aout.history[1]
+nl_stats!(plot_hist, aout, "m = $m"; method=:aa)
 end
-subplot(1,2,1)
-for ip=1:4
-semilogy(0:lhist[ip]-1, ithist[1:lhist[ip],ip],pstr[ip])
-end
-(m1,m2,m3,m4)=mvec;
-legend(["m=$m1", "m=$m2", "m=$m3", "m=$m4"])
-printlabel && title("Figure 4.X in print book")
-xlabel("Iterations")
-ylabel("Relative residual")
-subplot(1,2,2)
-for ip=1:4
-semilogy(1:lhist[ip], ithist[1:lhist[ip],ip],pstr[ip])
-end
-xlabel("Function Evaluations")
-
+printlabel ? (caption = "Fig 4.X in print book") : (caption = nothing)
+plot_its_funs(plot_hist, caption)
 end

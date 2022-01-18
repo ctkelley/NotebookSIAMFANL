@@ -18,60 +18,25 @@ Vstore=zeros(n*n,3*mmax+3);
 #
 rtol = 1.e-8;
 atol = 1.e-8;
-mvec=[2, 4, 10]
-pstr=["k--.","k-.","k-","k--","k-o"]
-lhist=zeros(Int64,5);
-ithist=zeros(50,5);
-fhist=zeros(Int64,50,2);
+#
+# Set up the data for the plots. Look NotebookSIAMFANL.jl for the
+# definition of the Data_4_Plots structure.
+#
+plot_hist = Vector{Data_4_Plots}()
 #
 pout=nsoli(hardleft!, u0, FV, JV; pdata=pdata, 
            rtol=rtol, atol=atol, maxit=20, eta=.1, fixedeta=false);
-(hfunl,lhistl,reshistl)=getcost(pout);
-lhist[1]=lhistl;
-fhist[1:lhistl,1]=hfunl;
-ithist[1:lhistl,1]=reshistl;
+nl_stats!(plot_hist, pout, "NewtonL"; method=:nk)
 
 pout=nsoli(pdeF!, u0, FV, JV, Jvec2d; pdata=pdata, Pvec=Pvec2d,
            rtol=rtol, atol=atol, maxit=20, eta=.1, fixedeta=false);
-(hfunl,lhistl,reshistl)=getcost(pout);
-lhist[2]=lhistl;
-fhist[1:lhistl,2]=hfunl;
-ithist[1:lhistl,2]=reshistl;
-
-for ip=1:3
-m=mvec[ip]
+nl_stats!(plot_hist, pout, "NewtonR"; method=:nk)
+mvec=[2, 4, 10]
+for m in mvec
 aout = aasol(hardleftFix!, u0, m, Vstore; pdata=pdata, maxit=40, rtol=rtol,
              atol=atol)
-ila=length(aout.history)
-lhist[ip+2]=ila;
-ithist[1:ila,ip+2]=aout.history./aout.history[1]
+nl_stats!(plot_hist, aout, "m = $m"; method=:aa)
 end
-
-subplot(1,2,1)
-for ip=1:5
-semilogy(0:lhist[ip]-1, ithist[1:lhist[ip],ip],pstr[ip])
-end
-legend(["NewtonL", "NewtonR", "m=2", "m=4", "m=10"])
-printlabel && title("Figure 4.2 in print book")
-xlabel("Iterations")
-ylabel("Relative residual")
-subplot(1,2,2)
-for ip=1:2
-#println(fhist[1:lhist[ip],ip])
-semilogy(fhist[1:lhist[ip],ip], ithist[1:lhist[ip],ip],pstr[ip])
-end
-for ip=3:5
-semilogy(1:lhist[ip], ithist[1:lhist[ip],ip],pstr[ip])
-end
-xlabel("Function Evaluations")
-
-end
-
-
-function getcost(nout)
-lhist=length(nout.history)
-tfun=nout.stats.ifun + nout.stats.ijac
-hfun=cumsum(tfun)
-reshist=nout.history./nout.history[1]
-return (hfun, lhist, reshist)
+printlabel ? (caption = "Fig 4.2 in print book") : (caption = nothing)
+plot_its_funs(plot_hist, caption)
 end
