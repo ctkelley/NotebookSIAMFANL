@@ -1,5 +1,12 @@
 module NotebookSIAMFANL
 
+struct Data_4_Plots
+relreshist::Vector{Float64}
+itdata::Vector{Int}
+fdata::Vector{Int}
+legend::String
+end
+
 using PyPlot
 using LaTeXStrings
 using Printf
@@ -39,9 +46,11 @@ export LptcCompare
 export aa_heq
 export aa_pde
 export mixing_pde
+export heat_plot
 
 export plothist
 export printhist
+export plot_its_funs
 
 include("Chapter1/linearmodel.jl")
 include("Chapter1/newtonstagnation.jl")
@@ -71,8 +80,10 @@ include("Chapter3/LptcCompare.jl")
 include("Chapter4/aa_heq.jl")
 include("Chapter4/aa_pde.jl")
 include("Chapter4/mixing_pde.jl")
+include("Chapter5/heat_plot.jl")
 
 include("Tools/plothist.jl")
 include("Tools/printhist.jl")
+include("Tools/plot_its_funs.jl")
 
 end
