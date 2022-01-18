@@ -19,82 +19,32 @@ function nk_pde_bicgstab(printlabel = true)
     atol = 1.e-10
     etamax = 0.1
     fixedeta = false
+#
+# Set up the data for the plots. Look NotebookSIAMFANL.jl for the
+# definition of the Data_4_Plots structure.
+#
+plot_hist = Vector{Data_4_Plots}()
+    fignum="3.7"
     #
     # Call the solver with a finite-difference Jac-Vec, FFT preconditioner
     # with GMRES, GMRES(2), and BiCGSTAB as the linear solvers
     #
-    poutg = nsoli(
-        pdeF!,
-        u0,
-        FV,
-        JVL;
-        rtol = rtol,
-        atol = atol,
-        pdata = pdata,
-        eta = etamax,
-        fixedeta = fixedeta,
-        maxit = 10,
-        lmaxit = 20,
-        Pvec = Pvec2d,
-    )
-    poutgl = nsoli(
-        pdeF!,
-        u0,
-        FV,
-        JV;
-        rtol = rtol,
-        atol = atol,
-        pdata = pdata,
-        eta = etamax,
-        fixedeta = fixedeta,
-        maxit = 10,
-        lmaxit = 20,
-        Pvec = Pvec2d,
-    )
-    poutb = nsoli(
-        pdeF!,
-        u0,
-        FV,
-        FVS;
-        rtol = rtol,
-        atol = atol,
-        pdata = pdata,
-        eta = etamax,
-        fixedeta = fixedeta,
-        maxit = 10,
-        lmaxit = 20,
-        Pvec = Pvec2d,
-        lsolver = "bicgstab",
-    )
-    #
-    # Collect the iteration statistics and make the plots
-    #
-    histgl = poutgl.history ./ poutgl.history[1]
-    lgl = length(histgl)
-    xgl = 0:lgl-1
-    histg = poutg.history ./ poutg.history[1]
-    lg = length(histg)
-    xg = 0:lg-1
-    histb = poutb.history ./ poutb.history[1]
-    lb = length(histb)
-    xb = 0:lb-1
-    subplot(1, 2, 1)
-    semilogy(xg, histg, "k-", xb, histb, "k--", xgl, histgl, "k-.")
-    ylabel("relative residual")
-    axis([0.0, 7.0, 1.e-8, 1.0])
-    xlabel("iterations")
-    ~printlabel || title("Fig 3.7 from print book")
-    subplot(1, 2, 2)
-    fvalsg = poutg.stats.ijac
-    hplotg = cumsum(fvalsg)
-    fvalsb = poutb.stats.ijac
-    hplotb = cumsum(fvalsb)
-    fvalsgl = poutgl.stats.ijac
-    hplotgl = cumsum(fvalsgl)
-    semilogy(hplotg, histg, "k-", hplotb, histb, "k--", hplotgl, histgl, "k-.")
-    ~printlabel || title("Fig 3.7 from print book")
-    axis([0.0, 60.0, 1.e-8, 1.0])
-    xlabel("Jacobian-vector products")
-    legend(["Gmres", "BiCGSTAB", "GMRES(2)"])
-    return (poutg = poutg, poutgl = poutgl, poutb = poutb)
+    poutg = nsoli( pdeF!, u0, FV, JVL; rtol = rtol, atol = atol, pdata = pdata,
+        eta = etamax, fixedeta = fixedeta, maxit = 10, lmaxit = 20, 
+        Pvec = Pvec2d)
+nl_stats!(plot_hist, poutg, "GMRES"; method=:nkj)
+#
+    poutb = nsoli( pdeF!, u0, FV, FVS; rtol = rtol, atol = atol, pdata = pdata,
+        eta = etamax, fixedeta = fixedeta, maxit = 10, lmaxit = 20,
+        Pvec = Pvec2d, lsolver = "bicgstab")
+nl_stats!(plot_hist, poutb, "BiCGSTAB"; method=:nkj)
+#
+    poutgl = nsoli( pdeF!, u0, FV, JV; rtol = rtol, atol = atol, pdata = pdata,
+        eta = etamax, fixedeta = fixedeta, maxit = 10, lmaxit = 20,
+        Pvec = Pvec2d)
+nl_stats!(plot_hist, poutgl, "GMRES(2)"; method=:nkj)
+#
+printlabel ? (caption = "Fig $fignum in print book") : (caption = nothing)
+plot_its_funs(plot_hist, caption; method=:nkj)
+return (poutg = poutg, poutgl = poutgl, poutb = poutb)
 end

@@ -16,38 +16,26 @@ u0=zeros(n*n,); FV=copy(u0);
 pdata=pdeinit(n);
 # Storage for the Jacobian-vector products
 JV=zeros(n*n,100);
+#
+# Set up the data for the plots. Look NotebookSIAMFANL.jl for the
+# definition of the Data_4_Plots structure.
+#
+plot_hist = Vector{Data_4_Plots}()
+fignum="3.3"
 # Call the solver
 # EW with etamax=.9
+legend(["Right", "Left", "Left-NL"])
 houtrs=nsoli(pdeF!, u0, FV, JV, Jvec2d; rtol=rtol, atol=atol, Pvec=Pvec2d,
           eta=.9, pdata=pdata, fixedeta=false, maxit=20, pside="right");
+nl_stats!(plot_hist, houtrs, "Right"; method=:nkj)
 houtls=nsoli(pdeF!, u0, FV, JV, Jvec2d; rtol=rtol, atol=atol, Pvec=Pvec2d,
           eta=.9, pdata=pdata, fixedeta=false, maxit=200, pside="left");
+nl_stats!(plot_hist, houtls, "Left"; method=:nkj)
 houtlnl=nsoli(hardleft!, u0, FV, JV; rtol=rtol, atol=atol,
           eta=.9, pdata=pdata, fixedeta=false, maxit=200);
+nl_stats!(plot_hist, houtlnl, "Left-NL"; method=:nkj)
 #
-# Plotting and bookkeeping you don't want to look at.
-#
-subplot(1,2,1)
-~printlabel || title("Fig 3.3 from print book")
-lrs=length(houtrs.history);
-lls=length(houtls.history);
-llnls=length(houtlnl.history);
-hisrs=houtrs.history./houtrs.history[1]
-hisls=houtls.history./houtls.history[1]
-hislnl=houtlnl.history./houtlnl.history[1]
-semilogy(0:lrs-1,hisrs,"k-",0:lls-1,hisls,"k--",
-         0:llnls-1,hislnl,"k-.")
-yticks([1.0, 1.e-2, 1.e-4, 1.e-6, 1.e-8])
-xlabel("iterations")
-ylabel("relative residual")
-legend(["Right", "Left", "Left-NL"])
-subplot(1,2,2)
-foutrs=cumsum(houtrs.stats.ijac)
-foutls=cumsum(houtls.stats.ijac)
-foutlnls=cumsum(houtlnl.stats.ijac)
-semilogy(foutrs,hisrs,"k-",foutls,hisls,"k--",
-          foutlnls,hislnl,"k-.")
-yticks([1.0, 1.e-2, 1.e-4, 1.e-6, 1.e-8])
-xlabel("Jacobian-vector products")
+printlabel ? (caption = "Fig $fignum in print book") : (caption = nothing)
+plot_its_funs(plot_hist, caption; method=:nkj)
 return (houtrs=houtrs, houtls=houtls, houtlnl=houtlnl)
 end

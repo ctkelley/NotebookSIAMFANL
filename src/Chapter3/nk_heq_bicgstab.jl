@@ -22,78 +22,25 @@ function nk_heq_bicgstab(printlabel = true)
     hdata = heqinit(u0, c)
     etamax = 0.1
     fixedeta = false
+#
+# Set up the data for the plots. Look NotebookSIAMFANL.jl for the
+# definition of the Data_4_Plots structure.
+#
+    plot_hist = Vector{Data_4_Plots}()
     #
     # Use GMRES, GMRES(2), and BiCGSTAB
     #
-    koutb = nsoli(
-        heqf!,
-        u0,
-        FS,
-        FV;
-        pdata = hdata,
-        rtol = rtol,
-        atol = atol,
-        lmaxit = 40,
-        eta = etamax,
-        lsolver = "bicgstab",
-        fixedeta = fixedeta,
-    )
-    koutg = nsoli(
-        heqf!,
-        u0,
-        FS,
-        FPS;
-        pdata = hdata,
-        rtol = rtol,
-        atol = atol,
-        lmaxit = 40,
-        eta = etamax,
-        fixedeta = fixedeta,
-    )
-    koutgs = nsoli(
-        heqf!,
-        u0,
-        FS,
-        FPSS;
-        pdata = hdata,
-        rtol = rtol,
-        atol = atol,
-        lmaxit = 40,
-        eta = etamax,
-        fixedeta = fixedeta,
-    )
-    #
-    # Get the iteration statistics and organize the plots.
-    #
-    histg = koutg.history ./ koutg.history[1]
-    histgs = koutgs.history ./ koutgs.history[1]
-    histb = koutb.history ./ koutb.history[1]
-    lng = length(histg)
-    xg = 0:lng-1
-    lngs = length(histgs)
-    xgs = 0:lngs-1
-    lnb = length(histb)
-    xb = 0:lnb-1
-    subplot(1, 2, 1)
-    semilogy(xg, histg, "k-", xb, histb, "k--", xgs, histgs, "k-.")
-    ylabel("relative residual")
-    xlabel("iterations")
-    ~printlabel || title("Fig 3.6 from print book")
-    axis([0.0, 6.0, 1.e-13, 1.0])
-    ta = collect(1:6)
-    xticks(ta)
-    subplot(1, 2, 2)
-    fvalsg = koutg.stats.ijac
-    hplotg = cumsum(fvalsg)
-    fvalsgs = koutgs.stats.ijac
-    hplotgs = cumsum(fvalsgs)
-    fvalsb =  koutb.stats.ijac
-    hplotb = cumsum(fvalsb)
-    semilogy(hplotg, histg, "k-", hplotb, histb, "k--", hplotgs, histgs, "k-.")
-    legend(["Gmres", "BiCGSTAB", "GMRES(2)"])
-    axis([0, 18.0, 1.e-13, 1.0])
-    ta = collect(0:2:18)
-    xticks(ta)
-    xlabel("Jacobian-vector products")
+    koutg = nsoli( heqf!, u0, FS, FPS; pdata = hdata, rtol = rtol, atol = atol,
+        lmaxit = 40, eta = etamax, fixedeta = fixedeta)
+    nl_stats!(plot_hist, koutg, "GMRES"; method=:nkj)
+    koutb = nsoli( heqf!, u0, FS, FV; pdata = hdata, rtol = rtol, atol = atol,
+        lmaxit = 40, eta = etamax, lsolver = "bicgstab", 
+        fixedeta = fixedeta)
+    nl_stats!(plot_hist, koutb, "BiCGSTAB"; method=:nkj)
+    koutgs = nsoli( heqf!, u0, FS, FPSS; pdata = hdata, rtol = rtol, 
+         atol = atol, lmaxit = 40, eta = etamax, fixedeta = fixedeta)
+    nl_stats!(plot_hist, koutgs, "GMRES(2)"; method=:nkj)
+    printlabel ? (caption = "Fig 3.6 in print book") : (caption = nothing)
+    plot_its_funs(plot_hist, caption; method=:nkj)
     return (koutb = koutb, koutg = koutg)
 end
