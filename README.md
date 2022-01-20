@@ -2,11 +2,12 @@
 ## Under contract with SIAM for publication in 2022
 
 ```diff
-- # Warning: Julia 1.6.4 and 1.7.0 break the high-dimensional H-equation examples thanks to an OPENBLAS problem.
+- # Warning: Julia 1.6.4 and 1.7.0 break the high-dimensional H-equation 
+- # examples thanks to an OPENBLAS problem.
 ```
 
 ```diff
-- #1.6.3 is ok. 1.7.0 with MKL blas is ok.
+- #1.6.3 and 1.6.5 are ok. 1.7.0 with MKL blas and 1.7.1 are  ok.
 ```
 
 See the story at 
@@ -17,12 +18,14 @@ and
 
 https://github.com/JuliaLang/julia/issues/43242
 
-If you try to start the notebooks with 1.6.4 or 1.7.0 with OPENBLAS I will throw an error. 1.6.3 and all previous versions >= 1.5 work fine.
+If you try to start the notebooks with 1.6.4 or 1.7.0 with OPENBLAS I will throw an error.
+
+I am now running this with 1.7.1 on Intel Macs and an M1 in native mode!
 
 # Notebook version 0.5.0
 ## First case study
 
-# Use v0.4.3 or higher of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
+# Use v0.5.0 or higher of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
 
 ## [C. T. Kelley](https://ctk.math.ncsu.edu)
 
