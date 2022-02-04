@@ -13,12 +13,16 @@ xlab=("Jacobian-vector products")
 end
 ylab=("")
 ip=1
+resmax=0.0
 for D4P in plot_hist
 semilogy(D4P.fdata, D4P.relreshist, pstr[ip])
+resmax=max(resmax,maximum(D4P.relreshist))
 ip+=1
 end
 (xmin, xmax, ymin, ymax) = axis()
-axis([0.0, xmax, ymin, 1.0])
+axis([0.0, xmax, ymin, max(1.0,resmax)])
+itick=ceil(xmax/5.0)
+xticks(0:itick:xmax)
 xlabel(xlab)
 ylabel(ylab)
 end
@@ -29,8 +33,10 @@ xlab=("Iterations")
 ylab=("Relative residual")
 inlegend=Vector{String}()
 ip=1;
+resmax=0.0
 for D4P in plot_hist
 push!(inlegend,D4P.legend)
+resmax=max(resmax,maximum(D4P.relreshist))
 semilogy(D4P.itdata, D4P.relreshist, pstr[ip])
 ip+=1
 end
@@ -38,7 +44,9 @@ legend(inlegend)
 xlabel(xlab)
 ylabel(ylab)
 (xmin, xmax, ymin, ymax) = axis()
-axis([0.0, xmax, ymin, 1.0])
+itick=ceil(xmax/5.0)
+xticks(0:itick:xmax)
+axis([0.0, xmax, ymin, max(1.0,resmax)])
 (caption == nothing) || title(caption)
 end
 
