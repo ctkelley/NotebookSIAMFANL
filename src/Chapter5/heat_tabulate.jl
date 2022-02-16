@@ -32,8 +32,8 @@ end
 printf("\\end{tabular}")
 else
 lvx=L"$x$"; lt1=L"$\Theta_1$"; lt2=L"$\Theta_2$";
-printf("%s %12s %15s \n", lvx, lt1, lt2)
-#printf("%s %12s %15s \n", "  x", "T1", "T2")
+#printf("%s %12s %15s \n", lvx, lt1, lt2)
+printf("%s %15s %15s \n", "  x", "Theta1", "Theta2")
 for i=1:11
 printf("%5.2f %15.5e %15.5e \n", xvals[i], P1ok[i], P2ok[i])
 end
