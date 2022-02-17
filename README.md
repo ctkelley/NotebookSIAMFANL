@@ -23,7 +23,7 @@ If you try to start the notebooks with 1.6.4 or 1.7.0 with OPENBLAS I will throw
 I am now running this with 1.7.1 on Intel Macs and an M1 in native mode!
 
 # Notebook version 0.5.0
-## First case study
+## First case study done: Conductive-Radiative Heat Transfer
 
 # Use v0.5.0 or higher of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
 
