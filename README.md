@@ -22,8 +22,9 @@ If you try to start the notebooks with 1.6.4 or 1.7.0 with OPENBLAS I will throw
 
 I am now running this with 1.7.1 on Intel Macs and an M1 in native mode!
 
-# Notebook version 0.5.0
+# Notebook version 0.5.1
 ## First case study done: Conductive-Radiative Heat Transfer
+## This release will be the second case study
 
 # Use v0.5.0 or higher of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
 
@@ -172,7 +173,7 @@ The codes for every plot and table in the book are either in the src directory i
 
 - src/ChapterX in the notebook repo has the examples for the print-->notebook map
 
-- src/TestProblems in the repo for __SIAMFANL.jl__ has the test problems for the book. You do ```using SIAMFANL.TestProblems``` to get to them.
+- src/TestProblems in the repo for __SIAMFANL.jl__ has the test problems and case studies for the book. You do ```using SIAMFANL.TestProblems``` to get to them.
 
 - src/Examples in the repo for __SIAMFANL.jl__ has many examples that I use in the and for CI. You do ```using SIAMFANL.Examples``` to get to them.
 
