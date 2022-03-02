@@ -27,7 +27,7 @@ I am now running this with 1.7.1 on Intel Macs and an M1 in native mode!
 ## This release fixes an excessive allocation problem in nsolli and ptcsoli
 ## second case study coming in 0.5.2
 
-# Use v0.5.0 or higher of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
+# Use v0.5.1 or higher of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
 
 ## [C. T. Kelley](https://ctk.math.ncsu.edu)
 
