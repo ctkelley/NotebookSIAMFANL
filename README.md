@@ -24,7 +24,7 @@ I am now running this with 1.7.1 on Intel Macs and an M1 in native mode!
 
 # Notebook version 0.5.1
 ## First case study done: Conductive-Radiative Heat Transfer
-## This release fixes an excessive allocation problem in nsolli
+## This release fixes an excessive allocation problem in nsolli and ptcsoli
 ## second case study coming in 0.5.2
 
 # Use v0.5.0 or higher of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
