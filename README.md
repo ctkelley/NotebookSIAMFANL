@@ -23,6 +23,9 @@ If you try to start the notebooks with 1.6.4 or 1.7.0 with OPENBLAS I will throw
 I am now running this with 1.7.1 on Intel Macs and an M1 in native mode!
 
 # Notebook version 0.5.2
+
+<img width = 200, src = "https://user-images.githubusercontent.com/10243067/158274914-6ac8a732-2caf-4ca4-9299-3fbef63c02e0.png">
+
 ## First case study done: Conductive-Radiative Heat Transfer
 ## Second case study done:
 
