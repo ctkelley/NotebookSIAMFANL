@@ -52,6 +52,7 @@ export printhist
 export plot_its_funs
 export vary_xferheat_parms
 export heat_tabulate
+export heq_graph_continuation
 
 include("Chapter1/linearmodel.jl")
 include("Chapter1/newtonstagnation.jl")
@@ -83,6 +84,7 @@ include("Chapter4/aa_pde.jl")
 include("Chapter4/mixing_pde.jl")
 include("Chapter5/xferheat.jl")
 include("Chapter5/heat_tabulate.jl")
+include("Chapter5/heq_graph_continuation.jl")
 
 include("Tools/plothist.jl")
 include("Tools/printhist.jl")
