@@ -11,7 +11,7 @@ and
 
 https://github.com/JuliaLang/julia/issues/43242
 
-__If you try to start the notebooks with 1.6.4 or 1.7.0 I will throw an error. I will stop throwing this error before 1.5.3 is released.__
+__If you try to start the notebooks with 1.6.4 or 1.7.0 I will throw an error. I will stop throwing this error before 0.5.3 is released.__
 
 I am now running this with 1.7.2 on Intel Macs and an M1 in native mode!
 
