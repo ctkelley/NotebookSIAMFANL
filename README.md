@@ -1,14 +1,7 @@
 # Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia
 ## Under contract with SIAM for publication in 2022
 
-```diff
-- # Warning: Julia 1.6.4 and 1.7.0 break the high-dimensional H-equation 
-- # examples thanks to an OPENBLAS problem.
-```
-
-```diff
-- #1.6.3 and 1.6.5 are ok. 1.7.0 with MKL blas and 1.7.1 are  ok.
-```
+__Use 1.7.1 or higher with these notebooks. LTS 1.6.5 also works (for now).__
 
 See the story at 
 
@@ -18,11 +11,11 @@ and
 
 https://github.com/JuliaLang/julia/issues/43242
 
-If you try to start the notebooks with 1.6.4 or 1.7.0 with OPENBLAS I will throw an error.
+__If you try to start the notebooks with 1.6.4 or 1.7.0 I will throw an error. I will stop throwing this error before 1.5.3 is released.__
 
-I am now running this with 1.7.1 on Intel Macs and an M1 in native mode!
+I am now running this with 1.7.2 on Intel Macs and an M1 in native mode!
 
-# Notebook version 0.5.2
+# Notebook version 0.5.3
 
 <img width = 200, src = "https://user-images.githubusercontent.com/10243067/158274914-6ac8a732-2caf-4ca4-9299-3fbef63c02e0.png">
 
