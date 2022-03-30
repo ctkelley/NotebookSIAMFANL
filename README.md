@@ -15,14 +15,9 @@ __If you try to start the notebooks with 1.6.4 or 1.7.0 I will throw an error. I
 
 I am now running this with 1.7.2 on Intel Macs and an M1 in native mode!
 
-# Notebook version 0.5.3
-
 <img width = 200, src = "https://user-images.githubusercontent.com/10243067/158274914-6ac8a732-2caf-4ca4-9299-3fbef63c02e0.png">
 
-## First case study done: Conductive-Radiative Heat Transfer
-## Second case study done:
-
-# Use v0.5.2 or higher of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
+# Use the latest release of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
 
 ## [C. T. Kelley](https://ctk.math.ncsu.edu)
 
