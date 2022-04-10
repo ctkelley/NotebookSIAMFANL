@@ -20,6 +20,7 @@ function linearmodel(printlabel=true)
     # Figure 1.1 from the print book.
     #
 
+    fpsize=fsize(printlabel)
     local_hist = nsolsc(atan,1.0,x -> 1.0/(1.0+x^2); rtol = 1.e-8, maxit = 20)
     iplot = true
     if iplot
@@ -53,8 +54,8 @@ function linearmodel(printlabel=true)
         plt.text(-.07, .05, L"x^*")
         plot(xval[2], 0, "ko")
         plot(xval[3], 0, "ko")
-        ylabel("atan(x)")
-        xlabel("x")
+        ylabel("atan(x)",fontsize=fpsize)
+        xlabel("x",fontsize=fpsize)
         ~printlabel || title("Figure 1.1 from print book")
      end
 end

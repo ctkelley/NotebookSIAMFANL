@@ -53,6 +53,7 @@ export plot_its_funs
 export vary_xferheat_parms
 export heat_tabulate
 export heq_graph_continuation
+export fsize
 
 include("Chapter1/linearmodel.jl")
 include("Chapter1/newtonstagnation.jl")
@@ -89,5 +90,7 @@ include("Chapter5/heq_graph_continuation.jl")
 include("Tools/plothist.jl")
 include("Tools/printhist.jl")
 include("Tools/plot_its_funs.jl")
+include("Tools/fsize.jl")
+
 
 end

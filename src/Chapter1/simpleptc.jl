@@ -1,5 +1,5 @@
 """
-simpleptc()
+simpleptc(printlabel=true)
 
 Make Figure 1.6 in the print book.
 
@@ -41,15 +41,17 @@ newtresid=newtdata.history
 #
 # Newton errors vs PTC errors
 #
+#printlabel ? fpsize="12" : fpsize = "14"
+fpsize=fsize(printlabel)
 figure(1)
 subplot(1,2,1)
 ~printlabel || title("Figure 1.6 from print book")
 semilogy(pival,abs.(ptcerr),"k--",nival,abs.(newterr),"k-")
 PTClabel=L"$\Psi$TC"
-legend((PTClabel,"Newton"))
-xlabel("Iterations",fontsize="12")
+legend((PTClabel,"Newton"),fontsize=fpsize)
+xlabel("Iterations",fontsize=fpsize)
 gylabele=L"$|x-x^*|$"
-ylabel(gylabele,fontsize="12")
+ylabel(gylabele,fontsize=fpsize)
 axis([0, itlim, 1.e-17, 1.0])
 #
 # Look at how |f| and dt almost mirror each other, as the forumla
@@ -57,10 +59,10 @@ axis([0, itlim, 1.e-17, 1.0])
 #
 subplot(1,2,2)
 semilogy(pival,abs.(ptcfun),"k--",nival,newtresid,"k-")
-xlabel("Iterations",fontsize="12")
+xlabel("Iterations",fontsize=fpsize)
 gylabelfdt=L"$|f|$"
-ylabel(gylabelfdt,fontsize="12")
-legend((PTClabel,"Newton"))
+ylabel(gylabelfdt,fontsize=fpsize)
+legend((PTClabel,"Newton"),fontsize=fpsize)
 axis([0, itlim, 1.e-15, 1.0])
 PyPlot.tight_layout()
 

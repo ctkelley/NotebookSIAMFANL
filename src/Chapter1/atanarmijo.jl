@@ -27,6 +27,7 @@ function atanarmijo(printlabel=true)
             x -> 1.0/(1.0+x^2); rtol = 1.e-8, atol = 1.e-10, maxit = 20,
             armfix=true
         )
+        fpsize=fsize(printlabel)
         rval = global_hist.history
         itc=length(rval)
         ival = 0:itc-1
@@ -41,8 +42,8 @@ function atanarmijo(printlabel=true)
         plot(ival[5], abs(rval[5]), "ko")
         ylim(1.e-11, 1000)
         xlim(0, 12)
-        ylabel("Absolute Nonlinear Residual")
-        xlabel("Nonlinear iterations")
+        ylabel("Absolute Nonlinear Residual",fontsize=fpsize)
+        xlabel("Nonlinear iterations",fontsize=fpsize)
 ~printlabel || title("Figure 1.4 from print book")
     end
 
