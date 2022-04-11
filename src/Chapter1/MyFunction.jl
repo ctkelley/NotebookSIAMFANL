@@ -1,7 +1,7 @@
 module MyFunction
 
-export(myfun)
-export(myfunp)
+export myfun 
+export myfunp 
 
 function myfun(x)
     fun=cos(x)-x
