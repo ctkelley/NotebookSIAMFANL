@@ -9,6 +9,7 @@ The mission of these plots is mostly to show how the forcing
 term affects convergence. 
 """
 function nk_pde_forcing(printlabel=true, n=31, pside="right")
+fpsize=fsize(printlabel)
 # Get some room for the residual
 rtol=1.e-7; atol=1.e-7;
 u0=zeros(n*n,); FV=copy(u0);
@@ -39,5 +40,5 @@ houtfe=nsoli(pdeF!, u0, FV, JV, Jvec2d; rtol=rtol, atol=atol, Pvec=Pvec2d,
 nl_stats!(plot_hist, houtfe, L"Fixed $\eta=.1$",
            method=:nkj)
 printlabel ? (caption = "Fig $fignum in print book") : (caption = nothing)
-plot_its_funs(plot_hist, caption; method=:nkj)
+plot_its_funs(plot_hist, caption; method=:nkj, fpsize=fpsize)
 end

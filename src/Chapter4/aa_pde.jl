@@ -4,6 +4,7 @@ Compare AA to Newton-Krylov for the left preconditioned nonlinear
 convection-diffusion equation.
 """
 function aa_pde(n=31; printlabel=true)
+fpsize=fsize(printlabel)
 #
 # Organize the precomputed data and the storage.
 #
@@ -38,5 +39,5 @@ aout = aasol(hardleftFix!, u0, m, Vstore; pdata=pdata, maxit=40, rtol=rtol,
 nl_stats!(plot_hist, aout, "m = $m"; method=:aa)
 end
 printlabel ? (caption = "Fig 4.2 in print book") : (caption = nothing)
-plot_its_funs(plot_hist, caption)
+plot_its_funs(plot_hist, caption; fpsize=fpsize)
 end

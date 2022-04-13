@@ -3,6 +3,7 @@ nk_heq_forcing(printlabel=true)
 Compare forcing term strategies for H-equation.
 """
 function nk_heq_forcing(printlabel=true)
+fpsize=fsize(printlabel)
 n=128;
 u0=ones(n,);
 FS=zeros(n,);
@@ -26,5 +27,5 @@ koutew9=nsoli(heqf!, u0, FS, FPS; pdata=hdata, eta=.9,
 nl_stats!(plot_hist, koutew9, 
          L"Eisenstat-Walker: $\eta_{max} = .9$";method=:nkj)
 printlabel ? (caption = "Fig 3.1 in print book") : (caption = nothing)
-plot_its_funs(plot_hist, caption; method=:nkj)
+plot_its_funs(plot_hist, caption; method=:nkj, fpsize=fpsize)
 end

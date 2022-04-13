@@ -5,6 +5,7 @@ Solve the convection-diffusion equation using nsoli.jl on an n x n grid.
 with Newton_GMRES and Newton-BiCGSTAB
 """
 function nk_pde_bicgstab(printlabel = true)
+    fpsize=fsize(printlabel)
     # Get some room for the residual
     n = 31
     u0 = zeros(n * n)
@@ -45,6 +46,6 @@ nl_stats!(plot_hist, poutb, "BiCGSTAB"; method=:nkj)
 nl_stats!(plot_hist, poutgl, "GMRES(2)"; method=:nkj)
 #
 printlabel ? (caption = "Fig $fignum in print book") : (caption = nothing)
-plot_its_funs(plot_hist, caption; method=:nkj)
+plot_its_funs(plot_hist, caption; method=:nkj, fpsize=fpsize)
 return (poutg = poutg, poutgl = poutgl, poutb = poutb)
 end

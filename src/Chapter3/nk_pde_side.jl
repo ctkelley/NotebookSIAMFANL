@@ -8,6 +8,7 @@ nonlinear left preconditioning with lose forcing.
 
 """
 function nk_pde_side(printlabel=true, n=31)
+fpsize=fsize(printlabel)
 #function hard_left(printlabel=true, n=31)
 # Get some room for the residual
 rtol=1.e-7; atol=1.e-7;
@@ -36,6 +37,6 @@ houtlnl=nsoli(hardleft!, u0, FV, JV; rtol=rtol, atol=atol,
 nl_stats!(plot_hist, houtlnl, "Left-NL"; method=:nkj)
 #
 printlabel ? (caption = "Fig $fignum in print book") : (caption = nothing)
-plot_its_funs(plot_hist, caption; method=:nkj)
+plot_its_funs(plot_hist, caption; method=:nkj, fpsize=fpsize)
 return (houtrs=houtrs, houtls=houtls, houtlnl=houtlnl)
 end

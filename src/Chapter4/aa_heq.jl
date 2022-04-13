@@ -4,6 +4,7 @@ Look at how performance of Anderson(m) depends on m for H-equation.
 Compare to nsoli.
 """
 function aa_heq(n=128, c=.99; printlabel=true)
+fpsize=fsize(printlabel)
 u0=ones(n,);
 hdata=heqinit(u0,c);
 FS=zeros(n,);
@@ -33,5 +34,5 @@ koutfe=nsoli(heqf!, u0, FS, FPS; pdata=hdata, eta=.1, fixedeta=true,
                rtol=rtol, atol=atol);
 nl_stats!(plot_hist, koutfe, "Newton-GMRES"; method=:nk)
 printlabel ? (caption = "Fig 4.1 in print book") : (caption = nothing)
-plot_its_funs(plot_hist, caption)
+plot_its_funs(plot_hist, caption; fpsize=fpsize)
 end

@@ -4,6 +4,7 @@ nk_heq_bicgstab(printlabel = true)
 Compare Newton-GMRES to Newton-BiCGSTAB for the H-equation
 """
 function nk_heq_bicgstab(printlabel = true)
+    fpsize=fsize(printlabel)
     n = 100
     #
     # Preallocated storage
@@ -41,6 +42,6 @@ function nk_heq_bicgstab(printlabel = true)
          atol = atol, lmaxit = 40, eta = etamax, fixedeta = fixedeta)
     nl_stats!(plot_hist, koutgs, "GMRES(2)"; method=:nkj)
     printlabel ? (caption = "Fig 3.6 in print book") : (caption = nothing)
-    plot_its_funs(plot_hist, caption; method=:nkj)
+    plot_its_funs(plot_hist, caption; method=:nkj, fpsize=fpsize)
     return (koutb = koutb, koutg = koutg)
 end

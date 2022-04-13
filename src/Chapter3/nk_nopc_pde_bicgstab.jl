@@ -7,6 +7,7 @@ with Newton_GMRES and Newton-BiCGSTAB
 Unpreconditioned example.
 """
 function nk_nopc_pde_bicgstab(printlabel = true)
+    fpsize=fsize(printlabel)
     # Get some room for the residual
     n = 31
     u0 = zeros(n * n)
@@ -45,6 +46,6 @@ plot_hist = Vector{Data_4_Plots}()
     # Collect the iteration statistics and make the plots
     #
     printlabel ? (caption = "Fig 3.8 in print book") : (caption = nothing)
-    plot_its_funs(plot_hist, caption; method=:nkj)
+    plot_its_funs(plot_hist, caption; method=:nkj, fpsize=fpsize)
     return (poutg = poutg, poutgl = poutgl, poutb = poutb)
 end

@@ -7,6 +7,7 @@ Left preconditioning this time
 
 """
 function LptcCompare(printlabel=true)
+fpsize=fsize(printlabel)
 n=63;
 dx=1.0/(n+1);
 xv=collect(dx:dx:1.0-dx)
@@ -28,16 +29,16 @@ itl[2]=length(nodtout.history)
 ithist[1:itl[2],2]=nodtout.history./nodtout.history[1]
 pstr=["k-","k--"]
 subplot(1,2,1)
-xlabel("iterations")
-ylabel("relative residual")
+xlabel("iterations",fontsize=fpsize)
+ylabel("relative residual",fontsize=fpsize)
 for ip=1:2
      semilogy(0:itl[ip]-1, ithist[1:itl[ip],ip], pstr[ip])
 end
 legend(["Precond-dt","Precond-no-dt"])
 ~printlabel || title("Figure 3.5 from the print book")
 subplot(1,2,2)
-ylabel("u"); 
-xlabel("x")
+ylabel("u",fontsize=fpsize); 
+xlabel("x",fontsize=fpsize)
 plot(xv, dtout.solution,"k-",xv, nodtout.solution,"k--")
 end
 
