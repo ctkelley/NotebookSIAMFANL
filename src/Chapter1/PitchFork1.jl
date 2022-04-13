@@ -15,4 +15,5 @@ plot(lambdap,stm,"k-")
 xlabel(L"$\lambda$")
 ylabel(L"$x^*(\lambda)$")
 legend(["Stable","Unstable"])
+title("Figure 1.12 in print book")
 end

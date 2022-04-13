@@ -30,6 +30,7 @@ sccounter, scout.history,"k-."
 ylabel("Log Absolute Nonlinear Residual")
 xlabel("Nonlinear Iterations")
 legend(("Newton","Chord","Secant"))
-title("More restrained version of Figure 1.3")
+title("Figure 1.10 in print book")
+#title("More restrained version of Figure 1.3")
 #return nnout
 end
