@@ -31,4 +31,5 @@ nl_stats!(plot_hist, aout, "m = $m"; method=:aa)
 end
 printlabel ? (caption = "Fig 4.X in print book") : (caption = nothing)
 plot_its_funs(plot_hist, caption)
+title("Figure 4.3 in print book")
 end

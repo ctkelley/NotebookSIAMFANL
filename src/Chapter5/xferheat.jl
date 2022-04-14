@@ -1,12 +1,14 @@
-function vary_xferheat_parms(fnote=1)
+function vary_xferheat_parms(fnote=1; printlabel=true)
 
 figmult=fnote
 figure(1)
-xferheat(;fignum=figmult);
+xferheat(;fignum=figmult, printlabel=printlabel);
 figure(2)
-xferheat(2, 1.0, 1.8, .5, 2.0, [2, 5, 10]; fignum=2*figmult);
+xferheat(2, 1.0, 1.8, .5, 2.0, [2, 5, 10]; 
+        fignum=2*figmult, printlabel=printlabel);
 figure(3)
-xferheat(2, 1.0, 2.0, .5, 4.0, [5, 10, 20]; fignum=3*figmult);
+xferheat(2, 1.0, 2.0, .5, 4.0, [5, 10, 20]; 
+        fignum=3*figmult, printlabel=printlabel);
 end
 """
 function xferheat(p=2, thetal=1.0, thetar=0.0, omega=.9, tau=1.0,
@@ -38,7 +40,8 @@ Easy: thetar=2.0, omega=.5, tau=4.0 (Fig 5.3)
 In all cases thetal=0.0.
 """
 function xferheat(p=2, thetal=1.0, thetar=0.0, omega=.9, tau=1.0,
-                  mvec=[0, 2, 5]; fignum=0)
+                  mvec=[0, 2, 5]; fignum=0, printlabel=true)
+fpsize=fsize(printlabel)
 #
 # Try this xferheat(3, 1.0, 1.8, .5, 2.0, mvec=[2, 5, 10])
 # xferheat(3, 1.0, 1.8, .5, 4.0, mvec= [2, 10, 20])
@@ -88,7 +91,7 @@ caption = string("Fig 5.$fignum: ", varcap)
 else
 caption = varcap
 end
-plot_its_funs(plot_hist, caption; method=:nk)
+plot_its_funs(plot_hist, caption; method=:nk, fpsize=fpsize)
 end
 
 function parm_string(tau, omega, thetar)
