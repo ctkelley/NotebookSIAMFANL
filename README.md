@@ -1,6 +1,8 @@
 # Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia
 ## Under contract with SIAM for publication in 2022
 
+## Version 0.7: final draft that goes to the publisher
+
 __Use 1.7.1 or higher with these notebooks. LTS 1.6.5 also works (for now).__
 
 See the story at 
