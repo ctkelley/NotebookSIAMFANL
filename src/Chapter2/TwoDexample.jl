@@ -5,6 +5,7 @@ Draw Fig 2.1 in the print book.
 function TwoDexample(printlabel=true)
 x0a=[2.0, .5];
 x0b=[3.0, 5.0];
+# Allocate some room for the resdiual and Jacobian
 FS=zeros(2,);
 FPS=zeros(2,2);
 nouta=nsol(simple!, x0a, FS, FPS; keepsolhist=true, sham=1);
@@ -13,6 +14,9 @@ ya=nouta.solhist[2,:];
 noutb=nsol(simple!, x0b, FS, FPS; keepsolhist=true, sham=1);
 xb=noutb.solhist[1,:];
 yb=noutb.solhist[2,:];
+#
+# Some plotting commands you may not want to look at are here.
+#
 plot(xa,ya,"k-*")
 plot(xb,yb,"k-",xb,yb,"ko")
 contourch2()
