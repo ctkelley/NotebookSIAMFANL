@@ -35,7 +35,7 @@ Those problems are
 
 Easy: thetar=0.0, omega=.9, tau=1.0 (Fig 5.1)
 Harder: thetar=1.8, omega=.5, tau=2.0 (Fig 5.2)
-Easy: thetar=2.0, omega=.5, tau=4.0 (Fig 5.3)
+Really hard: thetar=2.0, omega=.5, tau=4.0 (Fig 5.3)
 
 In all cases thetal=0.0.
 """
@@ -68,7 +68,7 @@ aout=aasol(heat_fixed!,theta0,m,Vstore;
           rtol=tol, atol=tol, pdata=hn_data, maxit=50);
 (m == 2) && (thetabase.=aout.solution)
 (aout.errcode == 0) || println("thetar = $thetar, tau=$tau, omega=$omega")
-nl_stats!(plot_hist, aout, "AA($m)"; method=:aa)
+nl_stats!(plot_hist, aout, "m =$m"; method=:aa)
 end
 #
 # Newton-GMRES
