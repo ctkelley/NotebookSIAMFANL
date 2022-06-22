@@ -86,7 +86,7 @@ nl_stats!(plot_hist, gout, "Newton-GMRES"; method=:nk)
 # Plot the results
 #
 varcap=parm_string(tau, omega, thetar)
-if fignum > 0
+if fignum > 0 && printlabel
 caption = string("Fig 5.$fignum: ", varcap)
 else
 caption = varcap
