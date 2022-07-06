@@ -1,3 +1,5 @@
+<img width = 400, src = "https://user-images.githubusercontent.com/10243067/177569419-050cf6cf-ab82-49ad-8e3b-1a6ea55b3c09.png">
+
 # Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia
 ## Under contract with SIAM for publication in 2022
 
@@ -16,7 +18,7 @@ https://github.com/JuliaLang/julia/issues/43242i
 
 I am now running this with 1.7.2 on Intel Macs and an M1 in native mode!
 
-<img width = 400, src = "https://user-images.githubusercontent.com/10243067/177569419-050cf6cf-ab82-49ad-8e3b-1a6ea55b3c09.png">
+
 
 # Use the latest release of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
 
