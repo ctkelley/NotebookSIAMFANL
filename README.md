@@ -16,7 +16,7 @@ https://github.com/JuliaLang/julia/issues/43242i
 
 I am now running this with 1.7.2 on Intel Macs and an M1 in native mode!
 
-<img width = 200, src = "https://user-images.githubusercontent.com/10243067/158274914-6ac8a732-2caf-4ca4-9299-3fbef63c02e0.png">
+<img width = 400, src = "https://user-images.githubusercontent.com/10243067/177569419-050cf6cf-ab82-49ad-8e3b-1a6ea55b3c09.png">
 
 # Use the latest release of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
 
