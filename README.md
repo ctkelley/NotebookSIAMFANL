@@ -3,8 +3,9 @@
 # Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia
 ## Under contract with SIAM for publication in 2022
 
-## Version 0.8: Absolute final version after copyediting! 
-## The ms went to the publisher on May 10. When I get the copyedits back, I will fix the problems and that will be the end of changes to the text. 
+## Version 0.8: I've finished with the proofs and sent the final ms back to SIAM for production.
+## This is the end. 0.9 will have some tweaks to the repo and comment lines for the codes. 
+
 
 __Use 1.7.1 or higher with these notebooks. LTS 1.6.5 also works (for now).__
 
@@ -171,7 +172,15 @@ The codes for every plot and table in the book are either in the src directory i
 
 - src/Examples in the repo for __SIAMFANL.jl__ has many examples that I use in the and for CI. You do ```using SIAMFANL.Examples``` to get to them.
 
-I include the __fanote_init.jl__ script in every notebook to make sure that things are where they are supposed to be. The source for __fanote_init.jl__ is
+## fanote_init.jl
+
+The second window in each notebook has one line
+```
+include("fanote_init.jl")
+```
+This is important.
+
+I include the __fanote_init.jl__ script in every notebook to make sure that things are where they are supposed to be. The important part of the source for __fanote_init.jl__ is
 
 ```
 using SIAMFANLEquations
@@ -185,6 +194,15 @@ push!(LOAD_PATH,"./src")
 using NotebookSIAMFANL
 ```
 Do not mess with it.
+
+I've also tweaked the way Julia prints floating point numbers in __fanote_init.jl__ with these lines
+```
+using Printf
+Base.show(io::IO, f::Float64) = @printf(io, "%1.5e", f)
+Base.show(io::IO, f::Float32) = @printf(io, "%1.5e", f)
+Base.show(io::IO, f::Float16) = @printf(io, "%1.5e", f)
+```
+These make floats print with only five digts after the decimal point. Without this the notebook can be very hard to read.
 
 ## Other Nonlinear Solvers in Julia
 
