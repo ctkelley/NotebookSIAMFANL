@@ -14,6 +14,10 @@ error("OpenBLAS + Notebook will not work with Julia v1.6.4 or v1.7.0. ")
 end
 end
 vcheck()
+using Printf
+Base.show(io::IO, f::Float64) = @printf(io, "%1.5e", f)
+Base.show(io::IO, f::Float32) = @printf(io, "%1.5e", f)
+Base.show(io::IO, f::Float16) = @printf(io, "%1.5e", f)
 using SIAMFANLEquations
 using SIAMFANLEquations.TestProblems
 using SIAMFANLEquations.Examples
