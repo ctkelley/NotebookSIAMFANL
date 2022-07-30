@@ -3,8 +3,9 @@
 # Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia
 ## Under contract with SIAM for publication in 2022
 
-## Version 0.8: I've finished with the proofs and sent the final ms back to SIAM for production.
-## This is the end. 0.9 will have some tweaks to the repo and comment lines for the codes. 
+## Version 0.8: I've finished with the proofs and sent the final ms back to SIAM for production. This is the end.
+
+## Version 0.9 will have some tweaks to the repo and comment lines for the codes. 
 
 
 __Use 1.7.1 or higher with these notebooks. LTS 1.6.5 also works (for now).__
@@ -17,9 +18,7 @@ and
 
 https://github.com/JuliaLang/julia/issues/43242i
 
-I am now running this with 1.7.2 on Intel Macs and an M1 in native mode!
-
-
+I am now running this with 1.7.2 on Intel Macs and an M1 in native mode! Everything works on 1.8.0-rc3.
 
 # Use the latest release of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
 
