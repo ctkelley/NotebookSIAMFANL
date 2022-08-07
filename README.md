@@ -1,20 +1,10 @@
 <img width = 400, src = "https://user-images.githubusercontent.com/10243067/177569419-050cf6cf-ab82-49ad-8e3b-1a6ea55b3c09.png">
 
+# Notebook for 
 # [Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia](https://ctk.math.ncsu.edu/fa20.html)
 ## Publishing in 2022 in time for holiday giving.
 
 ## This is version 0.9. The book is in final production and I'll only be making minor changes.
-
-
-__Use 1.7.1 or higher with these notebooks. LTS 1.6.5 also works (for now).__
-
-See the story at 
-
-https://discourse.julialang.org/t/problems-in-1-6-4-with-ijulia-downgrade-to-1-6-3/72129/12
-
-and
-
-https://github.com/JuliaLang/julia/issues/43242i
 
 I am now running this with 1.7.2 on Intel Macs and an M1 in native mode! Everything works on 1.8.0-rc3.
 
