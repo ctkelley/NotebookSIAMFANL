@@ -1,6 +1,6 @@
 <img width = 400, src = "https://user-images.githubusercontent.com/10243067/177569419-050cf6cf-ab82-49ad-8e3b-1a6ea55b3c09.png">
 
-# Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia
+# [Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia](https://ctk.math.ncsu.edu/fa20.html)
 ## Under contract with SIAM for publication in 2022
 
 ## This is version 0.9. The book is in final production and I'll only be making minor changes.
