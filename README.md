@@ -4,7 +4,7 @@
 # [Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia](https://ctk.math.ncsu.edu/fa20.html)
 ## Publishing in 2022 in time for holiday giving.
 
-## This is version 0.9. The book is in final production and I'll only be making minor changes.
+## This is version 0.9. I have finished the second round of proofs and the book is now at the printer. I may be making minor changes to the repo between now and 1.0, but there won't be anything major. 
 
 I am now running this with 1.7.2 on Intel Macs and an M1 in native mode! Everything works on 1.8.0-rc3.
 
