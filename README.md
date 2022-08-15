@@ -6,7 +6,7 @@
 
 ## This is version 0.9. I have finished the second round of proofs and the book is now at the printer. I may be making minor changes to the repo between now and 1.0, but there won't be anything major. 
 
-I am now running this with 1.7.2 on Intel Macs and an M1 in native mode! Everything works on 1.8.0-rc3.
+I am now running this with 1.7.2 on Intel Macs and an M1 in native mode! Everything works on 1.8.0-rc4.
 
 # Use the latest release of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
 
