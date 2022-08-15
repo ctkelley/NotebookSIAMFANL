@@ -1,4 +1,4 @@
-<img width = 400, src = "https://user-images.githubusercontent.com/10243067/177569419-050cf6cf-ab82-49ad-8e3b-1a6ea55b3c09.png">
+<img width = 400, src = "https://user-images.githubusercontent.com/10243067/184649605-c70ef2d9-f80f-4502-bd88-2eeffcc7b741.jpg">
 
 # Notebook for 
 # [Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia](https://ctk.math.ncsu.edu/fa20.html)
