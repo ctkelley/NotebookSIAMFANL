@@ -34,7 +34,8 @@ ylabel("relative residual",fontsize=fpsize)
 for ip=1:2
      semilogy(0:itl[ip]-1, ithist[1:itl[ip],ip], pstr[ip])
 end
-legend(["Precond-dt","Precond-no-dt"])
+dts=L"$\delta$"
+legend(["Precond-$dts","Precond-no-$dts"])
 ~printlabel || title("Figure 3.5 from the print book")
 subplot(1,2,2)
 ylabel("u",fontsize=fpsize); 

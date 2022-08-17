@@ -36,7 +36,9 @@ subplot(1,2,1)
 for ip=1:3
      semilogy(0:24, ithist[:,ip], pstr[ip])
 end
-legend(["Direct solve","Precond-dt","Precond-no-dt"])
+dts=L"$\delta$"
+#legend(["Direct solve","Precond-dt","Precond-no-dt"])
+legend(["Direct solve","Precond-$dts","Precond-no-$dts"])
 xlabel("iterations",fontsize=fpsize)
 ylabel("relative residual",fontsize=fpsize)
 ~printlabel || title("Figure 3.4 from the print book")
