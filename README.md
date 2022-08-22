@@ -2,11 +2,11 @@
 
 # Notebook for 
 # [Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia](https://ctk.math.ncsu.edu/fa20.html)
-## Publishing in 2022 in time for holiday giving.
+## Published well in time for holiday giving.
 
-## This is version 0.9. I have finished the second round of proofs and the book is now at the printer. I may be making minor changes to the repo between now and 1.0, but there won't be anything major. 
+## This is version 1.0! The book is out and I am done.
 
-I am now running this with 1.7.2 on Intel Macs and an M1/M2 in native mode! Everything works on 1.8.0-rc4.
+I am now running this with 1.7.2 on Intel Macs and an M1/M2 in native mode! Everything works on 1.8.0 as well.
 
 # Use the latest release of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
 
