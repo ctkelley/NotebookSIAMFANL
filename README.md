@@ -223,8 +223,13 @@ This one seems to be based on Dennis and Schnabel's 1983 book.
 
 
 ## Notebook Problems
- 
-It is very important that PyPlot and IJulia use the same version of conda. If the notebook is complaining about the kernel, that is likely the issue. You have a good chance of fixing this with the __update__ command within pkg. If you did the update when you installed this application and are still having problems. Try typing __update IJulia__ from pkg. If that fails ...
+It is very important that PyPlot and IJulia use the same version of conda and the IJulia knows what versioh of Juia you are using. If the notebook is complaining about the kernel, that is likely the issue. You have a good chance of fixing this by typing __bulid IJulia__ from pkg. To do this from the REPL type
+```
+using Pkg
+Pkg.build("IJulia")
+```
+
+If that fails ...
 
 The worst case, which has happened to me more than once, is that you'll have to 
 
