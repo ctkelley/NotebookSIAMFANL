@@ -4,9 +4,9 @@
 # [Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia](https://ctk.math.ncsu.edu/fa20.html)
 ## Published well in time for holiday giving.
 
-## This is version 1.0! The book is out and I am done.
+## This is version 1.0. The book is out and I am done.
 
-I am now running this with 1.7.2 on Intel Macs and an M1/M2 in native mode! Everything works on 1.8.0 as well.
+I am now running this with 1.8.0 on Intel Macs and an M1/M2 in native mode.
 
 # Use the latest release of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
 
@@ -223,7 +223,7 @@ This one seems to be based on Dennis and Schnabel's 1983 book.
 
 
 ## Notebook Problems
-It is very important that PyPlot and IJulia use the same version of conda and the IJulia knows what versioh of Juia you are using. If the notebook is complaining about the kernel, that is likely the issue. You have a good chance of fixing this by typing __bulid IJulia__ from pkg. To do this from the REPL type
+It is very important that PyPlot and IJulia use the same version of conda and the IJulia knows what versioh of Julia you are using. If the notebook is complaining about the kernel, that is likely the issue. You have a good chance of fixing this by typing __build IJulia__ from pkg. To do this from the REPL type
 ```
 using Pkg
 Pkg.build("IJulia")
@@ -239,9 +239,13 @@ The worst case, which has happened to me more than once, is that you'll have to
    2. Delete or move .julia
    
    3. Run Julia (which will create a new .julia in your home directory)
-      1. Put your config directory back in there. 
-        
-   4. Reinstall ALL YOUR PACKAGES! That is a real pain, but has never failed to fix the problem for me.
+      1. Install PyPlot and IJulia and make sure both work.
+      
+   3. Reinstall ALL YOUR PACKAGES! That is a real pain, but has never failed to fix the problem for me.
+      1. Close and restart Julia to make sure none of your other packages was the problem. 
+   
+   4. Put your config directory back in there. 
+      1. Close and restart Julia to make sure your startup.jl file was not causing any problems.
    
 See the tales of woe at https://discourse.julialang.org/t/ijulia-do-not-run/45409/10 , 
 
