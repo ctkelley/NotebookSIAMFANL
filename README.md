@@ -58,15 +58,6 @@ The title is
 
 Hence the repositories have SIAMFANL in their names.
 
-Cite this stuff, at least for now, as
-
-(Kel20d) C. T. Kelley, ***Solving Nonlinear Equations with Iterative Methods: Solvers and
-  Examples in Julia***, book manuscript, 2020. 
-
-(Kel20b) C. T. Kelley, ***NotebookSIAMFANL***, IJulia Notebook, 2020. https://github.com/ctkelley/NotebookSIAMFANL
-
-(Kel20c) C. T. Kelley, ***SIAMFANLEquations.jl***, Julia Package, 2020. https://github.com/ctkelley/SIAMFANLEquations.jl
-
 ## Getting started
 
 If you are reading this you have found the notebooks. The optimal way to use this is
