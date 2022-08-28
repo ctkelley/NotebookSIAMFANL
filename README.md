@@ -242,18 +242,20 @@ The worst case, which has happened to me more than once, is that you'll have to
       1. Install PyPlot and IJulia and make sure both work.
       
    3. Reinstall ALL YOUR PACKAGES! That is a real pain, but has never failed to fix the problem for me.
-      1. Close and restart Julia to make sure none of your other packages was the problem. 
+      1. Close and restart Julia to make sure none of your other packages was the problem for the notebooks.
    
-   4. Put your config directory back in there. 
+   4. Put your config directory back in .julia. 
       1. Close and restart Julia to make sure your startup.jl file was not causing any problems.
    
-See the tales of woe at https://discourse.julialang.org/t/ijulia-do-not-run/45409/10 , 
+See the tales of woe at 
+   1. https://discourse.julialang.org/t/ijulia-do-not-run/45409/10 , 
 
-https://discourse.julialang.org/t/unable-to-install-ijulia/47160 ,
+   2. https://discourse.julialang.org/t/unable-to-install-ijulia/47160 ,
 
-https://discourse.julialang.org/t/ijulia-notebook-failed-to-launch-the-ijulia-notebook-in-my-browser/37078 , 
-and
-https://discourse.julialang.org/t/ijulia-do-not-run/45409/4 ,
+   3. https://discourse.julialang.org/t/ijulia-notebook-failed-to-launch-the-ijulia-notebook-in-my-browser/37078 , and
+
+   4. https://discourse.julialang.org/t/ijulia-do-not-run/45409/4 ,
+   
 where this seems to have happened to other people.   
 
 ## Citations 
