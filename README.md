@@ -6,7 +6,7 @@
 
 ## This is version 1.0. The book is out and I am done.
 
-I am now running this with 1.8.0 on Intel Macs and an M1/M2 in native mode.
+I am now running this with 1.8.0 on Intel Macs and Apple M1/M2 in native mode.
 
 # Use the latest release of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
 
