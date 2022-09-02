@@ -6,6 +6,8 @@
 
 ## This is version 1.0. The book is out and I am done.
 
+## The archival version 1.0 from the date of publication is in the FA20 branch.
+
 I am now running this with 1.8.0 on Intel Macs and Apple M1/M2 in native mode.
 
 # Use the latest release of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
