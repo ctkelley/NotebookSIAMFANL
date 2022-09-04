@@ -4,9 +4,9 @@
 # [Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia](https://my.siam.org/Store/Product/viewproduct/?ProductId=44313635)
 ## Published well in time for holiday giving.
 
-## This is version 1.0. The book is out and this project is __finished__.
+## This is version 1.0. This is the archival version as of the date of publication.
 
-## This is the archival version as of the date of publication.
+## The book is out and this project is __finished__.
 
 <!--
 ## The archival version 1.0 from the date of publication is in the FA20 branch.
