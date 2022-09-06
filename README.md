@@ -3,9 +3,13 @@
 # Notebook for 
 # [Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia](https://my.siam.org/Store/Product/viewproduct/?ProductId=44313635)
 
-## The final manuscript is at the printer. Estimated date of publication is Oct 19, 2022.  This project is __finished__.
+## The book is done and this project is __finished__.
 
-## The archival version 1.0 from the date of publication is in the FA20 branch.
+## This is the archival version (1.0) from the date of publication. 
+
+<!--
+## The archival version (1.0) from the date of publication lives in the [FA20 branch](https://github.com/ctkelley/NotebookSIAMFANL/tree/FA20).
+-->
 
 I am now running this with 1.8.1 on Intel Macs and Apple M1/M2 in native mode.
 
@@ -290,7 +294,7 @@ doi="10.5281/zenodo.4284687"
 
 ## Das Ende
 
-SIAM publised [the book](https://my.siam.org/Store/Product/viewproduct/?ProductId=44313635) is October 2022. This means that the project is __done__. I will not be adding new functionality to [SIAMFANLEquations](https://github.com/ctkelley/SIAMFANLEquations.jl) or new content to these notebooks. Future releases will only fix typos and bugs.
+SIAM publised [the book](https://my.siam.org/Store/Product/viewproduct/?ProductId=44313635) in October 2022. This means that the project is __done__. I will not be adding new functionality to [SIAMFANLEquations](https://github.com/ctkelley/SIAMFANLEquations.jl) or new content to these notebooks. Future releases will only fix typos and bugs.
 
 ## Funding
 
