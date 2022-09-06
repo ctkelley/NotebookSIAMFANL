@@ -294,7 +294,7 @@ doi="10.5281/zenodo.4284687"
 
 ## Das Ende
 
-SIAM publised [the book](https://my.siam.org/Store/Product/viewproduct/?ProductId=44313635) in October 2022. This means that the project is __done__. I will not be adding new functionality to [SIAMFANLEquations](https://github.com/ctkelley/SIAMFANLEquations.jl) or new content to these notebooks. Future releases will only fix typos and bugs.
+I finished [the book](https://my.siam.org/Store/Product/viewproduct/?ProductId=44313635) and it went to the printer in September 2022. This means that the project is __done__. I will not be adding new functionality to [SIAMFANLEquations](https://github.com/ctkelley/SIAMFANLEquations.jl) or new content to these notebooks. Future releases will only fix typos and bugs.
 
 ## Funding
 
