@@ -3,13 +3,9 @@
 # Notebook for 
 # [Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia](https://my.siam.org/Store/Product/viewproduct/?ProductId=44313635)
 
-## This is version 1.0. This is the archival version as of the date of publication.
-
 ## The final manuscript is at the printer. Estimated date of publication is Oct 19, 2022.  This project is __finished__.
 
-<!--
 ## The archival version 1.0 from the date of publication is in the FA20 branch.
--->
 
 I am now running this with 1.8.1 on Intel Macs and Apple M1/M2 in native mode.
 
@@ -244,6 +240,8 @@ The worst case, which has happened to me more than once, is that you'll have to
    
    4. Put your config directory back in .julia. 
       1. Close and restart Julia to make sure your startup.jl file was not causing any problems.
+      2. It's a good idea to put your startup.jl file back one line at a time. 
+      3. Putting ```using PyPlot``` in startup.jl breaks plotting on some Macs. 
    
 See the tales of woe at 
    1. https://discourse.julialang.org/t/ijulia-do-not-run/45409/10 , 
