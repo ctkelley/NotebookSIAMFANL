@@ -5,11 +5,7 @@
 
 ## The book is done and this project is __finished__.
 
-## This is the archival version (1.0) from the date of publication. 
-
-<!--
 ## The archival version (1.0) from the date of publication lives in the [FA20 branch](https://github.com/ctkelley/NotebookSIAMFANL/tree/FA20).
--->
 
 I am now running this with 1.8.1 on Intel Macs and Apple M1/M2 in native mode.
 
