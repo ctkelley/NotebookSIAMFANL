@@ -7,7 +7,7 @@
 
 ## The archival version (1.0) from the date of publication lives in the [FA20 branch](https://github.com/ctkelley/NotebookSIAMFANL/tree/FA20).
 
-I am now running this with 1.8.1 on Intel Macs and Apple M1/M2 in native mode.
+I am now running this with 1.9.1 on Intel Macs and Apple M1/M2 in native mode.
 
 # Use the latest release of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
 
