@@ -7,7 +7,11 @@
 
 ## The archival version (1.0) from the date of publication lives in the [FA20 branch](https://github.com/ctkelley/NotebookSIAMFANL/tree/FA20).
 
-I am now running this with 1.9.1 on Intel Macs and Apple M1/M2 in native mode.
+I am now running this with 1.9.1 on Intel Macs and Apple M2/M2 Pro in native mode. 
+
+__Watch out!__ the timings in the files are likely to be different from
+the book as I test things with M* chips and the Apple Acclerator frame work. You best bet to get the timings in the book is with an 8 core Intel Mac. As those
+become obsolete, your best bet for accurate timings is to __do it yourself!!!__
 
 # Use the latest release of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
 
