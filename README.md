@@ -5,6 +5,8 @@
 
 ## The book is done and this project is __finished__.
 
+I'm fixing typos now. The list is  [here](Errata.pdf)
+
 ## The archival version (1.0) from the date of publication lives in the [FA20 branch](https://github.com/ctkelley/NotebookSIAMFANL/tree/FA20).
 
 I am now running this with 1.9.1 on Intel Macs and Apple M2/M2 Pro in native mode. 
