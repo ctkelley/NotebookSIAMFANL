@@ -5,7 +5,7 @@
 
 ## The book is done and this project is __finished__.
 
-I'm fixing typos now. The list is  [here](Errata.pdf)
+I'm fixing typos now. The list is  [here](Errata.pdf). I've made the corrections in the notebooks and they will go into the print book with the second printing.
 
 ## The archival version (1.0) from the date of publication lives in the [FA20 branch](https://github.com/ctkelley/NotebookSIAMFANL/tree/FA20).
 
