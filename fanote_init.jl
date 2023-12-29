@@ -9,5 +9,5 @@ using SIAMFANLEquations.Examples
 using BandedMatrices
 using BenchmarkTools
 using PyPlot
-push!(LOAD_PATH,"./src")
+push!(LOAD_PATH, "./src")
 using NotebookSIAMFANL

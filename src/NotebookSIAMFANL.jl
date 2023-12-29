@@ -1,10 +1,10 @@
 module NotebookSIAMFANL
 
 struct Data_4_Plots
-relreshist::Vector{Float64}
-itdata::Vector{Int}
-fdata::Vector{Int}
-legend::String
+    relreshist::Vector{Float64}
+    itdata::Vector{Int}
+    fdata::Vector{Int}
+    legend::String
 end
 
 using PyPlot
@@ -23,7 +23,7 @@ export linearmodel
 export newtonstagnation
 export threewaystagnation
 export threewaystagnationv2
-export atanarmijo 
+export atanarmijo
 export atanarmijov2
 export simpleptc
 export ptcvarydt

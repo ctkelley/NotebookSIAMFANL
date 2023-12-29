@@ -1,9 +1,9 @@
-function BVPsolution(n = 801, T = Float64, printlabel=true)
-#
-#   Solve the problem and make the figure. The good stuff is
-#   in bvp_solve
-#
-    figout = BVP_solve(n, T; bfact=qr!)
+function BVPsolution(n = 801, T = Float64, printlabel = true)
+    #
+    #   Solve the problem and make the figure. The good stuff is
+    #   in bvp_solve
+    #
+    figout = BVP_solve(n, T; bfact = qr!)
     bvpout = figout.bvpout
     tv = figout.tv
     vlabel = L"$v$"
