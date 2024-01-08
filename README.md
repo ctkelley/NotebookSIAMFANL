@@ -2,6 +2,10 @@
 
 # Notebook for 
 # [Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia](https://my.siam.org/Store/Product/viewproduct/?ProductId=44313635)
+# Now a  [SIAM e-book](https://epubs.siam.org/action/showPublications?pubType=book&notConceptID=115968&startPage=&ContribAuthorFirstLetter=k) 
+
+If your organization is subscribes to the SIAM E-Book 
+series, you can download the pdf for free. Ask your librarian about this.
 
 ## The book is done and this project is __finished__.
 
