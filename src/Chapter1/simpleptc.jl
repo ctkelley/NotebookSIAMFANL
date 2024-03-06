@@ -46,7 +46,7 @@ fpsize=fsize(printlabel)
 figure(1)
 subplot(1,2,1)
 ~printlabel || title("Figure 1.6 from print book")
-semilogy(pival,abs.(ptcerr),"k--",nival,abs.(newterr),"k-")
+semilogy(pival,abs.(ptcerr).+1.e-18,"k--",nival,abs.(newterr),"k-")
 PTClabel=L"$\Psi$TC"
 legend((PTClabel,"Newton"),fontsize=fpsize)
 xlabel("Iterations",fontsize=fpsize)
