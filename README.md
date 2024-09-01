@@ -157,7 +157,7 @@ These references have extensive bibliographies as does the print book. The noteb
 
 The codes for every plot and table in the book are either in the src directory in this repository or in the src directory in __SIAMFANL.jl__. You'll get the chance to run them, change them, and make them better/worse/shinier as you work through the notebooks. The organization is
 
-- src/ChapterX in the notebook repo has the examples for the print-->notebook map
+- src/ChapterX in the notebook repo has the examples for the print-->notebook map for that chapter.
 
 - src/TestProblems in the repo for __SIAMFANL.jl__ has the test problems and case studies for the book. You do ```using SIAMFANL.TestProblems``` to get to them.
 
@@ -227,7 +227,7 @@ This one seems to be based on Dennis and Schnabel's 1983 book.
 
 
 ## Notebook Problems
-It is very important that PyPlot and IJulia use the same version of conda and the IJulia knows what versioh of Julia you are using. If the notebook is complaining about the kernel, that is likely the issue. You have a good chance of fixing this by typing __build IJulia__ from pkg. To do this from the REPL type
+It is very important that PyPlot and IJulia use the same version of conda and the IJulia knows what version of Julia you are using. If the notebook is complaining about the kernel, that is likely the issue. You have a good chance of fixing this by typing __build IJulia__ from pkg. To do this from the REPL type
 ```
 using Pkg
 Pkg.build("IJulia")
