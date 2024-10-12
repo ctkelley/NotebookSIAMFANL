@@ -112,7 +112,9 @@ using FFTW
 using IJulia
 ```
 
-in my startup.jl file and do **using PyPlot** when I need it. PyPlot takes a while to get going. With version 1.10, load times are much, much better and putting __using PyPlot__ in your startup.jl file is a reasonable thing to do. I have not tested the notebooks with v1.10 yet and will do that as soon as 1.10 is out of beta. I use 1.10-beta for my day-to-day work already.
+in my startup.jl file and do **using PyPlot** when I need it. PyPlot takes a while to get going and putting ```using PyPlot``` in your startup.jl can break things.
+
+The notebooks work with versions 1.11 and most versions of Juila beyond 1.8. I just upgraded the kernel to 1.11.
 
 All this is also in the first code window in the notebooks. If Julia complains about a missing package, it is your job to add it.
 
