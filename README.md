@@ -13,10 +13,10 @@ I'm fixing typos now. The list is  [here](Errata.pdf). I've made the corrections
 
 ## The archival version (1.0) from the date of publication lives in the [FA20 branch](https://github.com/ctkelley/NotebookSIAMFANL/tree/FA20).
 
-I am now running this with 1.10.0 on Apple M2/M2 Pro in native mode. My Intel days are over.
+I am now running this with 1.11.0 on Apple M2/M2 Pro in native mode. My Intel days are over.
 
 __Watch out!__ the timings in the files are likely to be different from
-the book as I test things with M* chips and the Apple Acclerator framework. You best bet to get the timings in the book is with an 8 core Intel Mac. As those
+the book as I test things with M* chips and the Apple Acclerator framework. You best bet to duplicate the timings in the book is with an 8 core Intel Mac. As those
 become even more obsolete, your best bet for accurate timings is to __do it yourself!!!__
 
 # Use the latest release of [SIAMFANLEquations.jl](https://github.com/ctkelley/SIAMFANLEquations.jl) with this version of the notebook. 
