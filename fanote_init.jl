@@ -8,6 +8,9 @@ using SIAMFANLEquations.TestProblems
 using SIAMFANLEquations.Examples
 using BandedMatrices
 using BenchmarkTools
+#
+# Moving to PythonPlot
+# 
 using PyPlot
 push!(LOAD_PATH, "./src")
 using NotebookSIAMFANL
