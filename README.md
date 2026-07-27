@@ -93,7 +93,7 @@ The latest versions of Julia can break PyPlot. PyPlot does not support multithre
 make the notebooks work. This will not affect the threading in the BLAS, LAPACK, or AppleAccelerate. So, fire up Julia with
 
 ```
-Julia -t 1
+julia -t 1
 ```
 to get single threading execution.
 
