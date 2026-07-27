@@ -1,8 +1,8 @@
 <img width = 400, src = "https://user-images.githubusercontent.com/10243067/184649605-c70ef2d9-f80f-4502-bd88-2eeffcc7b741.jpg">
 
 # Notebook for 
-# [Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia](https://my.siam.org/Store/Product/viewproduct/?ProductId=44313635)
-# Now a  [SIAM e-book](https://epubs.siam.org/action/showPublications?pubType=book&notConceptID=115968&startPage=&ContribAuthorFirstLetter=k) 
+# [Solving Nonlinear Equations with Iterative Methods: <br> Solvers and Examples in Julia](https://epubs.siam.org/doi/book/10.1137/1.9781611977271)
+# Now a SIAM e-book.
 
 If your organization is subscribes to the SIAM E-Book 
 series, you can download the pdf for free. Ask your librarian about this.
