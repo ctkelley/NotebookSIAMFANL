@@ -89,6 +89,14 @@ or
 
 in the REPL. 
 
+The latest versions of Julia can break PyPlot. PyPlot does not support multithreading and you'll have to run Julia with only one thread to
+make the notebooks work. This will not affect the threading in the BLAS, LAPACK, or AppleAccelerate. So, fire up Julia with
+
+```
+Julia -t 1
+```
+to get single threading execution.
+
 The next step is to open the notebooks. An efficient way to do this (after installing IJulia) is to type **using IJulia** and  **notebook()** in the REPL. Then navigate to the directory where the notebooks are and click on SIAMFANL.ipynb.
 
 In the first code window in each of the notebooks you will find
@@ -98,6 +106,9 @@ include("fanote_init.jl")
 ```
 This is a Julia script that tells the notebooks where everything is. In partcular, the script lets the notebook find the examples.
 You might enjoy poking around in the __/src__ subdirectory.
+
+You may find that the notebook kernel dies from time to time. If you just rerun the cells you should be fine. I am trying to make this nonsense
+stop and may switch to PythonPlot. Stay tuned for the Julia 1.13 version of the notebooks.
 
 To get everything to work, you will need to add a few packages. LinearAlgebra, SuiteSparse, SparseArrays, BandedMatrices, BenchmarkTools, AbstractFFTs, FFTW, IJjulia, LaTeXStrings, and PyPlot. I put 
 
@@ -114,7 +125,8 @@ using IJulia
 
 in my startup.jl file and do **using PyPlot** when I need it. PyPlot takes a while to get going and putting ```using PyPlot``` in your startup.jl can break things.
 
-The notebooks work with versions 1.12 and most versions of Juila beyond 1.8. I just upgraded the kernel to 1.12.
+The notebooks work with versions 1.12 and most versions of Juila beyond 1.8. I just upgraded the kernel to 1.12 and will move to 1.13 as soon as it is
+released.
 
 All this is also in the first code window in the notebooks. If Julia complains about a missing package, it is your job to add it.
 
