@@ -6,6 +6,7 @@ include("fanote_init.jl")
 ```
 ## cell.
 
+See [this discussion](https://discourse.julialang.org/t/jupyter-crashes-when-using-pyplot-and-julia-1-12/134684) for details on this tale of woe.
 
 <img width = 400, src = "https://user-images.githubusercontent.com/10243067/184649605-c70ef2d9-f80f-4502-bd88-2eeffcc7b741.jpg">
 
