@@ -1,3 +1,12 @@
+# This is the last version of the notebook that will use PyPlot. 
+## I will be parking this in a PyPlot branch once I make the changes for moving to PythonPlot.
+## This has to be done because PyPlot is breaking. You can make it work for now (see below) but may have to try several times to run the 
+```Julia
+include("fanote_init.jl")
+```
+## cell.
+
+
 <img width = 400, src = "https://user-images.githubusercontent.com/10243067/184649605-c70ef2d9-f80f-4502-bd88-2eeffcc7b741.jpg">
 
 # Notebook for 
@@ -101,7 +110,7 @@ The next step is to open the notebooks. An efficient way to do this (after insta
 
 In the first code window in each of the notebooks you will find
 
-```Jula
+```Julia
 include("fanote_init.jl")
 ```
 This is a Julia script that tells the notebooks where everything is. In partcular, the script lets the notebook find the examples.
