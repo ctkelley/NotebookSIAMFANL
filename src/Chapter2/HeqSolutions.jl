@@ -3,7 +3,7 @@ HeqSolutions(printlabel=true)
 Draw Fig 2.2 in the print book.
 """
 function HeqSolutions(printlabel = true)
-    n = 100
+    n = 128
     c = 0.9
     x0 = ones(n)
     #

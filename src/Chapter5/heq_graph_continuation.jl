@@ -1,5 +1,5 @@
 function heq_graph_continuation(printbook = false)
-    (pval, nval, H, cfinal) = heq_continue()
+    (pval, nval, H, cfinal) = heq_continue(129)
     plot(pval, nval, "k-")
     xlabel(L"$c$")
     ylabel(L"$|| H ||_1$")

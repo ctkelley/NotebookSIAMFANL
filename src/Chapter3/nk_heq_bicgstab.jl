@@ -5,7 +5,7 @@ Compare Newton-GMRES to Newton-BiCGSTAB for the H-equation
 """
 function nk_heq_bicgstab(printlabel = true)
     fpsize = fsize(printlabel)
-    n = 100
+    n = 128
     #
     # Preallocated storage
     #
