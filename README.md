@@ -22,6 +22,20 @@ include("fanote_init.jl")
 
 That is a [known issue](https://discourse.julialang.org/t/another-mystery-in-ijulia/135017/3) and you can safely ignore it.
 
+- When you start PythonPlot in the notebook you are likely to see things like
+  
+```Julia
+[ Info: Precompiling PythonPlot [274fc56d-3b97-40fa-a1cd-1b4a50311bf9]
+[ Info: Precompiling PythonPlot [274fc56d-3b97-40fa-a1cd-1b4a50311bf9] 
+CondaPkg Found dependencies: /Users/ctk/.julia/packages/PythonCall/5WGSP/CondaPkg.toml
+CondaPkg Found dependencies: /Users/ctk/.julia/packages/PythonPlot/oS8x4/CondaPkg.toml
+CondaPkg Found dependencies: /Users/ctk/.julia/packages/CondaPkg/lKlVY/CondaPkg.toml
+CondaPkg Dependencies already up to date
+```
+when a script or module says ```using PythonPlot```. It does not harm, but is annoying.
+I do not know how to make PythonPlot shut up. If you figure it out, please let me know.
+    
+
 <img width = 400, src = "https://user-images.githubusercontent.com/10243067/184649605-c70ef2d9-f80f-4502-bd88-2eeffcc7b741.jpg">
 
 # Notebook for 
