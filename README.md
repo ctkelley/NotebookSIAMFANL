@@ -1,5 +1,5 @@
 # This is the last version of the notebook that will use PyPlot. 
-## This version is archived in the PyPlot branch. I make no promises that it will continue to work.
+## This version is archived in the PyPlot branch and tagged 1.01. I make no promises that it will continue to work.
 ## This has to be done because PyPlot is breaking. You can make it work for now (see below) but may have to try several times to run the 
 ```Julia
 include("fanote_init.jl")
