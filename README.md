@@ -101,6 +101,7 @@ include("fanote_init.jl")
 This is a Julia script that tells the notebooks where everything is. In partcular, the script lets the notebook find the examples.
 You might enjoy poking around in the __/src__ subdirectory. 
 
+## PythonPlot compile time messages.
 Here's a list of PythonPlot things you may (but should not) worry about when you type
 ```Julia
 include("fanote_init.jl")
@@ -129,6 +130,7 @@ I do not know how to make PythonPlot shut up. If you figure it out, please let m
 As long as the ```include("fanote_init.jl")``` cell completes without problems, everything will work. If the notebook kernel dies, then you will
 need to figure out why. The quick fix could be typing ```build IJulia``` in the package manager. 
 
+## Dependencies
 To run the notebooks, you will need to add a few packages. LinearAlgebra, SuiteSparse, SparseArrays, BandedMatrices, BenchmarkTools, AbstractFFTs, FFTW, IJjulia, LaTeXStrings, PythonCall, and PythonPlot. I put 
 
 ```Julia
