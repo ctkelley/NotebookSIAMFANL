@@ -3,7 +3,7 @@ mixing_pde(n=31; printlabel=false)
 So6lve the left preconditioned convection-diffusion problem with
 a mixing parameter beta=.2
 """
-function mixing_pde(n = 31; printlabel = false)
+function mixing_pde(n = 31; printlabel = true)
     pdata = pdeinit(n)
     fdata = pdata.fdata
     fone = ones(n * n)
@@ -38,7 +38,7 @@ function mixing_pde(n = 31; printlabel = false)
         )
         nl_stats!(plot_hist, aout, "m = $m"; method = :aa)
     end
-    printlabel ? (caption = "Fig 4.X in print book") : (caption = nothing)
+    printlabel ? (caption = "Fig 4.3 in print book") : (caption = nothing)
     plot_its_funs(plot_hist, caption)
-    title("Figure 4.3 in print book")
+    printlabel || title("Figure 4.3 in print book")
 end

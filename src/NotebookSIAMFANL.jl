@@ -7,8 +7,9 @@ struct Data_4_Plots
     legend::String
 end
 
-using PyPlot
-#using PythonPlot
+#using PyPlot
+using PythonPlot
+using PythonCall
 using LaTeXStrings
 using Printf
 using LinearAlgebra
@@ -16,6 +17,7 @@ using SIAMFANLEquations
 using SIAMFANLEquations.TestProblems
 using SIAMFANLEquations.Examples
 
+export Data_4_Plots
 export atan_test
 export ftan_test
 export ptc_scalar_example

@@ -64,7 +64,7 @@ gylabelfdt=L"$|f|$"
 ylabel(gylabelfdt,fontsize=fpsize)
 legend((PTClabel,"Newton"),fontsize=fpsize)
 axis([0, itlim, 1.e-15, 1.0])
-PyPlot.tight_layout()
+PythonPlot.tight_layout()
 
 return (ptcdata=ptcdata1, newtdata=newtdata)
 end

@@ -1,17 +1,23 @@
 function plot_its_funs(plot_hist, caption; method = :nk, fpsize = "12")
     pstr = ["k-", "k-.", "k--", "k-o", "k."]
-    subplot(1, 2, 1)
-    plot_res_vs_its(plot_hist, pstr, caption; fpsize = fpsize)
-    subplot(1, 2, 2)
-    plot_res_vs_fevals(plot_hist, pstr; method = method, fpsize = fpsize)
+#    subplot(1, 2, 1)
+captout=caption*": left";
+figure(1)
+    plot_res_vs_its(plot_hist, pstr, captout; fpsize = fpsize)
+#    subplot(1, 2, 2)
+captout=caption*": right"
+#captout=nothing
+figure(2)
+    plot_res_vs_fevals(plot_hist, pstr, captout; method = method, fpsize = fpsize)
 end
 
-function plot_res_vs_fevals(plot_hist, pstr; method = :nk, fpsize = "12")
+function plot_res_vs_fevals(plot_hist, pstr, caption; method = :nk, fpsize = "12")
     xlab = ("Function Evaluations")
+    ylab = ("Relative residual")
     if method == :nkj
         xlab = ("Jacobian-vector products")
     end
-    ylab = ("")
+#    ylab = ("")
     ip = 1
     resmax = 0.0
     for D4P in plot_hist
@@ -19,12 +25,14 @@ function plot_res_vs_fevals(plot_hist, pstr; method = :nk, fpsize = "12")
         resmax = max(resmax, maximum(D4P.relreshist))
         ip += 1
     end
-    (xmin, xmax, ymin, ymax) = axis()
-    axis([0.0, xmax, ymin, max(1.0, resmax)])
-    itick = ceil(xmax / 5.0)
-    xticks(0:itick:xmax)
+    (xmin, xmaxp, ymin, ymax) = axis()
+    xmax=pyconvert(Float64,xmaxp)
+     axis([0.0, xmax, ymin, max(1.0, resmax)])
+     itick = ceil(xmax / 5.0)
+     xticks(0:itick:xmax)
     xlabel(xlab, fontsize = fpsize)
     ylabel(ylab, fontsize = fpsize)
+    (caption == nothing) || title(caption, fontsize = fpsize)
 end
 
 
@@ -41,12 +49,13 @@ function plot_res_vs_its(plot_hist, pstr, caption; fpsize = "12")
         ip += 1
     end
     legend(inlegend)
-    xlabel(xlab, fontsize = fpsize)
-    ylabel(ylab, fontsize = fpsize)
-    (xmin, xmax, ymin, ymax) = axis()
+    (xmin, xmaxp, ymin, ymax) = axis()
+    xmax=pyconvert(Float64,xmaxp)
+    axis([0.0, xmax, ymin, max(1.0, resmax)])
     itick = ceil(xmax / 5.0)
     xticks(0:itick:xmax)
-    axis([0.0, xmax, ymin, max(1.0, resmax)])
+    xlabel(xlab, fontsize = fpsize)
+    ylabel(ylab, fontsize = fpsize)
     (caption == nothing) || title(caption, fontsize = fpsize)
 end
 
