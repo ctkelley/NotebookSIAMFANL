@@ -1,39 +1,13 @@
-# This is the last version of the notebook that will use PyPlot. 
-## This version is archived in the PyPlot branch and tagged 1.01. I make no promises that it will continue to work.
-## This has to be done because PyPlot is breaking. You can make it work for now (see below) but may have to try several times to run the 
-```Julia
-include("fanote_init.jl")
-```
-## cell.
+# These notebooks now use PythonPlot instead of PyPlot.
+## The old version is archived in the PyPlot branch and tagged 1.01. I make no promises that it will continue to work.
+## This has to be done because PyPlot is breaking. You can make it work for now but I do not recommend it.
+
+## PythonPlot (1) does not break things and (2) does not SEEM to require running single-threaded.
 
 See [this discussion](https://discourse.julialang.org/t/jupyter-crashes-when-using-pyplot-and-julia-1-12/134684) for details on this tale of woe and 
 [this](https://github.com/JuliaPy/PyPlot.jl/issues/601) for a PythonPlot endorsement.
 
-Here's a growing list of PythonPlot issues
 
-  - Sometimes you will see
-```
-SYSTEM: caught exception of type :MethodError while trying to print a failed Task notice; giving up
-```
-when you do 
-```Julia
-include("fanote_init.jl")
-```
-
-That is a [known issue](https://discourse.julialang.org/t/another-mystery-in-ijulia/135017/3) and you can safely ignore it.
-
-- When you start PythonPlot in the notebook you are likely to see things like
-  
-```Julia
-[ Info: Precompiling PythonPlot [274fc56d-3b97-40fa-a1cd-1b4a50311bf9]
-[ Info: Precompiling PythonPlot [274fc56d-3b97-40fa-a1cd-1b4a50311bf9] 
-CondaPkg Found dependencies: /Users/ctk/.julia/packages/PythonCall/5WGSP/CondaPkg.toml
-CondaPkg Found dependencies: /Users/ctk/.julia/packages/PythonPlot/oS8x4/CondaPkg.toml
-CondaPkg Found dependencies: /Users/ctk/.julia/packages/CondaPkg/lKlVY/CondaPkg.toml
-CondaPkg Dependencies already up to date
-```
-when a script or module says ```using PythonPlot```. It does not harm, but is annoying.
-I do not know how to make PythonPlot shut up. If you figure it out, please let me know.
     
 
 <img width = 400, src = "https://user-images.githubusercontent.com/10243067/184649605-c70ef2d9-f80f-4502-bd88-2eeffcc7b741.jpg">
@@ -127,15 +101,8 @@ or
 
 in the REPL. 
 
-The latest versions of Julia can break PyPlot. PyPlot does not support multithreading and you'll have to run Julia with only one thread to
-make the notebooks work. This will not affect the threading in the BLAS, LAPACK, or AppleAccelerate. So, fire up Julia with
-
-```
-julia -t 1
-```
-to get single threading execution.
-
-The next step is to open the notebooks. An efficient way to do this (after installing IJulia) is to type **using IJulia** and  **notebook()** in the REPL. Then navigate to the directory where the notebooks are and click on SIAMFANL.ipynb.
+The next step is to open the notebooks. An efficient way to do this (after installing IJulia) is to navigate to the directory where the notebooks are. 
+Start Julia and type **using IJulia** and  **notebook(;dir=pwd())** in the REPL. You will see the list of notebooks. Then click on SIAMFANL.ipynb.
 
 In the first code window in each of the notebooks you will find
 
@@ -143,12 +110,37 @@ In the first code window in each of the notebooks you will find
 include("fanote_init.jl")
 ```
 This is a Julia script that tells the notebooks where everything is. In partcular, the script lets the notebook find the examples.
-You might enjoy poking around in the __/src__ subdirectory.
+You might enjoy poking around in the __/src__ subdirectory. 
 
-You may find that the notebook kernel dies from time to time. If you just rerun the cells you should be fine. I am trying to make this nonsense
-stop and may switch to PythonPlot. Stay tuned for the Julia 1.13 version of the notebooks.
+Here's a list of PythonPlot things you may (but should not) worry about when you type
+```Julia
+include
+```
 
-To get everything to work, you will need to add a few packages. LinearAlgebra, SuiteSparse, SparseArrays, BandedMatrices, BenchmarkTools, AbstractFFTs, FFTW, IJjulia, LaTeXStrings, and PyPlot. I put 
+  - Sometimes you will see
+```
+SYSTEM: caught exception of type :MethodError while trying to print a failed Task notice; giving up
+```
+
+That is a [known issue](https://discourse.julialang.org/t/another-mystery-in-ijulia/135017/3) and you can safely ignore it.
+
+- When you start PythonPlot in the notebook you are likely to see things like
+  
+```Julia
+[ Info: Precompiling PythonPlot [274fc56d-3b97-40fa-a1cd-1b4a50311bf9]
+[ Info: Precompiling PythonPlot [274fc56d-3b97-40fa-a1cd-1b4a50311bf9] 
+CondaPkg Found dependencies: /Users/ctk/.julia/packages/PythonCall/5WGSP/CondaPkg.toml
+CondaPkg Found dependencies: /Users/ctk/.julia/packages/PythonPlot/oS8x4/CondaPkg.toml
+CondaPkg Found dependencies: /Users/ctk/.julia/packages/CondaPkg/lKlVY/CondaPkg.toml
+CondaPkg Dependencies already up to date
+```
+when a script or module says ```using PythonPlot```. It does no harm, but is annoying.
+I do not know how to make PythonPlot shut up. If you figure it out, please let me know.
+
+As long as the ```include("fanote_init.jl")``` cell completes without problems, everything will work. If the notebook kernel dies, then you will
+need to figure out why. The quick fix could be typing ```build IJulia``` in the package manager. 
+
+To run the notebooks, you will need to add a few packages. LinearAlgebra, SuiteSparse, SparseArrays, BandedMatrices, BenchmarkTools, AbstractFFTs, FFTW, IJjulia, LaTeXStrings, PythonCall, and PythonPlot. I put 
 
 ```Julia
 using LinearAlgebra
@@ -161,9 +153,9 @@ using FFTW
 using IJulia
 ```
 
-in my startup.jl file and do **using PyPlot** when I need it. PyPlot takes a while to get going and putting ```using PyPlot``` in your startup.jl can break things.
+in my startup.jl file and do **using PythonPlot** and **using PythonCall** when I need it. Python Plot takes a while to get going and putting ```using PythonPlot``` in your startup.jl can break things and confuse the notebooks.
 
-The notebooks work with versions 1.12 and most versions of Juila beyond 1.8. I just upgraded the kernel to 1.12 and will move to 1.13 as soon as it is
+The notebooks work with versions 1.12 and most versions of Juila beyond 1.10. I just upgraded the kernel to 1.12 and will move to 1.13 as soon as it is
 released.
 
 All this is also in the first code window in the notebooks. If Julia complains about a missing package, it is your job to add it.
