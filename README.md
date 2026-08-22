@@ -146,7 +146,7 @@ using IJulia
 
 in my startup.jl file and do **using PythonPlot** and **using PythonCall** when I need it. Python Plot takes a while to get going and putting ```using PythonPlot``` in your startup.jl can break things and confuse the notebooks.
 
-The notebooks work with versions 1.12 and most versions of Juila beyond 1.10. I just upgraded the kernel to 1.12 and will move to 1.13 as soon as it is
+The notebooks work with versions 1.12 and most versions of Juila beyond 1.10. I upgraded the kernel to 1.12 when 1.12 was released and will move to 1.13 as soon as it is
 released.
 
 All this is also in the first code window in the notebooks. If Julia complains about a missing package, it is your job to add it.
