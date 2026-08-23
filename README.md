@@ -101,6 +101,13 @@ include("fanote_init.jl")
 This is a Julia script that tells the notebooks where everything is. In partcular, the script lets the notebook find the examples.
 You might enjoy poking around in the __/src__ subdirectory. 
 
+## These notebooks now use PythonPlot instead of PyPlot.
+- The old version is archived in the PyPlot branch and tagged 1.01. I make no promises that it will continue to work.
+- This has to be done because PyPlot is breaking. You can make it work for now but I do not recommend it.
+- PythonPlot (1) does not break things and (2) does not SEEM to require running single-threaded.
+- See [this discussion](https://discourse.julialang.org/t/jupyter-crashes-when-using-pyplot-and-julia-1-12/134684) for details on this tale of woe and 
+[this](https://github.com/JuliaPy/PyPlot.jl/issues/601) for a PythonPlot endorsement.
+
 ## PythonPlot compile time messages.
 Here's a list of PythonPlot things you may (but should not) worry about when you type
 ```Julia
@@ -152,14 +159,6 @@ released.
 All this is also in the first code window in the notebooks. If Julia complains about a missing package, it is your job to add it.
 
 If you want to play with the source code solvers, clone the repository for the package and put that in your Julia **LOAD_PATH** or use __Pkg.develop__. The most operating system independent way to do it is with __Pkg.develop__, but that is also the most challenging for a novice to figure out. 
-
-## These notebooks now use PythonPlot instead of PyPlot.
-- The old version is archived in the PyPlot branch and tagged 1.01. I make no promises that it will continue to work.
-- This has to be done because PyPlot is breaking. You can make it work for now but I do not recommend it.
-- PythonPlot (1) does not break things and (2) does not SEEM to require running single-threaded.
-- See [this discussion](https://discourse.julialang.org/t/jupyter-crashes-when-using-pyplot-and-julia-1-12/134684) for details on this tale of woe and 
-[this](https://github.com/JuliaPy/PyPlot.jl/issues/601) for a PythonPlot endorsement.
-
  
 ## Julia Prerequisites
 
