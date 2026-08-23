@@ -108,7 +108,9 @@ You might enjoy poking around in the __/src__ subdirectory.
 - See [this discussion](https://discourse.julialang.org/t/jupyter-crashes-when-using-pyplot-and-julia-1-12/134684) for details on this tale of woe and 
 [this](https://github.com/JuliaPy/PyPlot.jl/issues/601) for a PythonPlot endorsement.
 
-## PythonPlot compile time messages.
+### PythonPlot compile time messages.
+fanote_init.jl has ``using Python_Plot`` inside and compiles Python_Plot if necessary.
+
 Here's a list of PythonPlot things you may (but should not) worry about when you type
 ```Julia
 include("fanote_init.jl")
@@ -121,7 +123,7 @@ SYSTEM: caught exception of type :MethodError while trying to print a failed Tas
 
 That is a [known issue](https://discourse.julialang.org/t/another-mystery-in-ijulia/135017/3) and you can safely ignore it.
 
-- When you start PythonPlot in the notebook you are likely to see things like
+- When __fanote_init.jl__ starts PythonPlot in the notebook you are likely to see things like
   
 ```Julia
 [ Info: Precompiling PythonPlot [274fc56d-3b97-40fa-a1cd-1b4a50311bf9]
@@ -180,8 +182,8 @@ and
 
 (Kel03) [***Solving Nonlinear Equations with Newton's Method***](https://my.siam.org/Store/Product/viewproduct/?ProductId=841) , Fundamentals of Algorithms 1, SIAM 2003
 
-describe the Newton and Broyden algoirthms. CTK95 has the theory. This project is a sequal to CTK03. CTK03 is Matlab-centric
-and will remain in print.
+describe the Newton and Broyden algoirthms. Kel95 has the theory. This project is a sequel to Kel03. Kel03 is Matlab-centric
+and will remain in print
 
 A recent Acta Numerica paper has everything
 
@@ -269,7 +271,7 @@ This one seems to be based on Dennis and Schnabel's 1983 book.
 
 
 ## Notebook Problems
-It is very important that PyPlot and IJulia use the same version of conda and the IJulia knows what version of Julia you are using. If the notebook is complaining about the kernel, that is likely the issue. You have a good chance of fixing this by typing __build IJulia__ from pkg. To do this from the REPL type
+It is very important that PythonPlot and IJulia use the same version of conda and the IJulia knows what version of Julia you are using. If the notebook is complaining about the kernel, that is likely the issue. You have a good chance of fixing this by typing __build IJulia__ from pkg. To do this from the REPL type
 ```
 using Pkg
 Pkg.build("IJulia")
@@ -293,7 +295,7 @@ The worst case, which has happened to me more than once, is that you'll have to
    4. Put your config directory back in .julia. 
       1. Close and restart Julia to make sure your startup.jl file was not causing any problems.
       2. It's a good idea to put your startup.jl file back one line at a time. 
-      3. Putting ```using PyPlot``` in startup.jl breaks plotting on some Macs. 
+      3. Putting ```using PythonPlot``` in startup.jl breaks plotting on some Macs. 
    
 See the tales of woe at 
    1. https://discourse.julialang.org/t/ijulia-do-not-run/45409/10 , 
