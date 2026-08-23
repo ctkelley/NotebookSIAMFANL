@@ -12,8 +12,8 @@ function aa_heq(n = 128, c = 0.99; printlabel = true)
     mmax = 10
     maxit = 20
     Vstore = zeros(n, 3 * mmax + 3)
-    rtol = 1.e-8
-    atol = 1.e-8
+    rtol = 1.0e-8
+    atol = 1.0e-8
     #
     # Set up the data for the plots. Look NotebookSIAMFANL.jl for the
     # definition of the Data_4_Plots structure.
@@ -22,7 +22,7 @@ function aa_heq(n = 128, c = 0.99; printlabel = true)
     #
     # AA for a few depths
     #
-    for m = 0:3
+    for m in 0:3
         houta = aasol(
             HeqFix!,
             u0,
@@ -51,5 +51,5 @@ function aa_heq(n = 128, c = 0.99; printlabel = true)
     )
     nl_stats!(plot_hist, koutfe, "Newton-GMRES"; method = :nk)
     printlabel ? (caption = "Fig 4.1 in print book") : (caption = nothing)
-    plot_its_funs(plot_hist, caption; fpsize = fpsize)
+    return plot_its_funs(plot_hist, caption; fpsize = fpsize)
 end

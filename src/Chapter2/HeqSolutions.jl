@@ -19,11 +19,11 @@ function HeqSolutions(printlabel = true)
     #   Call the solver twice.
     #
     nsolout9 =
-        nsol(heqf!, x0, FS, FPS; sham = 1, rtol = 1.e-10, atol = 1.e-10, pdata = hdata)
+        nsol(heqf!, x0, FS, FPS; sham = 1, rtol = 1.0e-10, atol = 1.0e-10, pdata = hdata)
     #   Change c to .5
     setc!(hdata, 0.5)
     nsolout5 =
-        nsol(heqf!, x0, FS, FPS; sham = 1, rtol = 1.e-10, atol = 1.e-10, pdata = hdata)
+        nsol(heqf!, x0, FS, FPS; sham = 1, rtol = 1.0e-10, atol = 1.0e-10, pdata = hdata)
     #
     # Showtime! Make the plot.
     #
@@ -35,5 +35,5 @@ function HeqSolutions(printlabel = true)
     xlabel(L"\mu")
     ylabel(L"H(\mu)")
     legend(["c=.9", "c=.5"])
-    ~printlabel || title("Fig 2.2 from print book")
+    return ~printlabel || title("Fig 2.2 from print book")
 end

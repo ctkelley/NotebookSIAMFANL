@@ -11,8 +11,8 @@ function nk_pde_side(printlabel = true, n = 31)
     fpsize = fsize(printlabel)
     #function hard_left(printlabel=true, n=31)
     # Get some room for the residual
-    rtol = 1.e-7
-    atol = 1.e-7
+    rtol = 1.0e-7
+    atol = 1.0e-7
     u0 = zeros(n * n)
     FV = copy(u0)
     # Get the precomputed data from pdeinit

@@ -13,8 +13,8 @@ function mixing_pde(n = 31; printlabel = true)
     mmax = 10
     Vstore = zeros(n * n, 3 * mmax + 3)
     #
-    rtol = 1.e-8
-    atol = 1.e-8
+    rtol = 1.0e-8
+    atol = 1.0e-8
     mvec = [0, 2, 4, 10]
     #
     # Set up the data for the plots. Look at NotebookSIAMFANL.jl for the
@@ -40,5 +40,5 @@ function mixing_pde(n = 31; printlabel = true)
     end
     printlabel ? (caption = "Fig 4.3 in print book") : (caption = nothing)
     plot_its_funs(plot_hist, caption)
-    printlabel || title("Figure 4.3 in print book")
+    return printlabel || title("Figure 4.3 in print book")
 end

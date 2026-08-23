@@ -18,8 +18,8 @@ function nk_heq_bicgstab(printlabel = true)
     # Get organized
     #
     c = 0.9
-    atol = 1.e-10
-    rtol = 1.e-10
+    atol = 1.0e-10
+    rtol = 1.0e-10
     hdata = heqinit(u0, c)
     etamax = 0.1
     fixedeta = false

@@ -11,9 +11,9 @@ function plothist(avals, labelarray, vax = "residual"; semilogflag = true, ptitl
         error("Too many lines for the graph. Use fewer.")
     end
     figure(1)
-    for ip = 1:nplot
+    for ip in 1:nplot
         itmax = length(avals[ip])
-        itc = 0:itmax-1
+        itc = 0:(itmax - 1)
         if semilogflag
             semilogy(itc, avals[ip], fmtplot[ip])
         else
@@ -29,5 +29,5 @@ function plothist(avals, labelarray, vax = "residual"; semilogflag = true, ptitl
     else
         ylabel("x")
     end
-    xlabel("Nonlinear Iterations")
+    return xlabel("Nonlinear Iterations")
 end

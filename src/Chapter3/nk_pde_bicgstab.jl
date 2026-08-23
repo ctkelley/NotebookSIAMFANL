@@ -16,8 +16,8 @@ function nk_pde_bicgstab(printlabel = true)
     JVL = zeros(n * n, 25)
     # Get the precomputed data from pdeinit
     pdata = pdeinit(n)
-    rtol = 1.e-7
-    atol = 1.e-10
+    rtol = 1.0e-7
+    atol = 1.0e-10
     etamax = 0.1
     fixedeta = false
     #

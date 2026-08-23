@@ -23,7 +23,7 @@ function ptcvarydt(printlabel = true)
     #
     # Look at how delta0 changes things.
     #
-    dtlist = [1.0, 1.e-1, 1.e-2, 1.e-3, 1.e-4]
+    dtlist = [1.0, 1.0e-1, 1.0e-2, 1.0e-3, 1.0e-4]
     labels = [
         L"$\delta_0 = 1.0$",
         L"$\delta_0 = 10^{-1}$",
@@ -31,9 +31,9 @@ function ptcvarydt(printlabel = true)
         L"$\delta_0 = 10^{-3}$",
     ]
     outdata = []
-    for id = 1:4
+    for id in 1:4
         dti = 10.0^(1 - id)
-        ptcdata1 = ptcsolsc(sptest, x0; delta0 = dti, rtol = 1.e-6, maxit = 1000000)
+        ptcdata1 = ptcsolsc(sptest, x0; delta0 = dti, rtol = 1.0e-6, maxit = 1000000)
         push!(outdata, ptcdata1.history)
     end
     if printlabel

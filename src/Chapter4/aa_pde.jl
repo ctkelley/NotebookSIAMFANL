@@ -17,8 +17,8 @@ function aa_pde(n = 31; printlabel = true)
     mmax = 10
     Vstore = zeros(n * n, 3 * mmax + 3)
     #
-    rtol = 1.e-8
-    atol = 1.e-8
+    rtol = 1.0e-8
+    atol = 1.0e-8
     #
     # Set up the data for the plots. Look NotebookSIAMFANL.jl for the
     # definition of the Data_4_Plots structure.
@@ -69,5 +69,5 @@ function aa_pde(n = 31; printlabel = true)
         nl_stats!(plot_hist, aout, "m = $m"; method = :aa)
     end
     printlabel ? (caption = "Fig 4.2 in print book") : (caption = nothing)
-    plot_its_funs(plot_hist, caption; fpsize = fpsize)
+    return plot_its_funs(plot_hist, caption; fpsize = fpsize)
 end

@@ -14,24 +14,24 @@ local_hist = nsolsc(1.0, atan, x -> 1.0/(1.0+x^2); rtol = 1.e-8, maxit = 20)
 using an anonymous function for the derivative.
 
 """
-function linearmodel(printlabel=true)
+function linearmodel(printlabel = true)
 
     #
     # Figure 1.1 from the print book.
     #
 
-    fpsize=fsize(printlabel)
-    local_hist = nsolsc(atan,1.0,x -> 1.0/(1.0+x^2); rtol = 1.e-8, maxit = 20)
+    fpsize = fsize(printlabel)
+    local_hist = nsolsc(atan, 1.0, x -> 1.0 / (1.0 + x^2); rtol = 1.0e-8, maxit = 20)
     iplot = true
-    if iplot
+    return if iplot
         figure(1)
         xval = local_hist.solhist
-        yval=atan.(xval)
-        xtval = -1.2:.01:1.2
+        yval = atan.(xval)
+        xtval = -1.2:0.01:1.2
         ytval = atan.(xtval)
         ztval = zeros(size(xtval))
         plot(xval, yval, "ko", xtval, ytval, "k-", xtval, ztval, "k-")
-        t = 0:.1:1
+        t = 0:0.1:1
         xv = xval[1] * (1.0 .- t) + t .* xval[2]
         yv = yval[1] * (1.0 .- t)
         plot(xv, yv, "k-")
@@ -45,17 +45,17 @@ function linearmodel(printlabel=true)
         xv = xval[3] .* ones(length(t), 1)
         plot(xv, yv, "k-")
         text(1, 0.64, L"(x_0,y_0)")
-        text(-.2, .45, L"y=m_0(x)")
-        text(xval[2] - .1, .125, L"(x_1,0)")
-        text(xval[2] + .05, yval[2] - .1, L"(x_1,y_1)")
-        text(xval[3] + .1, -.1, L"(x_2,0)")
-        text(xval[3] + .1, yval[3], L"(x_2,y_2)")
-        text(-.1, -.25, L"y=m_1(x)")
-        text(-.07, .05, L"x^*")
+        text(-0.2, 0.45, L"y=m_0(x)")
+        text(xval[2] - 0.1, 0.125, L"(x_1,0)")
+        text(xval[2] + 0.05, yval[2] - 0.1, L"(x_1,y_1)")
+        text(xval[3] + 0.1, -0.1, L"(x_2,0)")
+        text(xval[3] + 0.1, yval[3], L"(x_2,y_2)")
+        text(-0.1, -0.25, L"y=m_1(x)")
+        text(-0.07, 0.05, L"x^*")
         plot(xval[2], 0, "ko")
         plot(xval[3], 0, "ko")
-        ylabel("atan(x)",fontsize=fpsize)
-        xlabel("x",fontsize=fpsize)
+        ylabel("atan(x)", fontsize = fpsize)
+        xlabel("x", fontsize = fpsize)
         ~printlabel || title("Figure 1.1 from print book")
-     end
+    end
 end

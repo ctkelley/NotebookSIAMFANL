@@ -24,10 +24,10 @@ Nothing to see here. Move along.
 """
 function printhist(tablein, headers; TeX = false, figures = 5)
     ntab = length(tablein[1, :])
-    bighead = Array{String,2}(undef, 1, ntab + 1)
+    bighead = Array{String, 2}(undef, 1, ntab + 1)
     bighead[1] = "n"
-    for ih = 2:ntab+1
-        bighead[ih] = headers[ih-1]
+    for ih in 2:(ntab + 1)
+        bighead[ih] = headers[ih - 1]
     end
     if ntab > 5
         error("Too many columns for the table. Use fewer.")
@@ -39,10 +39,10 @@ function printhist(tablein, headers; TeX = false, figures = 5)
     printf(fmt::String, args...) = @eval @printf($fmt, $(args...))
     sprintf(fmt::String, args...) = @eval @sprintf($fmt, $(args...))
     itmax = length(tablein[:, 1])
-    itc = 0:itmax-1
+    itc = 0:(itmax - 1)
     if TeX
         @printf("\\begin{tabular}{")
-        for i = 1:ntab+1
+        for i in 1:(ntab + 1)
             @printf("l")
         end
         @printf("} \n")
@@ -50,17 +50,17 @@ function printhist(tablein, headers; TeX = false, figures = 5)
     else
         printf(headerfmt, bighead...)
     end
-    for it = 1:itmax
+    for it in 1:itmax
         st = sprintf(tabfmt, it - 1, tablein[it, :]...)
         snan = findfirst(isequal('N'), st)
         lt = length(st)
         while typeof(snan) != Nothing
-            st = string(st[1:snan-1], nanspace, st[snan+3:lt])
+            st = string(st[1:(snan - 1)], nanspace, st[(snan + 3):lt])
             snan = findfirst(isequal('N'), st)
         end
         printf("%s", st)
     end
-    if TeX
+    return if TeX
         @printf("\\hline \n")
         @printf("\\end{tabular} \n")
     end
@@ -76,14 +76,14 @@ function buildformat(ntab, TeX, figures)
     hfmt = string(" %", fm1, "s")
     headerfmt = " %s"
     if TeX
-        for i = 1:ntab
+        for i in 1:ntab
             format = string(format, "&", basefmt)
             headerfmt = string(headerfmt, "&", hfmt)
         end
         format = string(format, " \\\\ \n")
         headerfmt = string(headerfmt, " \\\\ \\hline \n")
     else
-        for i = 1:ntab
+        for i in 1:ntab
             format = string(format, basefmt)
             headerfmt = string(headerfmt, hfmt)
         end

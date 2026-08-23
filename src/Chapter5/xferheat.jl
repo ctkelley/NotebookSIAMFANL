@@ -15,7 +15,7 @@ function vary_xferheat_parms(fnote = 1; printlabel = true)
         printlabel = printlabel,
     )
     figure(3)
-    xferheat(
+    return xferheat(
         2,
         1.0,
         2.0,
@@ -56,15 +56,15 @@ Really hard: thetar=2.0, omega=.5, tau=4.0 (Fig 5.3)
 In all cases thetal=0.0.
 """
 function xferheat(
-    p = 2,
-    thetal = 1.0,
-    thetar = 0.0,
-    omega = 0.9,
-    tau = 1.0,
-    mvec = [0, 2, 5];
-    fignum = 0,
-    printlabel = true,
-)
+        p = 2,
+        thetal = 1.0,
+        thetar = 0.0,
+        omega = 0.9,
+        tau = 1.0,
+        mvec = [0, 2, 5];
+        fignum = 0,
+        printlabel = true,
+    )
     fpsize = fsize(printlabel)
     #
     # Try this xferheat(3, 1.0, 1.8, .5, 2.0, mvec=[2, 5, 10])
@@ -73,13 +73,13 @@ function xferheat(
     nx = (10^p) + 1
     dout = 10^(p - 1)
     na = 40
-    #thetal=1.0; thetar=0.0; omega=.9; tau=1.0; 
+    #thetal=1.0; thetar=0.0; omega=.9; tau=1.0;
     Nc = 0.05
     hn_data = heat_init(nx, na, thetal, thetar, omega, tau, Nc)
     theta0 = hn_data.bcfix
     mmax = 30
     Vstore = zeros(nx, 3 * mmax + 3)
-    tol = 1.e-10
+    tol = 1.0e-10
     #
     # Set up the data for the plots. Look NotebookSIAMFANL.jl for the
     # definition of the Data_4_Plots structure.
@@ -116,7 +116,7 @@ function xferheat(
         pdata = hn_data,
         rtol = tol,
         atol = tol,
-        dx = 1.e-5,
+        dx = 1.0e-5,
         eta = 0.1,
         fixedeta = false,
         lsolver = "gmres",
@@ -125,7 +125,7 @@ function xferheat(
     #
     # Newton-BiCGSTAB
     #
-    #bout=nsoli(FCR_heat!, theta0, FS, Vstore; pdata=hn_data, rtol=tol, 
+    #bout=nsoli(FCR_heat!, theta0, FS, Vstore; pdata=hn_data, rtol=tol,
     #           atol=tol, dx=1.e-5, eta=.1, fixedeta=false, lsolver="bicgstab")
     #nl_stats!(plot_hist, bout, "Newton-BiCGSTAB"; method=:nk)
     #
@@ -137,14 +137,14 @@ function xferheat(
     else
         caption = varcap
     end
-    plot_its_funs(plot_hist, caption; method = :nk, fpsize = fpsize)
+    return plot_its_funs(plot_hist, caption; method = :nk, fpsize = fpsize)
 end
 
 function parm_string(tau, omega, thetar)
     tauv = @sprintf("%4.1f", tau)
     omegav = @sprintf("%4.1f", omega)
     thetarv = @sprintf("%4.1f", thetar)
-    varcap = latexstring(
+    return varcap = latexstring(
         "\$\\tau = \$",
         tauv,
         "; \$\\omega = \$",

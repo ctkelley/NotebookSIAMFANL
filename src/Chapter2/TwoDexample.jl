@@ -20,7 +20,7 @@ function TwoDexample(printlabel = true)
     plot(xa, ya, "k-*")
     plot(xb, yb, "k-", xb, yb, "ko")
     contourch2()
-    ~printlabel || title("Fig 2.1 from print book")
+    return ~printlabel || title("Fig 2.1 from print book")
 end
 
 """
@@ -40,7 +40,7 @@ function contourch2()
     levels = [la; lc; lb]
     contour(x, y, z, levels; colors = ["black"])
     xlabel(L"x_1")
-    ylabel(L"x_2")
+    return ylabel(L"x_2")
 end
 
 
@@ -50,5 +50,5 @@ function norm for contour plot
 function f21(x, y)
     zx = x * x + y * y - 2.0
     zy = exp(x - 1.0) + y * y - 2.0
-    z = sqrt(zx * zx + zy * zy)
+    return z = sqrt(zx * zx + zy * zy)
 end

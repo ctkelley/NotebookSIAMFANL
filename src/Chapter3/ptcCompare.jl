@@ -8,7 +8,7 @@ function ptcCompare(printlabel = true)
     fpsize = fsize(printlabel)
     n = 63
     maxit = 100
-    pdt0 = 1.e-2
+    pdt0 = 1.0e-2
     ithist = zeros(25, 3)
     #
     # PTC with direct solvers
@@ -29,11 +29,11 @@ function ptcCompare(printlabel = true)
     nodtout = ptciBeam(n, pdt0, false, "right")
     fcostnodt = cumsum(nodtout.stats.ijac)
     hist3 = nodtout.history
-    #hist3=ptciBeam(n, pdt0, false, "right").history 
+    #hist3=ptciBeam(n, pdt0, false, "right").history
     ithist[:, 3] = hist3 ./ hist3[1]
     pstr = ["k-", "k--", "k-."]
     subplot(1, 2, 1)
-    for ip = 1:3
+    for ip in 1:3
         semilogy(0:24, ithist[:, ip], pstr[ip])
     end
     dts = L"$\delta$"
@@ -44,5 +44,5 @@ function ptcCompare(printlabel = true)
     ~printlabel || title("Figure 3.4 from the print book")
     subplot(1, 2, 2)
     semilogy(fcostdt, ithist[:, 2], pstr[2], fcostnodt, ithist[:, 3], pstr[3])
-    xlabel("Jacobian-vector products", fontsize = fpsize)
+    return xlabel("Jacobian-vector products", fontsize = fpsize)
 end

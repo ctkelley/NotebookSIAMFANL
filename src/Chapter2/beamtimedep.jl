@@ -8,7 +8,7 @@ function beamtimedep(printlabel = true)
     dt = 0.01
     stepnum = 200
     (t, se, xe, fhist, fhistt) = ivpBeam(n, dt, stepnum)
-    plothist_beam_ivp(t, xe, se, printlabel)
+    return plothist_beam_ivp(t, xe, se, printlabel)
 end
 
 function plothist_beam_ivp(t, xe, se, printlabel)
@@ -19,5 +19,5 @@ function plothist_beam_ivp(t, xe, se, printlabel)
     yticks(collect(0:0.2:1.0))
     ylabel("x")
     zlabel("u(x,t)")
-    ~printlabel || title("Fig 2.5 from print book")
+    return ~printlabel || title("Fig 2.5 from print book")
 end

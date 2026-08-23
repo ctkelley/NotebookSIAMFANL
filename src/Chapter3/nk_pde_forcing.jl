@@ -11,8 +11,8 @@ term affects convergence.
 function nk_pde_forcing(printlabel = true, n = 31, pside = "right")
     fpsize = fsize(printlabel)
     # Get some room for the residual
-    rtol = 1.e-7
-    atol = 1.e-7
+    rtol = 1.0e-7
+    atol = 1.0e-7
     u0 = zeros(n * n)
     FV = copy(u0)
     # Get the precomputed data from pdeinit
@@ -74,5 +74,5 @@ function nk_pde_forcing(printlabel = true, n = 31, pside = "right")
     )
     nl_stats!(plot_hist, houtfe, L"Fixed $\eta=.1$", method = :nkj)
     printlabel ? (caption = "Fig $fignum in print book") : (caption = nothing)
-    plot_its_funs(plot_hist, caption; method = :nkj, fpsize = fpsize)
+    return plot_its_funs(plot_hist, caption; method = :nkj, fpsize = fpsize)
 end

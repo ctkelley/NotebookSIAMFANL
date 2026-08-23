@@ -1,14 +1,14 @@
 function plot_its_funs(plot_hist, caption; method = :nk, fpsize = "12")
     pstr = ["k-", "k-.", "k--", "k-o", "k."]
-#    subplot(1, 2, 1)
-captout=caption*": left";
-figure(1)
+    #    subplot(1, 2, 1)
+    captout = caption * ": left"
+    figure(1)
     plot_res_vs_its(plot_hist, pstr, captout; fpsize = fpsize)
-#    subplot(1, 2, 2)
-captout=caption*": right"
-#captout=nothing
-figure(2)
-    plot_res_vs_fevals(plot_hist, pstr, captout; method = method, fpsize = fpsize)
+    #    subplot(1, 2, 2)
+    captout = caption * ": right"
+    #captout=nothing
+    figure(2)
+    return plot_res_vs_fevals(plot_hist, pstr, captout; method = method, fpsize = fpsize)
 end
 
 function plot_res_vs_fevals(plot_hist, pstr, caption; method = :nk, fpsize = "12")
@@ -17,7 +17,7 @@ function plot_res_vs_fevals(plot_hist, pstr, caption; method = :nk, fpsize = "12
     if method == :nkj
         xlab = ("Jacobian-vector products")
     end
-#    ylab = ("")
+    #    ylab = ("")
     ip = 1
     resmax = 0.0
     for D4P in plot_hist
@@ -26,13 +26,13 @@ function plot_res_vs_fevals(plot_hist, pstr, caption; method = :nk, fpsize = "12
         ip += 1
     end
     (xmin, xmaxp, ymin, ymax) = axis()
-    xmax=pyconvert(Float64,xmaxp)
-     axis([0.0, xmax, ymin, max(1.0, resmax)])
-     itick = ceil(xmax / 5.0)
-     xticks(0:itick:xmax)
+    xmax = pyconvert(Float64, xmaxp)
+    axis([0.0, xmax, ymin, max(1.0, resmax)])
+    itick = ceil(xmax / 5.0)
+    xticks(0:itick:xmax)
     xlabel(xlab, fontsize = fpsize)
     ylabel(ylab, fontsize = fpsize)
-    (caption == nothing) || title(caption, fontsize = fpsize)
+    return (caption == nothing) || title(caption, fontsize = fpsize)
 end
 
 
@@ -50,29 +50,29 @@ function plot_res_vs_its(plot_hist, pstr, caption; fpsize = "12")
     end
     legend(inlegend)
     (xmin, xmaxp, ymin, ymax) = axis()
-    xmax=pyconvert(Float64,xmaxp)
+    xmax = pyconvert(Float64, xmaxp)
     axis([0.0, xmax, ymin, max(1.0, resmax)])
     itick = ceil(xmax / 5.0)
     xticks(0:itick:xmax)
     xlabel(xlab, fontsize = fpsize)
     ylabel(ylab, fontsize = fpsize)
-    (caption == nothing) || title(caption, fontsize = fpsize)
+    return (caption == nothing) || title(caption, fontsize = fpsize)
 end
 
 function nl_stats!(plot_hist, nlout, legendstr; method = :nk)
     fdata = nl_funcount(nlout; method = method)
     xlen = length(nlout.history)
-    itdata = collect(0:1:xlen-1)
+    itdata = collect(0:1:(xlen - 1))
     relreshist = nlout.history ./ nlout.history[1]
     DT = Data_4_Plots(relreshist, itdata, fdata, legendstr)
-    push!(plot_hist, DT)
+    return push!(plot_hist, DT)
 end
 
 function nl_stats!(itdata, fdata, relreshist, nlout; method = :nk)
     push!(fdata, nl_funcount(nlout; method = method))
     xlen = length(nlout.history)
-    push!(itdata, collect(0:1:xlen-1))
-    push!(relreshist, nlout.history ./ nlout.history[1])
+    push!(itdata, collect(0:1:(xlen - 1)))
+    return push!(relreshist, nlout.history ./ nlout.history[1])
 end
 
 function nl_funcount(nout; method = :nk)

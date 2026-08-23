@@ -13,9 +13,9 @@ function stagnationtable()
         x -> tan(x) - x,
         4.5;
         maxit = 14,
-        rtol = 1.e-17,
-        atol = 1.e-17,
+        rtol = 1.0e-17,
+        atol = 1.0e-17,
         printerr = false,
     )
-    printhist(ftout.history[1:6], ["|f(x)|"])
+    return printhist(ftout.history[1:6], ["|f(x)|"])
 end
