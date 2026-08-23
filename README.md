@@ -224,7 +224,7 @@ using SIAMFANLEquations.Examples
 using LinearAlgebra
 using BandedMatrices
 using BenchmarkTools
-using PyPlot
+using PythonPlot
 push!(LOAD_PATH,"./src")
 using NotebookSIAMFANL
 ```
