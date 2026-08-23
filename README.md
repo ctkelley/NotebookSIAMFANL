@@ -237,7 +237,7 @@ Base.show(io::IO, f::Float64) = @printf(io, "%1.5e", f)
 Base.show(io::IO, f::Float32) = @printf(io, "%1.5e", f)
 Base.show(io::IO, f::Float16) = @printf(io, "%1.5e", f)
 ```
-These make floats print with only five digts after the decimal point. Without this the notebook can be very hard to read.
+These make floats print with only five digits after the decimal point. Without this the notebook can be very hard to read.
 
 ## Other Nonlinear Solvers in Julia
 
