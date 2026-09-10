@@ -16,7 +16,7 @@ I'm fixing typos now. The list is  [here](Errata.pdf). I've made the corrections
 
 ## The archival version (1.0) from the date of publication lives in the [FA20 branch](https://github.com/ctkelley/NotebookSIAMFANL/tree/FA20).
 
-I am now running this with 1.12.6 on an Apple M2/M2 Pro in native mode. My Intel days are over.
+I am now running this with Julia 1.13.0 on an Apple M2/M2 Pro in native mode. My Intel days are over.
 
 __Watch out!__ the timings in the files are likely to be different from
 the book as I test things with M* chips and the Apple Acclerator framework. Your best bet to duplicate the timings in the book is with an 8 core Intel Mac. As those
@@ -157,8 +157,7 @@ using IJulia
 
 in my startup.jl file and do **using PythonPlot** and **using PythonCall** when I need it. Python Plot takes a while to get going and putting ```using PythonPlot``` in your startup.jl can break things and confuse the notebooks.
 
-The notebooks work with versions 1.12 and most versions of Juila beyond 1.10. I upgraded the kernel to 1.12 when 1.12 was released and will move to 1.13 as soon as it is
-released.
+The notebooks work with versions 1.13 and most versions of Juila beyond 1.10. I upgraded the kernel to 1.13 when 1.13.0 was released. 
 
 All this is also in the first code window in the notebooks. If Julia complains about a missing package, it is your job to add it.
 
@@ -346,7 +345,8 @@ doi="10.5281/zenodo.4284687"
 
 ## Das Ende
 
-I finished [the book](https://my.siam.org/Store/Product/viewproduct/?ProductId=44313635) and it went to the printer in September 2022. This means that the project is __done__. I will not be adding new functionality to [SIAMFANLEquations](https://github.com/ctkelley/SIAMFANLEquations.jl) or new content to these notebooks. Future releases will only fix typos and bugs.
+I finished [the book](https://my.siam.org/Store/Product/viewproduct/?ProductId=44313635) and it went to the printer in September 2022. This means that the project is __done__. I will not be adding new functionality to [SIAMFANLEquations](https://github.com/ctkelley/SIAMFANLEquations.jl) or new content to these notebooks. Future releases will only fix typos and bugs, respond to changes
+in the Julia ecosystem that introduce bugs (see PyPlot), or update and test the notebooks with new versions of Julia. 
 
 ## Funding
 
